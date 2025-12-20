@@ -1,0 +1,236 @@
+@use '../utils' as *;
+
+body {
+   font-family: var(--font-family);
+   font-weight: 400;
+   color: var(--color-black);
+   --padding-container: #{$padding-mobile};
+   --container-width: #{$width-content};
+   --max-width-container: #{$max-width-container};
+
+   @media (min-width:768px) {
+      --padding-container: #{$padding-tablet};
+   }
+
+   @media (min-width:1024px) {
+      --padding-container: #{$padding-desktop};
+   }
+}
+
+.wrapper {
+   display: flex;
+   flex-direction: column;
+   min-height: 100vh;
+}
+
+.main {
+   flex: 1 1 auto;
+}
+
+// .shadow {
+//    box-shadow: -3px 0 16px 0 rgba(51, 51, 51, 0.3);
+// }
+
+[class*="container"] {
+   padding-left: var(--padding-container);
+   padding-right: var(--padding-container);
+   margin: 0 auto;
+   width: 100%;
+   max-width: var(--max-width-container);
+}
+
+label {
+   cursor: pointer;
+}
+
+.hover-button {
+   transition: background-color $tr-time, border-color $tr-time, color $tr-time;
+
+   input:checked+&,
+   ._pc &:hover {
+      background-color: #6E48F5;
+      border-color: #6E48F5;
+      color: #ffffff;
+
+      .configuration__with-logo-image::after {
+         opacity: 1;
+      }
+   }
+}
+
+.hover-button-icon {
+   transition: background-color $tr-time, border-color $tr-time, color $tr-time;
+
+   svg path {
+      transition: fill $tr-time;
+   }
+
+   ._pc &:hover {
+      background-color: #6E48F5;
+      color: #ffffff;
+
+      svg path {
+         fill: #B7FE56;
+      }
+   }
+}
+
+// .hidden-max1024 {
+//    @media (max-width:1023.98px) {
+//       display: none !important;
+//    }
+// }
+
+// .hidden-max768 {
+//    @media (max-width:767.98px) {
+//       display: none !important;
+//    }
+// }
+
+// .title-header {
+//    margin-bottom: 10px;
+//    font-weight: 700;
+//    font-size: 18px;
+//    line-height: 133%;
+//    text-transform: uppercase;
+//    color: var(--color-yellow-broom);
+
+//    @media (min-width:768px) {
+//       margin-bottom: 20px;
+//       font-size: 20px;
+//    }
+
+//    @media (min-width:1024px) {
+//       font-size: 24px;
+//    }
+// }
+.header-section {
+   margin-bottom: 20px;
+
+   @media (min-width:1024px) {
+      margin-bottom: 50px;
+   }
+}
+
+.title-section {
+   font-family: var(--font-family-second);
+   font-size: 30px;
+   font-weight: 800;
+   line-height: 100%;
+   letter-spacing: -0.02em;
+
+   @media (min-width:768px) {
+      font-size: 50px;
+   }
+
+   @media (min-width:1024px) {
+      font-size: 70px;
+   }
+}
+
+.text-section {
+   font-weight: 500;
+   font-size: 20px;
+   line-height: 140%;
+
+   @media (min-width:1024px) {
+      font-size: 30px;
+   }
+
+   span {
+      color: #6E48F5;
+   }
+}
+
+
+.margin-bottom-section {
+   margin-bottom: 40px;
+
+   @media (min-width:768px) {
+      margin-bottom: 80px;
+   }
+
+   @media (min-width:1024px) {
+      margin-bottom: 120px;
+   }
+}
+
+.scroll::-webkit-scrollbar {
+   width: 3px;
+   height: 3px;
+   border-radius: 6px;
+}
+
+.scroll::-webkit-scrollbar-track {
+   border-radius: 6px;
+   background-color: #F3F3F3;
+}
+
+.scroll::-webkit-scrollbar-thumb {
+   padding: 2px;
+   background-color: #575757;
+   background-clip: content-box;
+   border-radius: 6px;
+}
+
+// .swiper-wrapper {
+//    position: relative;
+//    z-index: 1;
+//    display: flex;
+//    transition-property: transform;
+// }
+
+// .swiper-slide {
+//    flex-shrink: 0;
+//    width: 100%;
+//    position: relative;
+//    transition-property: transform;
+//    touch-action: pan-y;
+// }
+
+.js-tabs-shell {
+   will-change: height;
+   transform: translateZ(0);
+   height: 0;
+   overflow: hidden;
+   // transition: height $tr-time-l $bezier;
+}
+
+// .js-tabs-toggle {
+//    cursor: pointer;
+// }
+
+// /* указатель количества, абсолютное позиционирование */
+// [data-icon-quantity] {
+//    position: relative;
+//    display: block;
+
+//    &::after {
+//       content: attr(data-icon-quantity);
+//       padding: 5px;
+//       position: absolute;
+//       top: 0;
+//       right: 0;
+//       transform: translate(25%, -25%);
+
+//       min-width: 24px;
+//       height: 24px;
+
+//       display: flex;
+//       align-items: center;
+//       justify-content: center;
+
+//       border-radius: 12px;
+//       font-size: 12px;
+//       color: var(--color-white, #ffffff);
+//       background-color: var(--color-black, #000000);
+//    }
+// }
+
+// /* указатель количества, в строку */
+// [data-string-quantity] {
+//    &::after {
+//       content: " (" attr(data-string-quantity) ")";
+//       color:var(--color-black, #000000);
+//    }
+// }

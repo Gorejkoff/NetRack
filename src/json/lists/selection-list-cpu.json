@@ -1,0 +1,32 @@
+[
+   {
+      "text": "Intel Xeon Platinum 8352V ",
+      "subtext": "(8 ядер/2100-3000 МГц)",
+      "inputname": "cpu2"
+   },
+   {
+      "text": "Intel Xeon Platinum 8322V ",
+      "subtext": "(10 ядер/2300-3300 МГц)",
+      "inputname": "cpu2"
+   },
+   {
+      "text": "Intel Xeon Platinum 8362V ",
+      "subtext": "(12 ядер/2300-3200 МГц)",
+      "inputname": "cpu2"
+   },
+   {
+      "text": "Intel Xeon Platinum 8290V ",
+      "subtext": "(16 ядер/3100-4000 МГц)",
+      "inputname": "cpu2"
+   },
+   {
+      "text": "Intel Xeon Platinum 8352V ",
+      "subtext": "(16 ядер/2600-3400 МГц)",
+      "inputname": "cpu2"
+   },
+   {
+      "text": "Intel Xeon Platinum 831V ",
+      "subtext": "(12 ядер/2100-3000 МГц)",
+      "inputname": "cpu2"
+   }
+]

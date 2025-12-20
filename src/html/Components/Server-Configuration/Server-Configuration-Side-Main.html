@@ -1,0 +1,170 @@
+<div class="configuration__side-main">
+   <div class="configuration__section">
+      <div class="configuration__section-title">Сервер</div>
+      <div class="configuration__section-wrapper">
+         <div class="configuration__parameter">
+            <div class="configuration__parameter-name">
+               <span>Процессор</span>
+               <button type="button" aria-label="описание">
+                  <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                     <path d="M10 20C4.47715 20 0 15.5228 0 10C0 4.47715 4.47715 0 10 0C15.5228 0 20 4.47715 20 10C20 15.5228 15.5228 20 10 20ZM9 13V15H11V13H9ZM11 11.3551C12.4457 10.9248 13.5 9.5855 13.5 8C13.5 6.067 11.933 4.5 10 4.5C8.302 4.5 6.88637 5.70919 6.56731 7.31346L8.5288 7.70577C8.6656 7.01823 9.2723 6.5 10 6.5C10.8284 6.5 11.5 7.17157 11.5 8C11.5 8.8284 10.8284 9.5 10 9.5C9.4477 9.5 9 9.9477 9 10.5V12H11V11.3551Z" fill="#B5B5B5" />
+                  </svg>
+               </button>
+            </div>
+            <div class="configuration__cpu">
+               <label>
+                  <input type="radio" name="cpu" value="intel-xeon-silver" hidden checked="true">
+                  <span class="configuration__cpu-icon hover-button">
+                     <img src="@img/svg/intel-xeon-silver.svg" alt="intel xeon silver">
+                  </span>
+               </label>
+               <label>
+                  <input type="radio" name="cpu" value="intel-xeon-gold" hidden>
+                  <span class="configuration__cpu-icon hover-button">
+                     <img src="@img/svg/intel-xeon-gold.svg" alt="intel xeon gold">
+                  </span>
+               </label>
+               <label>
+                  <input type="radio" name="cpu" value="intel-xeon-platinum" hidden>
+                  <span class="configuration__cpu-icon hover-button">
+                     <img src="@img/svg/intel-xeon-platinum.svg" alt="intel xeon platinum">
+                  </span>
+               </label>
+               <label>
+                  <input type="radio" name="cpu" value="intel-xeon-e" hidden>
+                  <span class="configuration__cpu-icon hover-button">
+                     <img src="@img/svg/intel-xeon-e.svg" alt="intel xeon e">
+                  </span>
+               </label>
+               <label>
+                  <input type="radio" name="cpu" value="amd-epyc" hidden>
+                  <span class="configuration__cpu-icon hover-button">
+                     <img src="@img/svg/amd-epyc.svg" alt="amd epyc">
+                  </span>
+               </label>
+            </div>
+
+
+            <div class="configuration__selection-group">
+               @@include('./UI/selection-list.html',{
+               text:'Intel Xeon Platinum 8352V',
+               subtext:'(8 ядер/2100-3000 МГц)',
+               json:'selection-list-cpu.json',
+               class:'width-lg'
+               })
+
+               @@include('./UI/selection-list.html',{
+               text:'2',
+               json:'selection-list-quantity.json',
+               class:'width-xs'
+               })
+            </div>
+
+
+
+
+         </div>
+
+         @@include('./UI/parameter-wrapper.html',{
+         name:'Память',
+         path:'../Components/Selection-DDR.html'
+         })
+
+         @@include('./UI/parameter-wrapper.html',{
+         name:'Диски',
+         path:'../Components/Selection-SSD.html'
+         })
+
+         @@include('./UI/parameter-wrapper.html',{
+         name:'RAID-контроллер',
+         path:'../Components/Selection-Controller.html'
+         })
+
+         @@include('./UI/parameter-wrapper.html',{
+         name:'Диски',
+         path:'../Components/Selection-Port.html'
+         })
+
+
+
+         <div class="configuration__parameter">
+            <div class="configuration__parameter-name">
+               <span>Размещение</span>
+               <button type="button" aria-label="описание">
+                  <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                     <path d="M10 20C4.47715 20 0 15.5228 0 10C0 4.47715 4.47715 0 10 0C15.5228 0 20 4.47715 20 10C20 15.5228 15.5228 20 10 20ZM9 13V15H11V13H9ZM11 11.3551C12.4457 10.9248 13.5 9.5855 13.5 8C13.5 6.067 11.933 4.5 10 4.5C8.302 4.5 6.88637 5.70919 6.56731 7.31346L8.5288 7.70577C8.6656 7.01823 9.2723 6.5 10 6.5C10.8284 6.5 11.5 7.17157 11.5 8C11.5 8.8284 10.8284 9.5 10 9.5C9.4477 9.5 9 9.9477 9 10.5V12H11V11.3551Z" fill="#B5B5B5" />
+                  </svg>
+               </button>
+            </div>
+            <div class="configuration__group-buttons">
+               <label>
+                  <input type="radio" name="location" hidden checked="true">
+                  <span class="configuration__with-logo hover-button">
+                     <span>На нашей площадке в ЦОД Tier III Москва</span>
+                     <span class="configuration__with-logo-image">
+                        <img src="@img/svg/home.svg" alt="у нас">
+                     </span>
+                  </span>
+               </label>
+               <label>
+                  <input type="radio" name="location" hidden>
+                  <span class="configuration__with-logo hover-button">
+                     <span>На вашей площадке навынос</span>
+                     <span class="configuration__with-logo-image">
+                        <img src="@img/svg/outside.svg" alt="навынос">
+                     </span>
+                  </span>
+               </label>
+            </div>
+         </div>
+      </div>
+   </div>
+
+   <div class="configuration__section">
+      <div class="configuration__section-title">Дополнительные сервисы</div>
+      <div class="configuration__section-wrapper">
+         <div class="configuration__section-grid">
+
+            @@include('./UI/parameter-wrapper.html',{
+            name:'Сетевые интерфейсы',
+            path:'../Components/Selection-Interface.html'
+            })
+            @@include('./UI/parameter-wrapper.html',{
+            name:'Сетевые интерфейсы',
+            path:'../Components/Selection-Interface.html'
+            })
+            @@include('./UI/parameter-wrapper.html',{
+            name:'Сетевые интерфейсы',
+            path:'../Components/Selection-Interface.html'
+            })
+            @@include('./UI/parameter-wrapper.html',{
+            name:'Сетевые интерфейсы',
+            path:'../Components/Selection-Interface.html'
+            })
+            @@include('./UI/parameter-wrapper.html',{
+            name:'Сетевые интерфейсы',
+            path:'../Components/Selection-Interface.html'
+            })
+            @@include('./UI/parameter-wrapper.html',{
+            name:'Сетевые интерфейсы',
+            path:'../Components/Selection-Interface.html'
+            })
+            @@include('./UI/parameter-wrapper.html',{
+            name:'Сетевые интерфейсы',
+            path:'../Components/Selection-Interface.html'
+            })
+            @@include('./UI/parameter-wrapper.html',{
+            name:'Сетевые интерфейсы',
+            path:'../Components/Selection-Interface.html'
+            })
+
+         </div>
+
+
+
+
+      </div>
+   </div>
+
+
+</div>

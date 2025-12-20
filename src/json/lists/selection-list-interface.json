@@ -1,0 +1,26 @@
+[
+   {
+      "text": "2 порта 1G",
+      "inputname": "interface"
+   },
+   {
+      "text": "2 порта 2G",
+      "inputname": "interface"
+   },
+   {
+      "text": "3 порта 1G",
+      "inputname": "interface"
+   },
+   {
+      "text": "3 порта 2G",
+      "inputname": "interface"
+   },
+   {
+      "text": "4 порта 3G",
+      "inputname": "interface"
+   },
+   {
+      "text": "4 порта 3G",
+      "inputname": "interface"
+   }
+]

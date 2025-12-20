@@ -1,0 +1,16 @@
+[
+   {
+      "name": "Конфигуратор",
+      "text": "Предоставим в течении 1-5 дней",
+      "class": "server-configuration__tab-button",
+      "active": true,
+      "number": 1
+   },
+   {
+      "name": "Готовые серверы",
+      "text": "Предоставим в течении одного дня",
+      "class": "server-configuration__tab-button",
+      "active": false,
+      "number": 2
+   }
+]

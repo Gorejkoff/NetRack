@@ -1,0 +1,26 @@
+[
+   {
+      "text": "SATA+NVMe RAID-контроллер, BBU, кэш 1G",
+      "inputname": "controller"
+   },
+   {
+      "text": "TA + 2x NVMe, кэш 1G, внешний BBU, 10GbE iSCSI",
+      "inputname": "controller"
+   },
+   {
+      "text": "(SAS/SATA/NVMe), кэш 1G, двойной SuperCap",
+      "inputname": "controller"
+   },
+   {
+      "text": "SATA3 + 4x M.2 NVMe, кэш 1G, литий-ионный BBU",
+      "inputname": "controller"
+   },
+   {
+      "text": "2Gb/s SAS3, NVMe-oF, кэш 4G, флеш-резерв (FBWC)",
+      "inputname": "controller"
+   },
+   {
+      "text": "AS3/SATA, 2x NVMe U.2, кэш 2G, SuperCap",
+      "inputname": "controller"
+   }
+]

@@ -1,0 +1,22 @@
+[
+   {
+      "text": "12 месяцев",
+      "subtextcolor": "(скидка 15%)",
+      "inputname": "period"
+   },
+   {
+      "text": "18 месяцев",
+      "subtextcolor": "(скидка 20%)",
+      "inputname": "period"
+   },
+   {
+      "text": "24 месяцев",
+      "subtextcolor": "(скидка 25%)",
+      "inputname": "period"
+   },
+   {
+      "text": "36 месяцев",
+      "subtextcolor": "(скидка 30%)",
+      "inputname": "period"
+   }
+]

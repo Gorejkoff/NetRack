@@ -1,0 +1,111 @@
+<div class="configuration__side-result">
+   <div class="configuration__section">
+      <div class="configuration__section-title">Итоговая конфигурация</div>
+      <div class="configuration__section-wrapper">
+         <div class="configuration__parameter">
+            <div class="configuration__parameter-name">
+               <span>Сервер</span>
+            </div>
+            <div class="configuration__parameter-list">
+               <div class="configuration__parameter-list-name">Процессор</div>
+               <div class="configuration__parameter-list-value">
+                  <p>1 x Intel Xeon Platinum 8250V</p>
+               </div>
+               <div class="configuration__parameter-list-name">Память </div>
+               <div class="configuration__parameter-list-value">
+                  <p>64 GB DDR4 REG ECC</p>
+               </div>
+               <div class="configuration__parameter-list-name">Диски</div>
+               <div class="configuration__parameter-list-value">
+                  <p>2 x SSD NVMe 960 GB</p>
+                  <p>2 x HDD SATA 960 GB</p>
+               </div>
+               <div class="configuration__parameter-list-name">RAID</div>
+               <div class="configuration__parameter-list-value">
+                  <p>SATA+NVMe RAID-контроллер</p>
+               </div>
+               <div class="configuration__parameter-list-name">Порт доступа в интернет</div>
+               <div class="configuration__parameter-list-value">
+                  <p>1 Гбит/с безлимит</p>
+               </div>
+            </div>
+         </div>
+         <div class="configuration__parameter">
+            <div class="configuration__parameter-name">
+               <span>Дополнительные сервисы</span>
+            </div>
+            <div class="configuration__parameter-list">
+               <div class="configuration__parameter-list-name">Внешний IP-адрес</div>
+               <div class="configuration__parameter-list-value">
+                  <p>Подсеть IPv4 /29</p>
+               </div>
+               <div class="configuration__parameter-list-name">Сетевые интерфейсы</div>
+               <div class="configuration__parameter-list-value">
+                  <p>2 порта 1G</p>
+               </div>
+               <div class="configuration__parameter-list-name">Защита от DDOS</div>
+               <div class="configuration__parameter-list-value">
+                  <p>Продвинутая L7 100 Мбит/с</p>
+               </div>
+               <div class="configuration__parameter-list-name">LAN внутри ЦОД</div>
+               <div class="configuration__parameter-list-value">
+                  <p>10 Гбит/с</p>
+               </div>
+               <div class="configuration__parameter-list-name">LAN между ЦОД</div>
+               <div class="configuration__parameter-list-value">
+                  <p>10 Гбит/с</p>
+               </div>
+               <div class="configuration__parameter-list-name">Канал до ММТС-9</div>
+               <div class="configuration__parameter-list-value">
+                  <p>10 Гбит/с</p>
+               </div>
+               <div class="configuration__parameter-list-name">Операционная система</div>
+               <div class="configuration__parameter-list-value">
+                  <p>самостоятельная установка</p>
+               </div>
+               <div class="configuration__parameter-list-name">Резервное копирование</div>
+               <div class="configuration__parameter-list-value">
+                  <p>100 ГБ дискового пространства</p>
+               </div>
+            </div>
+         </div>
+         <div class="configuration__parameter">
+            <div class="configuration__parameter-list _center">
+               <div class="configuration__parameter-list-name-strong">Размещение</div>
+               <div class="configuration__parameter-list-value">
+                  <p>IXcellerate North Москва</p>
+               </div>
+               <div class="configuration__parameter-list-name-strong">Период оплаты</div>
+               <div class="configuration__parameter-list-value">
+                  @@include('./UI/selection-list.html', {
+                  text:'12 месяцев',
+                  subtextcolor:'(скидка 15%)',
+                  json: 'period.json',
+                  })
+               </div>
+            </div>
+         </div>
+         <div class="configuration__parameter">
+            <div class="configuration__parameter-list">
+               <div class="configuration__parameter-list-result">Итого</div>
+               <div class="configuration__parameter-list-result-number">45 550 <span>руб/мес</span></div>
+            </div>
+         </div>
+
+         @@include('../../UI/Button/Button.html',{
+         text: 'Заказать сервер',
+         class:'button-purple',
+         })
+
+         <div class="configuration__parameter-info">Цена всех услуг указана с учетом НДС</div>
+
+      </div>
+   </div>
+
+   <div class="configuration__actions">
+      <button class="hover-button" type="button">Отправить на почту</button>
+      <a class="hover-button" href="0#" download="">Скачать PDF</a>
+      <button class="hover-button" type="button">Сбросить</button>
+   </div>
+
+</div>

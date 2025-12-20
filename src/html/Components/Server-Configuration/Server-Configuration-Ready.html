@@ -1,0 +1,123 @@
+<form action="#" method="post" name="configuration_ready" id="configuration_ready">
+   <div class="configuration__filter-radio">
+      <div class="configuration__filter-radio-list">
+         @@loop('./UI/filter-radio.html','json/lists/configuration-filter-radio-1.json')
+      </div>
+      <div class="configuration__sort js-tabs-body js-tabs-toggle js-tabs-closing js-data-scope">
+         <div>Сортировать:</div>
+         <button class="configuration__sort-value" type="button">
+            <span class="js-data-replace">По цене</span>
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+               <path d="M13.0285 16.1716L18.5455 10.8076L20 12.2218L11.9999 20L4 12.2218L5.45454 10.8076L10.9714 16.1716L10.9714 4L13.0285 4L13.0285 16.1716Z" fill="#6E48F5" />
+            </svg>
+         </button>
+         <ol class="configuration__sort-list">
+            <li>
+               <label>
+                  <input type="radio" name="sort" hidden>
+                  <span class="js-data-target js-data-get">По цене</span>
+               </label>
+            </li>
+            <li>
+               <label>
+                  <input type="radio" name="sort" hidden>
+                  <span class="js-data-target js-data-get">По популярности</span>
+               </label>
+            </li>
+            <li>
+               <label>
+                  <input type="radio" name="sort" hidden>
+                  <span class="js-data-target js-data-get">Сначала дешевые</span>
+               </label>
+            </li>
+            <li>
+               <label>
+                  <input type="radio" name="sort" hidden>
+                  <span class="js-data-target js-data-get">Сначала дорогие</span>
+               </label>
+            </li>
+         </ol>
+      </div>
+   </div>
+   <div class="configuration__filter-range">
+      <div class="configuration__range">
+         <div class="configuration__range-border">
+            <div class="configuration__range-title">Процессор</div>
+            <div class="configuration__range-group">
+               <div class="configuration__range-block">
+                  <div class="configuration__range-name">Количество ядер</div>
+                  @@include('./UI/filter-double-range.html',{
+                  min: 1,
+                  max: 126,
+                  name: 'core'
+                  })
+               </div>
+               <div class="configuration__range-block">
+                  <div class="configuration__range-name">Тактовая частота</div>
+                  @@include('./UI/filter-double-range.html',{
+                  min: 1900,
+                  max: 4000,
+                  name: 'frequency'
+                  })
+               </div>
+            </div>
+            <div class="configuration__filter-checkboxes">
+               @@loop('./UI/filter-checkbox.html','json/lists/filter-checkboxes-1.json')
+            </div>
+         </div>
+      </div>
+      <div class="configuration__range">
+         <div class="configuration__range-border">
+            <div class="configuration__range-title">Память</div>
+            <div class="configuration__range-block">
+               @@include('./UI/filter-double-range.html',{
+               min: 34,
+               max: 1024,
+               name: 'memory'
+               })
+            </div>
+            <div class="configuration__filter-checkboxes">
+               @@loop('./UI/filter-checkbox.html','json/lists/filter-checkboxes-2.json')
+            </div>
+         </div>
+      </div>
+      <div class="configuration__range">
+         <div class="configuration__range-border">
+            <div class="configuration__range-title">Диски</div>
+            <div class="configuration__range-block">
+               @@include('./UI/filter-double-range.html',{
+               min: 34,
+               max: 1024,
+               name: 'disks'
+               })
+            </div>
+            <div class="configuration__filter-checkboxes">
+               @@loop('./UI/filter-checkbox.html','json/lists/filter-checkboxes-3.json')
+            </div>
+         </div>
+      </div>
+      <button class="configuration__filter-return hover-button-icon" type="button">
+         <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M5.82843 6.99955L8.36396 9.5351L6.94975 10.9493L2 5.99955L6.94975 1.0498L8.36396 2.46402L5.82843 4.99955H13C17.4183 4.99955 21 8.58127 21 12.9996C21 17.4178 17.4183 20.9996 13 20.9996H4V18.9996H13C16.3137 18.9996 19 16.3133 19 12.9996C19 9.68585 16.3137 6.99955 13 6.99955H5.82843Z" fill="#575757" />
+         </svg>
+         <span>Сбросить</span>
+      </button>
+   </div>
+</form>
+<div class="configuration__ready-grid">
+   <article class="device-card device-card__banner">
+      <img class="device-card__banner-background" src="@img/webp/device-card-bg.webp" alt="фон">
+      <div class="device-card__wrapper">
+         <div class="device-card__banner-title">Нужно подобрать <span>конфигурацию</span> под ваш проект? </div>
+         @@include('../../UI/Button/Button.html',{
+         text:'Отправить запрос',
+         class: 'button-green'
+         })
+         <div class="device-card__availability hidden">
+            для отступа под кнопкой
+         </div>
+      </div>
+   </article>
+   @@loop('../../UI/Cards/Device-Card/Device-Card.html', 'json/lists/device-card-1.json')
+</div>
+<div class="configuration__note">*Стоимость актуальна для новых клиентов с учётом НДС</div>

@@ -1,0 +1,77 @@
+@use '../../../scss/utils/index' as *;
+
+.button {
+   padding: 16px 25px;
+   display: flex;
+   align-items: center;
+   justify-content: space-between;
+   gap: 20px;
+   min-height: 65px;
+   font-family: var(--font-family-second);
+   font-weight: 800;
+   font-size: 22px;
+   line-height: 140%;
+   letter-spacing: -0.02em;
+   border-radius: 100px;
+   transition: background-color $tr-time, color $tr-time;
+
+   svg {
+      width: 24px;
+      height: 24px;
+
+      path {
+         transition: fill $tr-time;
+      }
+   }
+
+   &[disabled] {
+      background-color: #F3F3F3 !important;
+      color: #B5B5B5 !important;
+
+      svg path {
+         fill: #B5B5B5 !important;
+      }
+   }
+
+   &.button-purple {
+      background-color: #6E48F5;
+      color: #ffffff;
+
+      svg path {
+         fill: #B7FE56;
+      }
+   }
+
+   &.button-green {
+      background-color: #B7FE56;
+
+      svg path {
+         fill: #6E48F5;
+      }
+   }
+
+   ._pc button:hover &,
+   ._pc a:hover &,
+   ._pc &:hover {
+
+      &.button-purple {
+         background-color: #242424;
+         color: #B7FE56;
+
+         svg path {
+            fill: #ffffff;
+         }
+      }
+
+      &.button-green {
+         background-color: #ffffff;
+         color: #242424;
+
+         svg path {
+            fill: #6E48F5;
+         }
+      }
+
+   }
+
+}

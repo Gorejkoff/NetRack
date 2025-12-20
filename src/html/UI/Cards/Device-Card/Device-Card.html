@@ -1,0 +1,44 @@
+<a href="#0" class="device-card @@if(context.availability == 'not-have'){disabled}">
+   <div class="device-card__header">
+      <div class="device-card__icon">
+         <img src="@img/svg/@@icon" alt="логотип intel">
+      </div>
+      <div class="device-card__title">@@title</div>
+   </div>
+
+
+   <div class="device-card__wrapper">
+      @@if(context.image){<div class="device-card__image">
+         <img src="@img/webp/@@image" alt="коммутатор">
+      </div>}
+      <div class="device-card__shell">
+         <div class="device-card__grid">
+            @@for( var i = 0; i < context.data.length; i++ ){ <div class="device-card__comps">
+               <div class="device-card__comps-item">`+context.data[i].item+`</div>
+               <div class="device-card__comps-type">`+context.data[i].type+`</div>
+         </div>
+         <div class="device-card__data">`+context.data[i].data+`</div>}
+      </div>
+   </div>
+
+   @@if(context.price){<div class="device-card__price">
+      <span class="device-card__price-value">@@price</span>
+      <span>руб/мес</span>
+   </div>}
+
+   @@include('../../../UI/Button/Button.html',{
+   link:'#0',
+   text:'Заказать сервер',
+   class: 'button-purple',
+   @@if(context.availability == 'not-have'){disabled: true,}
+   })
+
+   <div class="device-card__availability @@availability">
+      @@if(context.availability == 'have'){есть в наличии}
+      @@if(context.availability == 'few'){осталось мало}
+      @@if(context.availability == 'not-have'){нет в наличиии}
+   </div>
+
+   </div>
+
+</a>

@@ -1,0 +1,44 @@
+<!-- 
+
+   `+context.number[i]+`
+или
+   ${context.text[i]}
+
+
+   `+(i === 0 ? 'active' : '')+` 
+или
+   ${i === 0 ? 'active' : ''}
+
+-->
+
+<!-- цикл -->
+@@loop('../directory/file.html','json/file.json')
+
+<!-- цикл for -->
+@@include('html/file.html',{"arr":[1,2,3,4]})
+@@for( var i = 0; i < arr.length; i++ ) { <p>`+arr[i]+`</p> }
+
+
+   <!-- цикл с перебором массива -->
+   @@loop('html/test.html','[ { "name": "first", "number": [1,2] }, { "name": "second", "number": [ 1,2,3] } ]')
+   <div>
+      <div>@@name</div>
+      <div>
+         @@for( var i = 0; i < context.number.length; i++ ){ <p>`+context.number[i]+`</p> }
+      </div>
+   </div>
+
+   <!-- вариант условия внутри for, т.к. внутри for не получается использовать i в условии if -->
+   @@for( var i = 0; i < context.number.length; i++ ){ <p class="`+(i === 0 ? 'active' : '')+`">`+context.number[i]+`</p> }
+
+      <!-- вставка с условием или данными -->
+      @@include('html/file.html',{value: true,})
+      <!-- вариант вставки с условием -->
+      <div>Text 1</div>
+      @@if(value == true){<div>Text 2</div>}
+      <!-- или -->
+      @@if(value == true){<div>Text 1</div>}
+      @@if(value ! == true){<div>Text 2</div>}
+
+
+      <a href="#0" class="button @@if(context.props){@@props}">@@text</a>

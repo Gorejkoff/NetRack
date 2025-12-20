@@ -1,0 +1,15 @@
+.server-configuration {
+
+   &__container {}
+
+   &__tab {
+      height: 0;
+      overflow: hidden;
+      pointer-events: none;
+
+      &.active {
+         pointer-events: all;
+         height: auto;
+      }
+   }
+}

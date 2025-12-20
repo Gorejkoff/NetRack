@@ -1,0 +1,22 @@
+[
+   {
+      "text": "1024 ГБ DDR4 REG ECC",
+      "inputname": "ddr"
+   },
+   {
+      "text": "2048 ГБ DDR4 REG ECC",
+      "inputname": "ddr"
+   },
+   {
+      "text": "1024 ГБ DDR5 REG ECC",
+      "inputname": "ddr"
+   },
+   {
+      "text": "2048 ГБ DDR5 REG ECC",
+      "inputname": "ddr"
+   },
+   {
+      "text": "1024 ГБ DDR6 REG ECC",
+      "inputname": "ddr"
+   }
+]

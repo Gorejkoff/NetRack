@@ -1,0 +1,26 @@
+[
+   {
+      "text": "Xeon Silver",
+      "name": "core"
+   },
+   {
+      "text": "Xeon Gold",
+      "name": "core"
+   },
+   {
+      "text": "Xeon Platinum",
+      "name": "core"
+   },
+   {
+      "text": "Xeon E",
+      "name": "core"
+   },
+   {
+      "text": "AMD Epyc",
+      "name": "core"
+   },
+   {
+      "text": "AMD Ryzen",
+      "name": "core"
+   }
+]

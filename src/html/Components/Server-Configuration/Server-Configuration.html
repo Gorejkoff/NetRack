@@ -1,0 +1,27 @@
+<section class="server-configuration">
+   <div class="server-configuration__container">
+
+      <div class="header-section">
+         <div class="title-section">Выберите готовый сервер или соберите свою конфигурацию</div>
+      </div>
+
+      @@include('../../UI/Tabs-Switching-Buttons/Tabs-Switching-Buttons.html',{
+      json: 'json/lists/tabs-button-server-configuration.json'
+      })
+
+      <div class="server-configuration__tab active" data-tab_ts="1">
+         <form class="configuration" action="#0" method="post" name="configuration" id="configuration">
+            <div class="configuration__body">
+               @@include('./Server-Configuration-Side-Main.html',{})
+               @@include('./Server-Configuration-Side-Result.html',{})
+            </div>
+         </form>
+      </div>
+      <div class="server-configuration__tab" data-tab_ts="2">
+         <div class="configuration">
+            @@include('./Server-Configuration-Ready.html',{})
+         </div>
+      </div>
+
+   </div>
+</section>

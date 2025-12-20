@@ -1,0 +1,73 @@
+@use 'sass:math';
+
+@mixin fonts-face($fontsName, $path, $fontWeight) {
+   @font-face {
+      font-family:
+         $fontsName;
+      font-display: swap;
+      src: url("../fonts/#{$path}.woff2") format("woff2"),
+      url("../fonts/#{$path}.woff") format("woff");
+      font-weight:
+         $fontWeight;
+      font-style: normal;
+   }
+}
+
+// $prop - свойство,
+// $min - минимальное значение,
+// $max - максимальное значение,
+// $minW - минимальная ширина вьюпорта,
+// $maxW - махимальная ширина вьюпорта
+
+@function delete-unit($number) {
+   @return math.div($number, ($number * 0 + 1));
+}
+
+@mixin size_adaptive ($prop, $min, $max, $minW, $maxW) {
+
+   $minpx : delete-unit($min) + px;
+   $minWidth : delete-unit($minW) + px;
+   $maxWidth : delete-unit($maxW) - 0.02 + px;
+   $maxNum : delete-unit($max);
+   $minNum : delete-unit($min);
+   $maxWNum : delete-unit($maxW);
+   $minWNum : delete-unit($minW);
+
+   @media (min-width: $minWidth) and (max-width:$maxWidth) {
+      #{$prop}: calc($minpx + (100vw - $minWidth)/($maxWNum - $minWNum)*($maxNum - $minNum));
+   }
+}
+
+@mixin size_adaptive_vw ($prop, $min, $max, $minW, $maxW) {
+
+   $minpx : delete-unit($min) + vw;
+   $minWidth : delete-unit($minW) + px;
+   $maxWidth : delete-unit($maxW) - 0.02 + px;
+   $maxNum : delete-unit($max);
+   $minNum : delete-unit($min);
+   $maxWNum : delete-unit($maxW);
+   $minWNum : delete-unit($minW);
+
+   @media (min-width: $minWidth) and (max-width:$maxWidth) {
+      #{$prop}: calc($minpx + ((100vw - $minWidth)/($maxWNum - $minWNum) / 1px * ($maxNum - $minNum) * 1vw));
+   }
+}
+
+// $grow - коэффициент увеличения,
+// $shrink - коэффициент уменьшения,
+// $min - минимальная ширина,
+// $max - максимальная ширина,
+// $minW - минимальная ширина вьюпорта,
+// $maxW - махимальная ширина вьюпорта
+
+@mixin size_adaptive_flex ($grow, $shrink, $min, $max, $minW, $maxW) {
+   $minpx : delete-unit($min) + px;
+   $minWidth : delete-unit($minW) + px;
+   $maxWidth : delete-unit($maxW) - 0.02 + px;
+   $maxWNum : delete-unit($maxW);
+   $minWNum : delete-unit($minW);
+
+   @media (min-width: $minWidth) and (max-width:$maxWidth) {
+      flex: $grow $shrink calc($minpx + (100vw - $minWidth)/($maxWNum - $minWNum)*($max - $min));
+   }
+}

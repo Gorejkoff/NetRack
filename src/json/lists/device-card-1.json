@@ -1,0 +1,225 @@
+[
+   {
+      "title": "Xeon Platinum 8352V",
+      "icon": "icon-intel.svg",
+      "image": "",
+      "availability": "have",
+      "price": "45 550",
+      "data": [
+         {
+            "item": "CPU",
+            "type": "2x",
+            "data": "12 ядер 2,1 – 3,3 ГГц"
+         },
+         {
+            "item": "GPU",
+            "type": "4x",
+            "data": "<img src=\"@img/svg/icon-gpu.svg\" alt=\"иконка\"> RTX A4000 16 ГБ"
+         },
+         {
+            "item": "RAM",
+            "type": "DDR4",
+            "data": "1024 ГБ"
+         },
+         {
+            "item": "SSD",
+            "type": "SATA",
+            "data": "2 x 960 ГБ"
+         },
+         {
+            "item": "SSD",
+            "type": "NVMe",
+            "data": "4 x 3,92 ТБ"
+         },
+         {
+            "item": "Internet",
+            "type": "",
+            "data": "1 Гбит/с безлимит"
+         }
+      ]
+   },
+   {
+      "title": "Xeon E-2234",
+      "icon": "icon-intel.svg",
+      "image": "",
+      "availability": "have",
+      "price": "42 190",
+      "data": [
+         {
+            "item": "CPU",
+            "type": "2x",
+            "data": "4 ядра/2100-3000 МГц"
+         },
+         {
+            "item": "RAM",
+            "type": "DDR4",
+            "data": "32 ГБ"
+         },
+         {
+            "item": "SSD",
+            "type": "SATA",
+            "data": "2 x 960 ГБ"
+         },
+         {
+            "item": "Internet",
+            "type": "",
+            "data": "1 Гбит/с безлимит"
+         }
+      ]
+   },
+   {
+      "title": "EPYC 7763",
+      "icon": "icon-amd.svg",
+      "image": "",
+      "availability": "few",
+      "price": "67 000",
+      "data": [
+         {
+            "item": "CPU",
+            "type": "2x",
+            "data": "64 ядер 2,45 – 3,5 ГГц"
+         },
+         {
+            "item": "RAM",
+            "type": "DDR4",
+            "data": "32 ГБ"
+         },
+         {
+            "item": "SSD",
+            "type": "SATA",
+            "data": "2 х 1,92 TB"
+         },
+         {
+            "item": "Internet",
+            "type": "",
+            "data": "1 Гбит/с безлимит"
+         }
+      ]
+   },
+   {
+      "title": "EPYC 7763",
+      "icon": "icon-intel.svg",
+      "image": "",
+      "availability": "not-have",
+      "price": "83 000",
+      "data": [
+         {
+            "item": "CPU",
+            "type": "2x",
+            "data": "64 ядер 2,45 – 3,5 ГГц"
+         },
+         {
+            "item": "RAM",
+            "type": "DDR4",
+            "data": "512 ГБ"
+         },
+         {
+            "item": "SSD",
+            "type": "NVMe",
+            "data": "4 х 3,84 TB"
+         },
+         {
+            "item": "Internet",
+            "type": "",
+            "data": "1 Гбит/с безлимит"
+         }
+      ]
+   },
+   {
+      "title": "Xeon Silver 4310",
+      "icon": "icon-intel.svg",
+      "image": "",
+      "availability": "not-have",
+      "price": "",
+      "data": [
+         {
+            "item": "CPU",
+            "type": "2x",
+            "data": "12 ядер 2,1 – 3,3 ГГц"
+         },
+         {
+            "item": "GPU",
+            "type": "4x",
+            "data": "<img src=\"@img/svg/icon-gpu.svg\" alt=\"иконка\"> RTX A4000 16 ГБ"
+         },
+         {
+            "item": "RAM",
+            "type": "DDR4",
+            "data": "64 ГБ"
+         },
+         {
+            "item": "SSD",
+            "type": "SATA",
+            "data": "2 x 960 ГБ"
+         },
+         {
+            "item": "Internet",
+            "type": "",
+            "data": "1 Гбит/с безлимит"
+         }
+      ]
+   },
+   {
+      "title": "Xeon Gold 5320",
+      "icon": "icon-intel.svg",
+      "image": "",
+      "availability": "few",
+      "price": "31 550",
+      "data": [
+         {
+            "item": "CPU",
+            "type": "2x",
+            "data": "12 ядер 2,1 – 3,3 ГГц"
+         },
+         {
+            "item": "GPU",
+            "type": "4x",
+            "data": "<img src=\"@img/svg/icon-gpu.svg\" alt=\"иконка\"> RTX A4000 16 ГБ"
+         },
+         {
+            "item": "RAM",
+            "type": "DDR4",
+            "data": "64 ГБ"
+         },
+         {
+            "item": "SSD",
+            "type": "SATA",
+            "data": "2 x 960 ГБ"
+         },
+         {
+            "item": "Internet",
+            "type": "",
+            "data": "1 Гбит/с безлимит"
+         }
+      ]
+   },
+   {
+      "title": "EPYC 7763",
+      "icon": "icon-amd.svg",
+      "image": "",
+      "availability": "not-have",
+      "price": "",
+      "data": [
+         {
+            "item": "CPU",
+            "type": "2x",
+            "data": "12 ядер 2,1 – 3,3 ГГц"
+         },
+         {
+            "item": "RAM",
+            "type": "DDR4",
+            "data": "64 ГБ"
+         },
+         {
+            "item": "SSD",
+            "type": "NVMe",
+            "data": "4 х 3,84 TB"
+         },
+         {
+            "item": "Internet",
+            "type": "",
+            "data": "1 Гбит/с безлимит"
+         }
+      ]
+   }
+]

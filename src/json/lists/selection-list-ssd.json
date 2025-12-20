@@ -1,0 +1,22 @@
+[
+   {
+      "text": "NVMe SATA Enterprise",
+      "inputname": "ssd"
+   },
+   {
+      "text": "Seagate Nytro 5550",
+      "inputname": "ssd"
+   },
+   {
+      "text": "WD Ultrastar DC SN840",
+      "inputname": "ssd"
+   },
+   {
+      "text": "Micron 9400 PRO NVMe",
+      "inputname": "ssd"
+   },
+   {
+      "text": "Intel Optane SSD DC P5800X",
+      "inputname": "ssd"
+   }
+]
