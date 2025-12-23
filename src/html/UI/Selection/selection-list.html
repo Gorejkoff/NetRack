@@ -1,0 +1,23 @@
+<div class="selection-list js-tabs-body js-tabs-toggle js-tabs-closing js-data-scope @@if(context.class){@@class}">
+   <button class="selection-list__border" type="button">
+      <span class="selection-list__wrapper">
+         <span class="selection-list__text-group js-data-replace">
+            <span>@@text</span>
+            @@if(context.subtext){<span class="selection-list__subtext">@@subtext</span>}
+            @@if(context.subtextcolor){<span class="selection-list__subtext-color">@@subtextcolor</span>}
+         </span>
+         <span class="selection-list__arrow">
+            <svg width="9" height="6" viewBox="0 0 9 6" fill="none" xmlns="http://www.w3.org/2000/svg">
+               <path d="M4.24268 5.65685L0 1.41425L1.41422 0L4.24268 2.82845L7.07108 0L8.48528 1.41425L4.24268 5.65685Z" fill="#191919" />
+            </svg>
+         </span>
+      </span>
+   </button>
+   <div class="selection-list__shell js-tabs-shell">
+      <div class="js-tabs-inner">
+         <div class="selection-list__border-inner scroll">
+            @@loop('./selection.html','json/lists/@@json')
+         </div>
+      </div>
+   </div>
+</div>

@@ -1,0 +1,30 @@
+[
+   {
+      "title": "IXcellerate North",
+      "active": true
+   },
+   {
+      "title": "IXcellerate South",
+      "active": false
+   },
+   {
+      "title": "Останкино",
+      "active": false
+   },
+   {
+      "title": "StoreData",
+      "active": false
+   },
+   {
+      "title": "DataLine Nord",
+      "active": false
+   },
+   {
+      "title": "DataPro",
+      "active": false
+   },
+   {
+      "title": "ММТС-9 (М9)",
+      "active": false
+   }
+]

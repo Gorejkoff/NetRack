@@ -44,24 +44,20 @@
                </label>
             </div>
 
-
             <div class="configuration__selection-group">
-               @@include('./UI/selection-list.html',{
+               @@include('../../UI/Selection/selection-list.html',{
                text:'Intel Xeon Platinum 8352V',
                subtext:'(8 ядер/2100-3000 МГц)',
                json:'selection-list-cpu.json',
                class:'width-lg'
                })
 
-               @@include('./UI/selection-list.html',{
+               @@include('../../UI/Selection/selection-list.html',{
                text:'2',
                json:'selection-list-quantity.json',
                class:'width-xs'
                })
             </div>
-
-
-
 
          </div>
 
@@ -84,8 +80,6 @@
          name:'Диски',
          path:'../Components/Selection-Port.html'
          })
-
-
 
          <div class="configuration__parameter">
             <div class="configuration__parameter-name">
@@ -160,11 +154,6 @@
 
          </div>
 
-
-
-
       </div>
    </div>
-
-
 </div>

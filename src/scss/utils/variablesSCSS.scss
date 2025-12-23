@@ -7,6 +7,6 @@ $width-content: 2116px;
 //  максимальный размер контейнера с отступами 
 $max-width-container: $padding-desktop * 2 + $width-content;
 //  transition time 
-$tr-time: .2s;
-$tr-time-l: .5s;
+$tr-time: 0.2s;
+$tr-time-l: 0.5s;
 $bezier: cubic-bezier(.6, -0.01, .24, 1);

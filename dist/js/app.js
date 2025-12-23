@@ -22,7 +22,7 @@ const MIN768 = window.matchMedia('(min-width: 768px)');
 
 // variables
 const HEADER = document.getElementById('header');
-
+const GALLERY_ACCORDION_LIST = document.querySelectorAll('.gallery-accordion__body .gallery-accordion__item');
 
 
 function throttle(callee, timeout) {
@@ -57,7 +57,8 @@ window.addEventListener('resize', () => {
 
 // ** ======================= CLICK ======================  ** //
 document.documentElement.addEventListener("click", (event) => {
-   if (event.target.closest('.open-menu')) { openHeaderMenu() }
+   if (event.target.closest('.open-menu')) { openHeaderMenu() };
+   if (event.target.closest('.gallery-accordion__item')) { changeGalleryAccordion(event.target.closest('.gallery-accordion__item')) }
 })
 
 function openHeaderMenu() {
@@ -67,7 +68,11 @@ function closeHeaderMenu() {
    document.body.classList.remove('menu-is-open')
 }
 
-
+function changeGalleryAccordion(target) {
+   if (GALLERY_ACCORDION_LIST.length > 0) {
+      GALLERY_ACCORDION_LIST.forEach(e => e.classList.toggle('active', e == target))
+   }
+}
 // подмена на выбранный контент
 // js-data-target - область клика
 // js-data-get - источник данных

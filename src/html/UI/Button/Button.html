@@ -1,6 +1,12 @@
-<button class="button @@if(context.class){@@class}" type="button" @@if(context.disabled){disabled}>
+@@if(context.link){<a href="@@link" class="button @@if(context.class){@@class} @@if(context.disabled){disabled}">
    <span>@@text</span>
    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
       <path d="M16.1716 10.9715L10.8076 5.45454L12.2218 4L20 12.0001L12.2218 20L10.8076 18.5455L16.1716 13.0286H4V10.9715H16.1716Z" fill="#191919" />
    </svg>
-</button>
+</a>}
+@@if(!context.link){<button class="button @@if(context.class){@@class}" type="@@if(context.type){@@type}@@if(!context.type){button}" @@if(context.disabled){disabled}>
+   <span>@@text</span>
+   <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <path d="M16.1716 10.9715L10.8076 5.45454L12.2218 4L20 12.0001L12.2218 20L10.8076 18.5455L16.1716 13.0286H4V10.9715H16.1716Z" fill="#191919" />
+   </svg>
+</button>}

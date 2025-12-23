@@ -30,15 +30,17 @@
 
    <!-- вариант условия внутри for, т.к. внутри for не получается использовать i в условии if -->
    @@for( var i = 0; i < context.number.length; i++ ){ <p class="`+(i === 0 ? 'active' : '')+`">`+context.number[i]+`</p> }
-
-      <!-- вставка с условием или данными -->
-      @@include('html/file.html',{value: true,})
-      <!-- вариант вставки с условием -->
-      <div>Text 1</div>
-      @@if(value == true){<div>Text 2</div>}
       <!-- или -->
-      @@if(value == true){<div>Text 1</div>}
-      @@if(value ! == true){<div>Text 2</div>}
+      @@for( var i = 0; i < context.number.length; i++ ){ `+(context.data[i].type ? '<div class="device-card__comps-type">' +context.data[i].type+'</div>' : '')+` }
+
+         <!-- вставка с условием или данными -->
+         @@include('html/file.html',{value: true,})
+         <!-- вариант вставки с условием -->
+         <div>Text 1</div>
+         @@if(value == true){<div>Text 2</div>}
+         <!-- или -->
+         @@if(value == true){<div>Text 1</div>}
+         @@if(value ! == true){<div>Text 2</div>}
 
 
-      <a href="#0" class="button @@if(context.props){@@props}">@@text</a>
+         <a href="#0" class="button @@if(context.props){@@props}">@@text</a>

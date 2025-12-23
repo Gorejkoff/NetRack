@@ -1,4 +1,4 @@
-<a href="#0" class="device-card @@if(context.availability == 'not-have'){disabled}">
+<div class="device-card @@if(context.availability == 'not-have'){disabled}">
    <div class="device-card__header">
       <div class="device-card__icon">
          <img src="@img/svg/@@icon" alt="логотип intel">
@@ -15,7 +15,7 @@
          <div class="device-card__grid">
             @@for( var i = 0; i < context.data.length; i++ ){ <div class="device-card__comps">
                <div class="device-card__comps-item">`+context.data[i].item+`</div>
-               <div class="device-card__comps-type">`+context.data[i].type+`</div>
+               `+(context.data[i].type ? '<div class="device-card__comps-type">'+context.data[i].type+'</div>' : '')+`
          </div>
          <div class="device-card__data">`+context.data[i].data+`</div>}
       </div>
@@ -39,6 +39,6 @@
       @@if(context.availability == 'not-have'){нет в наличиии}
    </div>
 
-   </div>
+</div>
 
-</a>
+</div>

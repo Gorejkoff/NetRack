@@ -1,0 +1,20 @@
+<section class="gallery-accordion padding-section">
+   <img class="gallery-accordion__background" src="@img/webp/bg-1.webp" alt="фон" aria-hidden="true">
+   <div class="gallery-accordion__container">
+      <div class="header-section">
+         <div class="header-with-button">
+            <div class="gallery-accordion__title title-section">Размещаем серверы <br>в надежных дата-центрах Москвы</div>
+            <div>
+               @@include('../../UI/Button/Button.html',{
+               text:'Подробнее о дата-центрах',
+               link:'#0',
+               class:'button-arrow-purple'
+               })
+            </div>
+         </div>
+      </div>
+      <div class="gallery-accordion__body">
+         @@loop('./Gallery-Accordion-Item.html','json/lists/gallery-accordion.json')
+      </div>
+   </div>
+</section>

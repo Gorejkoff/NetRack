@@ -8,7 +8,12 @@
 @use "../../html/UI/Tabs-Switching-Buttons/tabs-switching-buttons";
 @use "../../html/UI/Button/button";
 @use "../../html/UI/Cards/Device-Card/device-card";
+@use "../../html/UI/Selection/selection";
 
 // components
 @use '../../html/Components/Included/included';
 @use '../../html/Components/Server-Configuration/server-configuration';
+@use '../../html/Components/Get-Help/get-help';
+@use '../../html/Components/Ideal-Infrastructur/ideal-infrastructur';
+@use '../../html/Components/Gallery-Accordion/gallery-accordion';
+@use '../../html/Components/Info-Block/info-block';
