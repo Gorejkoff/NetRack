@@ -1,22 +1,46 @@
+@use '../../../scss/utils' as *;
+
 .tabs-switching-buttons {
    margin-bottom: 10px;
    display: flex;
+   flex-direction: column;
    gap: 10px;
+
+   @media (min-width:1024px) {
+      flex-direction: row;
+   }
 
    a,
    button {
-      padding: 30px;
+      padding: 10px 20px;
       flex: 1 1 1%;
       display: flex;
       flex-direction: column;
       align-items: center;
       justify-content: center;
-      gap: 5px;
-      min-height: 100px;
+      min-height: 55px;
       border: 1px solid #B5B5B5;
       border-radius: 10px;
       background-color: transparent;
       transition: background-color 0.3s, border-color 0.3s;
+
+      @include size_adaptive (min-height, 62, 120, 1366, 2560);
+
+      @media (min-width:1366px) {
+         gap: 3px;
+      }
+
+      @media (min-width:1920px) {
+         padding: 20px 40px;
+      }
+
+      @media (min-width:2560px) {
+         font-size: 28px;
+         min-height: 120px;
+         gap: 5px;
+      }
+
+
 
       ._pc &:hover,
       &.active {
@@ -36,15 +60,26 @@
    &__text {
       font-family: var(--font-family-second);
       font-weight: 800;
-      font-size: 28px;
+      font-size: 16px;
       line-height: 110%;
       letter-spacing: -0.01em;
       text-align: center;
       transition: color 0.3s;
+      @include size_adaptive (font-size, 16, 28, 1366, 2560);
+
+      @media (min-width:2560px) {
+         font-size: 28px;
+      }
    }
 
    &__info {
       color: #6E48F5;
+      font-size: 13px;
       transition: color 0.3s;
+      @include size_adaptive (font-size, 13, 20, 1366, 2560);
+
+      @media (min-width:2560px) {
+         font-size: 20px;
+      }
    }
 }

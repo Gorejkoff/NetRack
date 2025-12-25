@@ -4,16 +4,18 @@ body {
    font-family: var(--font-family);
    font-weight: 400;
    color: var(--color-black);
-   --padding-container: #{$padding-mobile};
-   --container-width: #{$width-content};
-   --max-width-container: #{$max-width-container};
+   --padding-container: 10px;
+   --container-width: 1120px;
+   --max-width-container: calc(var(--container-width) + var(--padding-container) * 2);
+   --indent-section: 40px;
 
-   @media (min-width:768px) {
-      --padding-container: #{$padding-tablet};
-   }
+   @include size_adaptive (--container-width, 1120, 2116, 1366, 2560);
+   @include size_adaptive (--indent-section, 40, 70, 768, 1366);
+   @include size_adaptive (--indent-section, 70, 120, 1366, 2560);
 
-   @media (min-width:1024px) {
-      --padding-container: #{$padding-desktop};
+   @media (min-width:2560px) {
+      --indent-section: 120px;
+      --container-width: 2116px;
    }
 }
 
@@ -146,8 +148,11 @@ label {
 .header-section {
    margin-bottom: 20px;
 
-   @media (min-width:1024px) {
-      margin-bottom: 50px;
+   @include size_adaptive (font-size, 20, 40, 768, 1366);
+   @include size_adaptive (font-size, 40, 70, 1366, 2560);
+
+   @media (min-width:2560px) {
+      margin-bottom: 70px;
    }
 }
 
@@ -163,11 +168,10 @@ label {
    line-height: 100%;
    letter-spacing: -0.02em;
 
-   @media (min-width:768px) {
-      font-size: 50px;
-   }
+   @include size_adaptive (font-size, 30, 36, 768, 1366);
+   @include size_adaptive (font-size, 36, 70, 1366, 2560);
 
-   @media (min-width:1024px) {
+   @media (min-width:2560px) {
       font-size: 70px;
    }
 }
@@ -188,49 +192,19 @@ label {
 }
 
 .padding-section {
-   padding-top: 40px;
-   padding-bottom: 40px;
-
-   &+.padding-section {
-      margin-top: 10px;
-   }
-
-   @media (min-width:768px) {
-      padding-top: 80px;
-      padding-bottom: 80px;
-   }
-
-   @media (min-width:1024px) {
-      padding-top: 120px;
-      padding-bottom: 120px;
-   }
+   margin-top: 10px;
+   margin-bottom: 10px;
+   padding-top: var(--indent-section);
+   padding-bottom: var(--indent-section);
 }
 
 .margin-section {
-   margin-top: 40px;
-   margin-bottom: 40px;
-
-   @media (min-width:768px) {
-      margin-top: 80px;
-      margin-bottom: 80px;
-   }
-
-   @media (min-width:1024px) {
-      margin-top: 120px;
-      margin-bottom: 120px;
-   }
+   margin-top: var(--indent-section);
+   margin-bottom: var(--indent-section);
 }
 
 .margin-bottom-section {
-   margin-bottom: 40px;
-
-   @media (min-width:768px) {
-      margin-bottom: 80px;
-   }
-
-   @media (min-width:1024px) {
-      margin-bottom: 120px;
-   }
+   margin-bottom: var(--indent-section);
 }
 
 .scroll::-webkit-scrollbar {

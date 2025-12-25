@@ -1,22 +1,22 @@
 [
    {
-      "text": "128",
+      "text": "128 ГБ",
       "inputname": "size"
    },
    {
-      "text": "256",
+      "text": "256 ГБ",
       "inputname": "size"
    },
    {
-      "text": "512",
+      "text": "512 ГБ",
       "inputname": "size"
    },
    {
-      "text": "1024",
+      "text": "1024 ГБ",
       "inputname": "size"
    },
    {
-      "text": "2048",
+      "text": "2048 ГБ",
       "inputname": "size"
    }
 ]

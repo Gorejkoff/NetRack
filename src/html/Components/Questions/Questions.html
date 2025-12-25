@@ -1,0 +1,21 @@
+<section class="questions margin-section">
+   <div class="questions__container">
+      <div class="header-with-button">
+         <div class="title-section">Ответы на часто задаваемые вопросы</div>
+         <div>
+            @@include('../../UI/Button/Button.html',{
+            text:'Показать все вопросы',
+            link:'#0',
+            class:'button-border button-arrow-purple'
+            })
+         </div>
+      </div>
+      @@loop('./Questions-Tabs.html',[
+      {title: 'Правила списания средств за услугу виртуального сервера'},
+      {title: 'Где находятся ваши выделенные серверы?'},
+      {title: 'Могу ли я выбрать дата-центр?'},
+      {title: 'Можно ли мне разместить у вас в дата-центре мои серверы и взять в аренду дополнительные серверы, которые мне нужны для расширения нашего проекта?'},
+      {title: 'Могу ли я арендовать у вас выделенный сервер и разместить у себя в офисе?'},
+      ])
+   </div>
+</section>

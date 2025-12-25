@@ -1,10 +1,17 @@
 @use '../../../scss/utils' as *;
 
 .selection-list {
+   --tabs-duration: 0s;
+   --height-wrapper: 36px;
    display: inline-block;
    position: relative;
-   --tabs-duration: 0s;
    width: 100%;
+
+   @include size_adaptive (--height-wrapper, 36, 63, 1366, 2560);
+
+   @media (min-width:2560px) {
+      --height-wrapper: 63px;
+   }
 
    ._pc &:hover {
 
@@ -20,19 +27,39 @@
    }
 
    &.width-xs {
-      flex: 0 0 100px;
+      flex: 0 0 48px;
+
+      @include size_adaptive_flex (0, 0, 48, 100, 1366, 2560);
+
+      @media (min-width:2560px) {
+         flex: 0 0 100px;
+      }
    }
 
    &.width-sm {
-      flex: 0 0 141px
+      flex: 0 0 85px;
+
+      @include size_adaptive_flex (0, 0, 85, 141, 1366, 2560);
+
+      @media (min-width:2560px) {
+         flex: 0 0 141px;
+      }
    }
 
    &.width-md {
-      flex: 0 1 433px;
+      flex: 0 1 auto;
+
+      @media (min-width:1366px) {
+         flex: 0 1 433px;
+      }
    }
 
    &.width-lg {
-      flex: 0 1 690px;
+      flex: 0 1 auto;
+
+      @media (min-width:1366px) {
+         flex: 0 1 690px;
+      }
    }
 
 
@@ -51,16 +78,29 @@
    }
 
    &__wrapper {
-      padding: 16px 20px;
+      padding: 10px;
       display: flex;
       align-items: center;
       justify-content: space-between;
-      gap: 10px;
+
       height: 100%;
-      min-height: 63px;
+      min-height: var(--height-wrapper);
       width: 100%;
-      background-color: #F3F3F3;
+      background-color: #ffffff;
       transition: background-color $tr-time, color $tr-time;
+
+      @media (min-width:1366px) {
+         background-color: #F3F3F3;
+      }
+
+      @media (min-width:1920px) {
+         gap: 10px;
+         padding: 10px 15px;
+      }
+
+      @media (min-width:2560px) {
+         padding: 16px 20px;
+      }
 
       ._pc .configuration__border-inner &:hover {
          background-color: #6E48F5;
@@ -75,13 +115,18 @@
 
    &__text-group {
       font-weight: 500;
-      font-size: 22px;
+      font-size: 12px;
       line-height: 140%;
       letter-spacing: -0.02em;
+      @include size_adaptive (font-size, 12, 22, 1366, 2560);
+
+      @media (min-width:2560px) {
+         font-size: 22px;
+      }
    }
 
    &__subtext {
-      font-size: 18px;
+      font-size: 0.81em;
       color: #575757;
       transition: color $tr-time;
    }
@@ -109,19 +154,29 @@
       border-top: none;
       border-radius: 0 0 5px 5px;
       overflow: hidden;
-      max-height: 262px;
+      max-height: calc(var(--height-wrapper) * 4.1);
       overflow-y: auto;
       transition: border-color $tr-time;
+
+      @media (min-width:2560px) {
+         max-height: 262px;
+      }
    }
 
    &__arrow {
-      width: 24px;
-      min-width: 24px;
-      height: 24px;
+      --size: 18px;
+      width: var(--size);
+      min-width: var(--size);
+      height: var(--size);
       display: flex;
       align-items: center;
       justify-content: center;
       transition: transform var(--tabs-duration, $tr-time-l);
+      @include size_adaptive (--size, 18, 24, 1366, 2560);
+
+      @media (min-width:2560px) {
+         --size: 24px;
+      }
 
       svg {
          width: 9px;

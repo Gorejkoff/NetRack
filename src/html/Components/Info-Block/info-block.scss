@@ -1,5 +1,6 @@
 .info-block {
    padding: 0 !important;
+   // overflow: hidden;
 
    &__container {}
 
@@ -10,9 +11,11 @@
    }
 
    &__contant {
-      --offset: calc((100vw - 100% - var(--padding-container)) / 2);
+      margin-top: 0;
+      margin-bottom: 0;
+      --offset: calc((100vw - 100% - var(--padding-container) - var(--gap)) / 2);
       --padding: min(200px, var(--offset));
-      margin-left: calc((var(--offset) + var(--gap)) * -1);
+      margin-left: calc((var(--offset)) * -1);
       padding-right: max(var(--padding), var(--padding-container));
       padding-left: max(var(--offset), var(--padding-container));
       flex: 0 0 calc(60% - var(--gap) + var(--offset));
@@ -61,9 +64,9 @@
    }
 
    &__image {
-      --offset: calc((100vw - 100%) / 2 + var(--gap));
+      --offset: calc((100vw - 100% - var(--gap)) / 2);
       position: relative;
-      flex: 0 0 calc(40% + var(--offset));
+      flex: 0 0 calc(40% + var(--offset) - var(--gap));
       margin-right: calc(var(--offset) * -1);
       min-height: 100%;
       border-radius: 20px;

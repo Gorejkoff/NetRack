@@ -1,9 +1,23 @@
 @use '../utils/index' as *;
 
 .configuration {
-   padding: 50px;
-   border-radius: 10px;
+   margin-left: -10px;
+   padding: 10px;
+   width: 100vw;
    background-color: #F3F3F3;
+
+   @media (min-width:1024px) {
+      width: auto;
+      margin-left: 0;
+      border-radius: 10px;
+      padding: 25px;
+   }
+
+   @include size_adaptive (padding, 25, 50, 1366, 2560);
+
+   @media (min-width:2560px) {
+      padding: 50px;
+   }
 
    .button {
       width: 100%;
@@ -11,7 +25,12 @@
 
    &__body {
       display: flex;
+      flex-direction: column;
       gap: 10px;
+
+      @media (min-width:1366px) {
+         flex-direction: row;
+      }
    }
 
    &__side-main {
@@ -19,61 +38,128 @@
    }
 
    &__side-result {
-      flex: 0 0 696px;
+      @include size_adaptive_flex (0, 0, 368, 696, 1366, 2560);
+
+      @media (min-width:2560px) {
+         flex: 0 0 696px;
+      }
    }
 
    &__section {
-      padding: 10px;
-      border-radius: 8px;
-      border: 1px solid #B5B5B5;
-      background-color: #ffffff;
+
+      @media (min-width:1366px) {
+         padding: 10px;
+         background-color: #ffffff;
+         border: 1px solid #B5B5B5;
+         border-radius: 4px;
+      }
+
+      @media (min-width:1920px) {
+         border-radius: 6px;
+      }
+
+      @media (min-width:2560px) {
+         border-radius: 8px;
+      }
 
       &:not(:last-child) {
          margin-bottom: 10px;
       }
+
    }
 
    &__section-title {
-      padding: 20px 30px;
+      padding: 10px 15px;
       font-weight: 600;
-      font-size: 24px;
+      font-size: 14px;
       color: #575757;
       line-height: 140%;
       border-radius: 3px;
-      background-color: #F3F3F3;
-      min-height: 75px;
+      background-color: #ffffff;
+
+      @include size_adaptive (font-size, 14, 24, 1366, 2560);
+
+      @media (min-width:1366px) {
+         padding: 10px 15px;
+         background-color: #F3F3F3;
+      }
+
+      @media (min-width:1920px) {
+         padding: 15px 20px;
+      }
+
+      @media (min-width:2560px) {
+         padding: 20px 30px;
+         font-size: 24px;
+      }
    }
 
    &__section-wrapper {
-      padding: 30px;
+      padding: 15px 0;
+
+      @media (min-width:1366px) {
+         padding: 10px;
+         padding: 15px;
+      }
+
+      @media (min-width:1920px) {
+         padding: 20px;
+      }
+
+      @media (min-width:2560px) {
+         padding: 30px;
+      }
    }
 
    &__parameter {
       &:not(:last-child) {
-         margin-bottom: 30px;
+         margin-bottom: 15px;
+
+         @media (min-width:1920px) {
+            margin-bottom: 20px;
+         }
+
+         @media (min-width:2560px) {
+            margin-bottom: 30px;
+         }
       }
    }
 
    &__parameter-name {
-      margin-bottom: 20px;
+      margin-bottom: 10px;
       display: flex;
       align-items: center;
       gap: 5px;
       font-weight: 600;
-      font-size: 24px;
+      font-size: 14px;
       line-height: 140%;
+      @include size_adaptive (font-size, 14, 24, 1366, 2560);
+
+      @media (min-width:1920px) {
+         margin-bottom: 15px;
+      }
+
+      @media (min-width:2560px) {
+         margin-bottom: 20px;
+         font-size: 24px;
+      }
 
       a,
       button {
-         padding: 4px;
          display: flex;
          align-items: center;
          justify-content: center;
+         padding: 0.16em;
       }
 
       svg {
-         width: 20px;
+         width: 10px;
          height: auto;
+         @include size_adaptive (width, 10, 20, 1366, 2560);
+
+         @media (min-width:2560px) {
+            width: 20px;
+         }
       }
    }
 
@@ -88,8 +174,17 @@
 
    &__cpu {
       display: flex;
-      flex-wrap: wrap;
       gap: 10px;
+      overflow-x: auto;
+
+      &::-webkit-scrollbar {
+         display: none;
+      }
+
+      @media (min-width:1366px) {
+         overflow-x: visible;
+         flex-wrap: wrap;
+      }
 
       &:not(:last-child) {
          margin-bottom: 20px;
@@ -97,31 +192,63 @@
    }
 
    &__cpu-icon {
-      padding: 24px;
+      padding: 12px;
       display: block;
       background-color: #F3F3F3;
       border: 1px solid #B5B5B5;
       border-radius: 5px;
+      width: 105px;
+
+      @include size_adaptive (width, 105, 200, 1366, 2560);
+      @include size_adaptive (padding, 12, 24, 1366, 2560);
+
+      @media (min-width:2560px) {
+         padding: 24px;
+         width: 200px;
+      }
 
       img {
+         width: 100%;
          box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.04);
       }
    }
 
    &__with-logo {
-      padding: 30px;
+      padding: 10px 30px;
       display: flex;
+      flex-direction: column;
       align-items: center;
       justify-content: space-between;
       gap: 5px;
       width: 100%;
-      min-height: 115px;
+      min-height: 60px;
       border-radius: 5px;
       background-color: #F3F3F3;
+      text-align: center;
       font-weight: 600;
-      font-size: 24px;
+      font-size: 13px;
       line-height: 140%;
       letter-spacing: -0.02em;
+      border: 1px solid #B5B5B5;
+
+      @media (min-width:1024px) {
+         padding: 10px;
+         flex-direction: row;
+         text-align: left;
+      }
+
+      @media (min-width:1366px) {
+         border: none;
+      }
+
+      @include size_adaptive (font-size, 13, 24, 1366, 2560);
+      @include size_adaptive (min-height, 60, 115, 1366, 2560);
+
+      @media (min-width:2560px) {
+         padding: 30px;
+         min-height: 115px;
+         font-size: 24px;
+      }
    }
 
    &__with-logo-image {
@@ -142,22 +269,42 @@
       }
 
       img {
+         width: 38px;
          position: relative;
          z-index: 1;
+         @include size_adaptive (width, 38, 70, 1366, 2560);
+
+         @media (min-width:2560px) {
+            width: 70px;
+         }
       }
    }
 
    &__section-grid {
       display: grid;
-      grid-template-columns: 1fr 1fr;
-      column-gap: 62px;
+      grid-template-columns: 1fr;
+      @include size_adaptive (column-gap, 32, 62, 1366, 2560);
+
+      @media (min-width:1366px) {
+         grid-template-columns: 1fr 1fr;
+         column-gap: 32px;
+         row-gap: 0;
+      }
+
+      @media (min-width:2560px) {
+         column-gap: 62px;
+      }
    }
 
    &__selection-group {
       display: flex;
       align-items: stretch;
-      gap: 10px;
+      gap: 5px;
       width: 100%;
+
+      @media (min-width:1366px) {
+         gap: 10px;
+      }
 
       &:not(:last-child) {
          padding-bottom: 10px;
@@ -165,15 +312,28 @@
    }
 
 
-   &__dutton-add {
+   &__button-add {
+      --width: 36px;
       display: flex;
       align-items: center;
       justify-content: center;
-      width: 64px;
+      width: var(--width);
+      min-width: var(--width);
       min-height: 100%;
       border-radius: 5px;
       border: 1px solid #B5B5B5;
       overflow: hidden;
+      background-color: #ffffff;
+
+      @media (min-width:1366px) {
+         background-color: transparent;
+      }
+
+      @include size_adaptive (--width, 36, 64, 1366, 2560);
+
+      @media (min-width:2560px) {
+         --width: 64px;
+      }
 
       svg,
       img {
@@ -182,29 +342,68 @@
 
    }
 
+   &__selection-message {
+      padding: 2px 6px;
+      display: inline-block;
+      font-weight: 500;
+      font-size: 12px;
+      line-height: 140%;
+      color: #ffffff;
+      background-color: #FF383C;
+      border-radius: 10px;
+      @include size_adaptive (font-size, 12, 18, 1366, 2560);
+
+      @media (min-width:1366px) {
+         color: #FF383C;
+         background-color: #F3F3F3;
+         padding: 3px 12px;
+      }
+
+      @media (min-width:2560px) {
+         font-size: 18px;
+      }
+   }
+
    &__filter-radio {
       margin-bottom: 30px;
       display: flex;
+      flex-direction: column;
       justify-content: space-between;
       align-items: center;
       gap: 20px;
+
+      @media (min-width:1366px) {
+         flex-direction: row;
+      }
    }
 
    &__filter-radio-list {
       display: flex;
       flex-wrap: wrap;
       gap: 5px;
+
+      &>* {
+         @media (max-width:1365.98px) {
+            flex: 1 1 auto;
+         }
+      }
    }
 
    &__filter-radio-item {
       display: block;
-      padding: 10px 20px;
+      padding: 0.5em 1em;
       font-weight: 500;
-      font-size: 20px;
+      font-size: 13px;
       line-height: 140%;
+      text-align: center;
       border: 1px solid #B5B5B5;
       background-color: #ffffff;
       border-radius: 100px;
+      @include size_adaptive (font-size, 13, 20, 1366, 2560);
+
+      @media (min-width:2560px) {
+         font-size: 20px;
+      }
    }
 
    &__sort {
@@ -212,8 +411,13 @@
       display: flex;
       align-items: center;
       gap: 10px;
-      font-size: 22px;
+      font-size: 13px;
       line-height: 140%;
+      @include size_adaptive (font-size, 13, 22, 1366, 2560);
+
+      @media (min-width:2560px) {
+         font-size: 22px;
+      }
    }
 
    &__sort-list {
@@ -229,11 +433,16 @@
       box-shadow: 0 4px 17px 0 rgba(0, 0, 0, 0.15);
       background-color: #ffffff;
       border-radius: 5px;
-      font-size: 22px;
+      font-size: 13px;
       line-height: 140%;
       opacity: 0;
       pointer-events: none;
       overflow: hidden;
+      @include size_adaptive (font-size, 13, 22, 1366, 2560);
+
+      @media (min-width:2560px) {
+         font-size: 22px;
+      }
 
       .js-tabs-open & {
          opacity: 1;
@@ -260,23 +469,30 @@
       align-items: center;
       justify-content: center;
       gap: 10px;
-      flex: 0 1 100px;
+      flex: 1 1 100px;
       background-color: #ffffff;
       border-radius: 3px;
       font-weight: 600;
       font-size: 22px;
       line-height: 140%;
+
+      @media (min-width:1366px) {
+         flex: 0 1 100px;
+      }
    }
 
    &__sort-value {
       display: flex;
       align-items: center;
+      white-space: nowrap;
       color: #6E48F5;
       text-decoration: underline;
       text-decoration-style: dotted;
       transition: color $tr-time, text-decoration-color $tr-time;
 
       svg {
+         width: 1em;
+         height: auto;
          transition: transform $tr-time;
 
          path {
@@ -302,9 +518,14 @@
    &__filter-range {
       padding-top: 1em;
       display: flex;
+      flex-wrap: wrap;
       align-items: stretch;
       gap: 10px;
       font-size: 22px;
+
+      @media (min-width:1920px) {
+         flex-wrap: nowrap;
+      }
    }
 
    &__range {
@@ -323,6 +544,7 @@
       padding-right: 30px;
       border: 1px solid #B5B5B5;
       border-radius: 3px;
+      width: 100%;
    }
 
    &__range-title {
@@ -338,13 +560,22 @@
 
    &__range-group {
       display: flex;
+      flex-direction: column;
       gap: 40px;
+
+      @media (min-width:768px) {
+         flex-direction: row;
+      }
    }
 
    &__range-block {
-      display: flex;
-      align-items: flex-end;
+      flex: 1 1 auto;
       gap: 20px;
+
+      @media (min-width:1366px) {
+         display: flex;
+         align-items: flex-end;
+      }
    }
 
    &__range-name {
@@ -353,12 +584,18 @@
    }
 
    &__double-range {
+
       flex: 1 0 300px;
       --size-spin: 19px;
       font-size: 18px;
       padding-top: calc(var(--size-spin) + 1em);
       padding-bottom: calc(var(--size-spin) / 2);
-      min-width: 300px;
+
+      @include size_adaptive_flex (1, 0, 100, 300, 1366, 2560);
+
+      @media (min-width:2560px) {
+         flex: 1 0 300px;
+      }
    }
 
    &__double-range-track {
@@ -450,14 +687,39 @@
    &__ready-grid {
       margin-top: 30px;
       display: grid;
-      grid-template-columns: 1fr 1fr 1fr 1fr;
+      grid-template-columns: 1fr;
       grid-auto-rows: 1fr;
       gap: 10px;
+
+      @media (min-width:1024px) {
+         grid-template-columns: 1fr 1fr;
+      }
+
+      @media (min-width:1366px) {
+         grid-template-columns: 1fr 1fr 1fr;
+      }
+
+      @media (min-width:1920px) {
+         grid-template-columns: 1fr 1fr 1fr 1fr;
+      }
    }
 
    &__parameter-list {
+      --padding-parameter: 5px;
       display: grid;
-      grid-template-columns: 1fr 1.2fr;
+      grid-template-columns: 1fr 1.35fr;
+      font-size: 12px;
+      @include size_adaptive (font-size, 12, 20, 1366, 2560);
+
+      @media (min-width:1920px) {
+         grid-template-columns: 1fr 1.2fr;
+         ----padding-parameter: 10px;
+      }
+
+      @media (min-width:2560px) {
+         font-size: 20px;
+         ----padding-parameter: 15px;
+      }
 
       &._center {
          align-items: center;
@@ -465,31 +727,34 @@
    }
 
    &__parameter-list-name {
-      padding-top: 15px;
-      padding-bottom: 15px;
+      padding-top: var(--padding-parameter);
+      padding-bottom: var(--padding-parameter);
       padding-right: 20px;
-      font-size: 20px;
       line-height: 140%;
       color: #B5B5B5;
       border-bottom: 1px solid #F3F3F3;
    }
 
    &__parameter-list-value {
-      padding-top: 15px;
-      padding-bottom: 15px;
+      padding-top: var(--padding-parameter);
+      padding-bottom: var(--padding-parameter);
       font-weight: 500;
-      font-size: 20px;
       line-height: 140%;
       border-bottom: 1px solid #F3F3F3;
    }
 
    &__parameter-list-name-strong {
-      padding-top: 15px;
-      padding-bottom: 15px;
+      padding-top: var(--padding-parameter);
+      padding-bottom: var(--padding-parameter);
       font-weight: 600;
-      font-size: 22px;
+      font-size: 13px;
       line-height: 140%;
       border-bottom: 1px solid #F3F3F3;
+      @include size_adaptive (font-size, 13, 22, 1366, 2560);
+
+      @media (min-width:2560px) {
+         font-size: 22px;
+      }
 
       &:nth-last-child(2) {
          border: none;
@@ -504,17 +769,27 @@
       display: flex;
       align-items: flex-end;
       font-weight: 600;
-      font-size: 26px;
+      font-size: 15px;
       line-height: 140%;
+      @include size_adaptive (font-size, 15, 26, 1366, 2560);
+
+      @media (min-width:2560px) {
+         font-size: 26px;
+      }
    }
 
    &__parameter-list-result-number {
       font-family: var(--font-family-second);
       font-weight: 800;
-      font-size: 50px;
+      font-size: 26px;
       line-height: 100%;
       letter-spacing: -0.02em;
       text-align: right;
+      @include size_adaptive (font-size, 26, 50, 1366, 2560);
+
+      @media (min-width:2560px) {
+         font-size: 50px;
+      }
 
       span {
          font-size: 0.6em;
@@ -523,38 +798,67 @@
 
    &__parameter-info {
       margin-top: 15px;
-      font-size: 16px;
+      font-size: 11px;
       line-height: 140%;
       text-align: center;
       color: #575757;
+
+      @media (min-width:1920px) {
+         font-size: 13px;
+      }
+
+      @media (min-width:2560px) {
+         font-size: 16px;
+      }
    }
 
    &__note {
       margin-top: 20px;
-      font-size: 18px;
+      font-size: 13px;
       line-height: 140%;
       color: #575757;
+      @include size_adaptive (font-size, 13, 18, 1366, 2560);
+
+      @media (min-width:2560px) {
+         font-size: 18px;
+      }
    }
 
    &__actions {
+      padding: 10px;
       display: grid;
       grid-template-columns: 1fr 1fr 1fr;
       gap: 10px;
 
+      @media (min-width:1366px) {
+         padding: 0;
+      }
+
       a,
       button {
-         padding: 20px;
-         min-height: 68px;
+         padding: 10px;
          display: flex;
          align-items: center;
          justify-content: center;
          font-weight: 500;
-         font-size: 20px;
+         font-size: 13px;
          line-height: 140%;
          letter-spacing: -0.02em;
          background-color: #ffffff;
          border: 1px solid #B5B5B5;
          border-radius: 8px;
+
+         @include size_adaptive (font-size, 13, 20, 1366, 2560);
+
+         @media (min-width:1920px) {
+            padding: 15px;
+         }
+
+         @media (min-width:2560px) {
+            padding: 20px;
+            font-size: 20px;
+         }
+
       }
    }
 

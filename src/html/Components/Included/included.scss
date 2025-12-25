@@ -1,3 +1,5 @@
+@use '../../../scss/utils' as *;
+
 .included {
    margin-top: 50px;
 
@@ -5,16 +7,30 @@
 
    &__body {
       display: flex;
-      gap: 40px;
+      flex-direction: column;
+      gap: 15px;
+
+      @media (min-width:1366px) {
+         gap: 40px;
+         flex-direction: row;
+      }
    }
 
    &__title {
       flex: 1 1 auto;
       font-family: var(--font-family-second);
       font-weight: 800;
-      font-size: 60px;
+      font-size: 24px;
       line-height: 100%;
       letter-spacing: -0.02em;
+
+
+      @include size_adaptive (font-size, 24, 32, 768, 1366);
+      @include size_adaptive (font-size, 32, 60, 1366, 2560);
+
+      @media (min-width:2560px) {
+         font-size: 60px;
+      }
 
       span {
          color: #6E48F5;
@@ -24,16 +40,38 @@
    &__list {
       flex: 0 0 60%;
       display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 16px;
+      grid-template-columns: 1fr;
+      gap: 0.72em;
+      font-size: 13px;
+
+      @media (min-width:1024px) {
+         grid-template-columns: 1fr 1fr;
+
+      }
+
+      @include size_adaptive (font-size, 13, 22, 1366, 2560);
+
+      @media (min-width:2560px) {
+         font-size: 22px;
+      }
    }
 
    &__item {
       display: flex;
-      gap: 10px;
-      font-size: 22px;
+      gap: 0.5em;
       line-height: 140%;
       list-style: none;
       color: #242424;
+
+      svg,
+      img {
+         width: 12px;
+         height: auto;
+         @include size_adaptive (width, 12, 24, 1366, 2560);
+
+         @media (min-width:2560px) {
+            width: 24px;
+         }
+      }
    }
 }

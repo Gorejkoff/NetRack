@@ -26,8 +26,20 @@
 
    &__banner {
       border: none;
-      grid-row: 1/2;
-      grid-column: 4/5;
+      overflow: hidden;
+
+      @media (min-width:1024px) {
+         grid-row: 1/2;
+         grid-column: 2/3;
+      }
+
+      @media (min-width:1366px) {
+         grid-column: 3/4;
+      }
+
+      @media (min-width:1920px) {
+         grid-column: 4/5;
+      }
    }
 
    &__header {
@@ -37,13 +49,20 @@
    }
 
    &__icon {
-      width: 97px;
-      flex: 0 0 97px;
+      --width: 50px;
+      width: var(--width);
+      flex: 0 0 var(--width);
       display: flex;
       align-items: center;
       justify-content: center;
       border-radius: 3px;
       background-color: #242424;
+
+      @include size_adaptive (--widt, 50, 97, 1366, 2560);
+
+      @media (min-width:2560px) {
+         --width: 97px
+      }
 
       svg,
       img {
@@ -58,17 +77,30 @@
       display: flex;
       align-items: center;
       font-weight: 600;
-      font-size: 24px;
+      font-size: 16px;
       line-height: 140%;
       border-radius: 3px;
       background-color: #F3F3F3;
+
+      @include size_adaptive (font-size, 16, 24, 1366, 2560);
+
+      @media (min-width:2560px) {
+         font-size: 24px;
+      }
+
    }
 
    &__wrapper {
       flex: 1 1 auto;
       display: flex;
       flex-direction: column;
-      padding: 30px;
+      padding: 10px;
+
+      @include size_adaptive (padding, 10, 30, 1366, 2560);
+
+      @media (min-width:2560px) {
+         padding: 30px;
+      }
    }
 
    &__image {
@@ -86,6 +118,12 @@
    &__grid {
       display: grid;
       grid-template-columns: auto 1fr;
+      font-size: 13px;
+      @include size_adaptive (font-size, 13, 22, 1366, 2560);
+
+      @media (min-width:2560px) {
+         font-size: 22px;
+      }
    }
 
    &__comps {
@@ -98,14 +136,12 @@
    }
 
    &__comps-item {
-      font-size: 22px;
       line-height: 140%;
       color: #B5B5B5;
    }
 
    &__comps-type {
       padding: 4px 8px;
-      font-size: 20px;
       line-height: 140%;
       text-align: center;
       color: #6E48F5;
@@ -119,7 +155,6 @@
       padding-bottom: 7px;
       display: flex;
       align-items: center;
-      font-size: 22px;
       line-height: 140%;
       border-bottom: 1px solid #F3F3F3;
    }
@@ -129,11 +164,15 @@
       margin-bottom: 20px;
       font-family: var(--font-family-second);
       font-weight: 800;
-      font-size: 20px;
+      font-size: 13px;
       line-height: 100%;
       letter-spacing: -0.02em;
       text-align: center;
+      @include size_adaptive (font-size, 13, 20, 1366, 2560);
 
+      @media (min-width:2560px) {
+         font-size: 20px;
+      }
    }
 
    &__price-value {
@@ -145,8 +184,13 @@
       padding-left: 22px;
       margin: 10px auto 0;
       display: inline-block;
-      font-size: 18px;
+      font-size: 13px;
       line-height: 140%;
+      @include size_adaptive (font-size, 13, 18, 1366, 2560);
+
+      @media (min-width:2560px) {
+         font-size: 18px;
+      }
 
       &.hidden {
          opacity: 0;
@@ -181,10 +225,15 @@
       flex: 1 1 auto;
       font-family: var(--font-family-second);
       font-weight: 800;
-      font-size: 40px;
+      font-size: 30px;
       line-height: 100%;
       letter-spacing: -0.02em;
       color: #ffffff;
+      @include size_adaptive (font-size, 30, 40, 1366, 2560);
+
+      @media (min-width:2560px) {
+         font-size: 40px;
+      }
 
       span {
          color: #B7FE56;
