@@ -1,0 +1,9 @@
+<div class="cards-grid">
+   @@include('../../UI/Cards/Device-Card/Device-Card-Baner.html',{
+   image:'device-card-bg-2.webp',
+   buttonclass:'button-green',
+   buttontext: 'Отправить запрос'
+   })
+   @@loop('../../UI/Cards/Device-Card/Device-Card.html', 'json/lists/device-card-2.json')
+</div>
+<div class="cards-grid__note">*Стоимость актуальна для новых клиентов с учётом НДС</div>

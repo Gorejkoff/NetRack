@@ -1,0 +1,102 @@
+[
+   {
+      "title": "Xeon Platinum 8352V",
+      "icon": "icon-intel.svg",
+      "image": "device-4.webp",
+      "availability": "have",
+      "dropdown": true,
+      "price": "45 550",
+      "data": [
+         {
+            "item": "CPU",
+            "type": "2x",
+            "data": "12 ядер 2,1 – 3,3 ГГц"
+         },
+         {
+            "item": "GPU",
+            "type": "4x",
+            "data": "<img src=\"@img/svg/icon-gpu.svg\" alt=\"иконка\"> RTX A4000 16 ГБ"
+         },
+         {
+            "item": "RAM",
+            "type": "DDR4",
+            "data": "1024 ГБ"
+         },
+         {
+            "item": "SSD",
+            "type": "SATA",
+            "data": "2 x 960 ГБ"
+         },
+         {
+            "item": "SSD",
+            "type": "NVMe",
+            "data": "4 x 3,92 ТБ"
+         },
+         {
+            "item": "Internet",
+            "type": "",
+            "data": "1 Гбит/с безлимит"
+         }
+      ]
+   },
+   {
+      "title": "Xeon E-2234",
+      "icon": "icon-intel.svg",
+      "image": "device-5.webp",
+      "availability": "have",
+      "dropdown": true,
+      "price": "42 190",
+      "data": [
+         {
+            "item": "CPU",
+            "type": "2x",
+            "data": "4 ядра/2100-3000 МГц"
+         },
+         {
+            "item": "RAM",
+            "type": "DDR4",
+            "data": "32 ГБ"
+         },
+         {
+            "item": "SSD",
+            "type": "SATA",
+            "data": "2 x 960 ГБ"
+         },
+         {
+            "item": "Internet",
+            "type": "",
+            "data": "1 Гбит/с безлимит"
+         }
+      ]
+   },
+   {
+      "title": "Xeon E-2234",
+      "icon": "icon-intel.svg",
+      "image": "device-6.webp",
+      "availability": "have",
+      "dropdown": true,
+      "price": "42 190",
+      "data": [
+         {
+            "item": "CPU",
+            "type": "2x",
+            "data": "4 ядра/2100-3000 МГц"
+         },
+         {
+            "item": "RAM",
+            "type": "DDR4",
+            "data": "32 ГБ"
+         },
+         {
+            "item": "SSD",
+            "type": "SATA",
+            "data": "2 x 960 ГБ"
+         },
+         {
+            "item": "Internet",
+            "type": "",
+            "data": "1 Гбит/с безлимит"
+         }
+      ]
+   }
+]

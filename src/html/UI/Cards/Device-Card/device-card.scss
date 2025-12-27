@@ -159,6 +159,22 @@
       border-bottom: 1px solid #F3F3F3;
    }
 
+   &__dropdown {
+      margin-bottom: 20px;
+   }
+
+   &__dropdown-title {
+      padding: 10px 0;
+      line-height: 140%;
+      color: #B5B5B5;
+      font-size: 13px;
+      @include size_adaptive (font-size, 13, 22, 1366, 2560);
+
+      @media (min-width:2560px) {
+         font-size: 22px;
+      }
+   }
+
    &__price {
       margin-top: 30px;
       margin-bottom: 20px;

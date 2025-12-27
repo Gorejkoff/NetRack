@@ -21,6 +21,15 @@
       </div>
    </div>
 
+   @@if(context.dropdown){ <div class="device-card__dropdown">
+      <div class="device-card__dropdown-title">Объём хранилища</div>
+      @@include('../../Selection/selection-list.html',{
+      text:'6 х 1,92 ГБ SSD NMMe',
+      json:'device-dropdown.json'
+
+      })
+   </div>}
+
    @@if(context.price){<div class="device-card__price">
       <span class="device-card__price-value">@@price</span>
       <span>руб/мес</span>

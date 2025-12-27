@@ -104,20 +104,12 @@
       </button>
    </div>
 </form>
-<div class="configuration__ready-grid">
-   <article class="device-card device-card__banner">
-      <img class="device-card__banner-background" src="@img/webp/device-card-bg.webp" alt="фон">
-      <div class="device-card__wrapper">
-         <div class="device-card__banner-title">Нужно подобрать <span>конфигурацию</span> под ваш проект? </div>
-         @@include('../../UI/Button/Button.html',{
-         text:'Отправить запрос',
-         class: 'button-green'
-         })
-         <div class="device-card__availability hidden">
-            для отступа под кнопкой
-         </div>
-      </div>
-   </article>
+<div class="cards-grid">
+   @@include('../../UI/Cards/Device-Card/Device-Card-Baner.html',{
+   image:'device-card-bg.webp',
+   buttonclass:'button-green',
+   buttontext: 'Отправить запрос'
+   })
    @@loop('../../UI/Cards/Device-Card/Device-Card.html', 'json/lists/device-card-1.json')
 </div>
-<div class="configuration__note">*Стоимость актуальна для новых клиентов с учётом НДС</div>
+<div class="cards-grid__note">*Стоимость актуальна для новых клиентов с учётом НДС</div>
