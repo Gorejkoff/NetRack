@@ -1,0 +1,29 @@
+@use '../../../scss/utils' as *;
+
+.server-placement {
+
+   &__container {}
+
+   &__wrapper {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+
+      @media (min-width:1366px) {
+         flex-direction: row;
+      }
+   }
+
+   &__parameter {
+      flex: 1 1 auto;
+   }
+
+   &__result {
+
+      @include size_adaptive_flex (0, 0, 300, 575, 1366, 2560);
+
+      @media (min-width:2560px) {
+         flex: 0 0 575px;
+      }
+   }
+}

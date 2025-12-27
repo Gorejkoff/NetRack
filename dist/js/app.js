@@ -253,6 +253,28 @@ window.addEventListener('resize', () => {
 
 
 
+const steppers = document.querySelectorAll('.js-stepper');
+if (steppers.length > 0) {
+   steppers.forEach(stepper => {
+      let activeIndex = 0;
+      const listInputs = stepper.querySelectorAll('input');
+      listInputs.forEach((e, i) => { if (e.checked) { activeIndex = i } });
+      stepper.addEventListener('click', (event) => {
+         if (event.target.closest('.js-stepper-decrement')) {
+            if (activeIndex > 0) {
+               --activeIndex;
+               listInputs[activeIndex].checked = true;
+            }
+         }
+         if (event.target.closest('.js-stepper-increment')) {
+            if (activeIndex < listInputs.length - 1) {
+               ++activeIndex;
+               listInputs[activeIndex].checked = true;
+            }
+         }
+      })
+   })
+}
 // js-tabs-body - тело вкладки, в открытом состоянии добавляется класс js-tabs-open.
 // * !!! где js-tabs-body, добавить data-tabs-duration="500" скорость анимации в 'мс', 500мс по умолчанию.
 // js-tabs-hover - работает hover на ПК (должен быть с js-tabs-body), отключает клик на ПК, для touchscreen надо раставить js-tabs-click или js-tabs-toggle
@@ -422,6 +444,7 @@ function addTabsSwitching(button_name, tab_name, fn_name) {
 }
 
 // addTabsSwitching('.button_name', '.tab_name', '.fn_name')
-addTabsSwitching('.server-configuration__tab-button', '.server-configuration__tab')
+addTabsSwitching('.js-server-configuration-tab-button', '.js-server-configuration-tab')
+addTabsSwitching('.js-server-placement-tab-button', '.js-server-placement-tab')
 
 

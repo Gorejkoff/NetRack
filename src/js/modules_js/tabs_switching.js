@@ -32,6 +32,7 @@ function addTabsSwitching(button_name, tab_name, fn_name) {
 }
 
 // addTabsSwitching('.button_name', '.tab_name', '.fn_name')
-addTabsSwitching('.server-configuration__tab-button', '.server-configuration__tab')
+addTabsSwitching('.js-server-configuration-tab-button', '.js-server-configuration-tab')
+addTabsSwitching('.js-server-placement-tab-button', '.js-server-placement-tab')
 
 

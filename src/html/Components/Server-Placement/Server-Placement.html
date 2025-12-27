@@ -1,0 +1,53 @@
+<section class="server-placement margin-section">
+   <div class="server-placement__container">
+
+      <div class="header-section">
+         <div class="title-section">Цены на размещение сервера</div>
+      </div>
+
+      @@include('../../UI/Tabs-Switching-Buttons/Tabs-Switching-Buttons.html',{ json: 'json/lists/tabs-server-placement.json'})
+
+      <div class="js-server-placement-tab tabs-switching__wrapper active" data-tab_ts="1">
+         <div class="background-block">
+            <div class="server-placement__wrapper">
+               <div class="server-placement__parameter">
+                  @@include('./Server-Placement-Place.html',{})
+               </div>
+               <div class="server-placement__result">
+                  @@include('./Server-Placement-Result.html',{})
+               </div>
+            </div>
+         </div>
+      </div>
+      <div class="js-server-placement-tab tabs-switching__wrapper" data-tab_ts="2">
+         <div class="background-block">
+            <div class="server-placement__wrapper">
+               <div class="server-placement__parameter">
+                  @@include('./Server-Placement-Rent.html',{})
+               </div>
+               <div class="server-placement__result">
+                  @@include('./Server-Placement-Result.html',{})
+               </div>
+            </div>
+         </div>
+      </div>
+      <div class="js-server-placement-tab tabs-switching__wrapper" data-tab_ts="3">
+         <div class="background-block">
+            <div class="server-placement__wrapper">
+               <div class="server-placement__parameter">
+                  @@include('./Server-Placement-Rent.html',{})
+               </div>
+               <div class="server-placement__result">
+                  @@include('./Server-Placement-Result.html',{})
+               </div>
+            </div>
+         </div>
+      </div>
+
+
+
+
+
+   </div>
+
+</section>

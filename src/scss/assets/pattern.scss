@@ -292,6 +292,20 @@ label {
    border-radius: 6px;
 }
 
+.tabs-switching {
+   &__wrapper {
+      height: 0;
+      overflow: hidden;
+      pointer-events: none;
+
+      &.active {
+         overflow: visible;
+         pointer-events: all;
+         height: auto;
+      }
+   }
+}
+
 // .swiper-wrapper {
 //    position: relative;
 //    z-index: 1;

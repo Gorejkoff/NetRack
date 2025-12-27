@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width initial-scale=1.0">
 <meta name="description" content="Аренда выделенного сервера">
 <!-- <link rel="preload" as="font" type="font/woff2" href="./fonts/Raleway-Regular.woff2" crossorigin=""> -->
-<link rel="stylesheet" href="css/style.css?t=1766849947062">
+<link rel="stylesheet" href="css/style.css?t=1766871336408">
 </head>
 
 
@@ -35,16 +35,16 @@
       </div>
 
       <div class="tabs-switching-buttons">
-   <button class="server-configuration__tab-button active" type="button" data-button_ts="1">
+   <button class="js-server-configuration-tab-button active" type="button" data-button_ts="1">
    <span class="tabs-switching-buttons__text">Конфигуратор</span>
    <span class="tabs-switching-buttons__info">Предоставим в течении 1-5 дней</span>
-</button><button class="server-configuration__tab-button " type="button" data-button_ts="2">
+</button><button class="js-server-configuration-tab-button " type="button" data-button_ts="2">
    <span class="tabs-switching-buttons__text">Готовые серверы</span>
    <span class="tabs-switching-buttons__info">Предоставим в течении одного дня</span>
 </button>
 </div>
 
-      <div class="server-configuration__tab active" data-tab_ts="1">
+      <div class="js-server-configuration-tab tabs-switching__wrapper active" data-tab_ts="1">
          <form class="configuration background-block" action="#0" method="post" name="configuration" id="configuration">
             <div class="configuration__body">
                <div class="configuration__side-main">
@@ -1640,7 +1640,7 @@
             </div>
          </form>
       </div>
-      <div class="server-configuration__tab" data-tab_ts="2">
+      <div class="js-server-configuration-tab tabs-switching__wrapper" data-tab_ts="2">
          <div class="configuration background-block">
             <form action="#" method="post" name="configuration_ready" id="configuration_ready">
    <div class="configuration__filter-radio">
@@ -2406,6 +2406,7 @@
          
          
          
+
          <section class="questions margin-section">
    <div class="questions__container">
       <div class="header-section header-with-button">
@@ -2615,7 +2616,6 @@
       </div>
    </div>
 </section>
-
          <section class="models margin-section">
    <div class="models__container">
       <div class="header-section">
@@ -3028,6 +3028,1132 @@
       </div>
    </div>
 </section>
+         <section class="server-placement margin-section">
+   <div class="server-placement__container">
+
+      <div class="header-section">
+         <div class="title-section">Цены на размещение сервера</div>
+      </div>
+
+      <div class="tabs-switching-buttons">
+   <button class="js-server-placement-tab-button active" type="button" data-button_ts="1">
+   <span class="tabs-switching-buttons__text">Размещение сервера</span>
+   
+</button><button class="js-server-placement-tab-button " type="button" data-button_ts="2">
+   <span class="tabs-switching-buttons__text">Аренда секций в стойках</span>
+   
+</button><button class="js-server-placement-tab-button " type="button" data-button_ts="3">
+   <span class="tabs-switching-buttons__text">Аренда серверных стоек</span>
+   
+</button>
+</div>
+
+      <div class="js-server-placement-tab tabs-switching__wrapper active" data-tab_ts="1">
+         <div class="background-block">
+            <div class="server-placement__wrapper">
+               <div class="server-placement__parameter">
+                  <div class="configuration__section">
+   <div class="configuration__section-title">Параметры</div>
+   <div class="configuration__section-wrapper">
+
+      <div class="configuration__parameter">
+         <div class="configuration__parameter-name">
+            <span>Корпус сервера</span>
+            <button type="button" aria-label="описание">
+               <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M10 20C4.47715 20 0 15.5228 0 10C0 4.47715 4.47715 0 10 0C15.5228 0 20 4.47715 20 10C20 15.5228 15.5228 20 10 20ZM9 13V15H11V13H9ZM11 11.3551C12.4457 10.9248 13.5 9.5855 13.5 8C13.5 6.067 11.933 4.5 10 4.5C8.302 4.5 6.88637 5.70919 6.56731 7.31346L8.5288 7.70577C8.6656 7.01823 9.2723 6.5 10 6.5C10.8284 6.5 11.5 7.17157 11.5 8C11.5 8.8284 10.8284 9.5 10 9.5C9.4477 9.5 9 9.9477 9 10.5V12H11V11.3551Z" fill="#B5B5B5"></path>
+               </svg>
+            </button>
+         </div>
+         <div class="configuration__case">
+            <label>
+               <input type="radio" name="cpu" value="intel-xeon-silver" hidden checked>
+               <span class="configuration__case-item hover-button">
+                  <span class="configuration__case-icon">
+                     <img src="./img/svg/case.svg" alt="корпус сервера">
+                  </span>
+                  <span class="configuration__case-text">1U</span>
+               </span>
+            </label>
+            <label>
+               <input type="radio" name="cpu" value="intel-xeon-silver" hidden>
+               <span class="configuration__case-item hover-button">
+                  <span class="configuration__case-icon">
+                     <img src="./img/svg/case.svg" alt="корпус сервера">
+                     <img src="./img/svg/case.svg" alt="корпус сервера">
+                  </span>
+                  <span class="configuration__case-text">2U</span>
+               </span>
+            </label>
+            <label>
+               <input type="radio" name="cpu" value="intel-xeon-silver" hidden>
+               <span class=" configuration__case-item hover-button">
+                  <span class="configuration__case-icon">
+                     <img src="./img/svg/case.svg" alt="корпус сервера">
+                     <img src="./img/svg/case.svg" alt="корпус сервера">
+                     <img src="./img/svg/case.svg" alt="корпус сервера">
+                  </span>
+                  <span class="configuration__case-text">3U</span>
+               </span>
+            </label>
+            <label>
+               <input type="radio" name="cpu" value="intel-xeon-silver" hidden>
+               <span class="configuration__case-item hover-button">
+                  <span class="configuration__case-icon">
+                     <img src="./img/svg/case.svg" alt="корпус сервера">
+                     <img src="./img/svg/case.svg" alt="корпус сервера">
+                     <img src="./img/svg/case.svg" alt="корпус сервера">
+                     <img src="./img/svg/case.svg" alt="корпус сервера">
+                  </span>
+                  <span class="configuration__case-text">4U</span>
+               </span>
+            </label>
+
+         </div>
+
+
+      </div>
+
+      <div class="configuration__section-grid">
+
+         <div class="configuration__parameter">
+            <div class="configuration__parameter-name">
+               <span>Номинальная мощность блоков питания</span>
+               <button type="button" aria-label="описание">
+                  <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                     <path d="M10 20C4.47715 20 0 15.5228 0 10C0 4.47715 4.47715 0 10 0C15.5228 0 20 4.47715 20 10C20 15.5228 15.5228 20 10 20ZM9 13V15H11V13H9ZM11 11.3551C12.4457 10.9248 13.5 9.5855 13.5 8C13.5 6.067 11.933 4.5 10 4.5C8.302 4.5 6.88637 5.70919 6.56731 7.31346L8.5288 7.70577C8.6656 7.01823 9.2723 6.5 10 6.5C10.8284 6.5 11.5 7.17157 11.5 8C11.5 8.8284 10.8284 9.5 10 9.5C9.4477 9.5 9 9.9477 9 10.5V12H11V11.3551Z" fill="#B5B5B5"></path>
+                  </svg>
+               </button>
+            </div>
+
+            <div class="configuration__stepper js-stepper">
+               <button class="configuration__stepper-button js-stepper-decrement" type="button">-</button>
+               <div class="configuration__stepper-body">
+                  <div class="configuration__stepper-value">
+                     <label>
+                        <input type="radio" name="watt" value="300" hidden checked>
+                        <span class="configuration__stepper-value-item">300</span>
+                     </label>
+                     <label>
+                        <input type="radio" name="watt" value="400" hidden>
+                        <span class="configuration__stepper-value-item">400</span>
+                     </label>
+                     <label>
+                        <input type="radio" name="watt" value="600" hidden>
+                        <span class="configuration__stepper-value-item">600</span>
+                     </label>
+                  </div>
+                  <div class="configuration__stepper-text">Вт</div>
+               </div>
+               <button class="configuration__stepper-button js-stepper-increment" type="button">+</button>
+            </div>
+
+         </div>
+
+         <div class="configuration__parameter">
+   <div class="configuration__parameter-name">
+      <span>Дата-центр</span>
+      <button type="button" aria-label="описание">
+         <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M10 20C4.47715 20 0 15.5228 0 10C0 4.47715 4.47715 0 10 0C15.5228 0 20 4.47715 20 10C20 15.5228 15.5228 20 10 20ZM9 13V15H11V13H9ZM11 11.3551C12.4457 10.9248 13.5 9.5855 13.5 8C13.5 6.067 11.933 4.5 10 4.5C8.302 4.5 6.88637 5.70919 6.56731 7.31346L8.5288 7.70577C8.6656 7.01823 9.2723 6.5 10 6.5C10.8284 6.5 11.5 7.17157 11.5 8C11.5 8.8284 10.8284 9.5 10 9.5C9.4477 9.5 9 9.9477 9 10.5V12H11V11.3551Z" fill="#B5B5B5" />
+         </svg>
+      </button>
+   </div>
+   <div class="configuration__selection-group">
+   <div class="selection-list js-tabs-body js-tabs-toggle js-tabs-closing js-data-scope width-md">
+   <button class="selection-list__border" type="button">
+      <span class="selection-list__wrapper">
+         <span class="selection-list__text-group js-data-replace">
+            <span>1 Гбит/с безлимит</span>
+            
+            
+         </span>
+         <span class="selection-list__arrow">
+            <svg width="9" height="6" viewBox="0 0 9 6" fill="none" xmlns="http://www.w3.org/2000/svg">
+               <path d="M4.24268 5.65685L0 1.41425L1.41422 0L4.24268 2.82845L7.07108 0L8.48528 1.41425L4.24268 5.65685Z" fill="#191919" />
+            </svg>
+         </span>
+      </span>
+   </button>
+   <div class="selection-list__shell js-tabs-shell">
+      <div class="js-tabs-inner">
+         <div class="selection-list__border-inner scroll">
+            <label class="selection-list__wrapper js-data-target">
+   <input type="radio" name="port" hidden>
+   <span class="selection-list__text-group js-data-get">
+      <span>1 Гбит/с безлимит</span>
+      
+      
+   </span>
+</label><label class="selection-list__wrapper js-data-target">
+   <input type="radio" name="port" hidden>
+   <span class="selection-list__text-group js-data-get">
+      <span>2 Гбит</span>
+      
+      
+   </span>
+</label><label class="selection-list__wrapper js-data-target">
+   <input type="radio" name="port" hidden>
+   <span class="selection-list__text-group js-data-get">
+      <span>3 Гбит/с безлимит</span>
+      
+      
+   </span>
+</label><label class="selection-list__wrapper js-data-target">
+   <input type="radio" name="port" hidden>
+   <span class="selection-list__text-group js-data-get">
+      <span>4 Гбит/с безлимит</span>
+      
+      
+   </span>
+</label><label class="selection-list__wrapper js-data-target">
+   <input type="radio" name="port" hidden>
+   <span class="selection-list__text-group js-data-get">
+      <span>5 Гбит/с безлимит</span>
+      
+      
+   </span>
+</label>
+         </div>
+      </div>
+   </div>
+</div>
+</div>
+</div>
+
+         <div class="configuration__parameter">
+            <div class="configuration__parameter-name">
+               <span>Количество блоков питания</span>
+               <button type="button" aria-label="описание">
+                  <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                     <path d="M10 20C4.47715 20 0 15.5228 0 10C0 4.47715 4.47715 0 10 0C15.5228 0 20 4.47715 20 10C20 15.5228 15.5228 20 10 20ZM9 13V15H11V13H9ZM11 11.3551C12.4457 10.9248 13.5 9.5855 13.5 8C13.5 6.067 11.933 4.5 10 4.5C8.302 4.5 6.88637 5.70919 6.56731 7.31346L8.5288 7.70577C8.6656 7.01823 9.2723 6.5 10 6.5C10.8284 6.5 11.5 7.17157 11.5 8C11.5 8.8284 10.8284 9.5 10 9.5C9.4477 9.5 9 9.9477 9 10.5V12H11V11.3551Z" fill="#B5B5B5"></path>
+                  </svg>
+               </button>
+            </div>
+            <div class="configuration__selection-group">
+               <label>
+                  <input type="radio" name="quantity-case" hidden checked="true">
+                  <span class="configuration__button-text hover-button">
+                     <span>один</span>
+                  </span>
+               </label>
+               <label>
+                  <input type="radio" name="quantity-case" hidden>
+                  <span class="configuration__button-text hover-button">
+                     <span>два</span>
+                  </span>
+               </label>
+            </div>
+         </div>
+
+         <div class="configuration__parameter">
+   <div class="configuration__parameter-name">
+      <span>Интернет с базовой защитой от DDoS</span>
+      <button type="button" aria-label="описание">
+         <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M10 20C4.47715 20 0 15.5228 0 10C0 4.47715 4.47715 0 10 0C15.5228 0 20 4.47715 20 10C20 15.5228 15.5228 20 10 20ZM9 13V15H11V13H9ZM11 11.3551C12.4457 10.9248 13.5 9.5855 13.5 8C13.5 6.067 11.933 4.5 10 4.5C8.302 4.5 6.88637 5.70919 6.56731 7.31346L8.5288 7.70577C8.6656 7.01823 9.2723 6.5 10 6.5C10.8284 6.5 11.5 7.17157 11.5 8C11.5 8.8284 10.8284 9.5 10 9.5C9.4477 9.5 9 9.9477 9 10.5V12H11V11.3551Z" fill="#B5B5B5" />
+         </svg>
+      </button>
+   </div>
+   <div class="configuration__selection-group">
+   <div class="selection-list js-tabs-body js-tabs-toggle js-tabs-closing js-data-scope width-md">
+   <button class="selection-list__border" type="button">
+      <span class="selection-list__wrapper">
+         <span class="selection-list__text-group js-data-replace">
+            <span>1 Гбит/с безлимит</span>
+            
+            
+         </span>
+         <span class="selection-list__arrow">
+            <svg width="9" height="6" viewBox="0 0 9 6" fill="none" xmlns="http://www.w3.org/2000/svg">
+               <path d="M4.24268 5.65685L0 1.41425L1.41422 0L4.24268 2.82845L7.07108 0L8.48528 1.41425L4.24268 5.65685Z" fill="#191919" />
+            </svg>
+         </span>
+      </span>
+   </button>
+   <div class="selection-list__shell js-tabs-shell">
+      <div class="js-tabs-inner">
+         <div class="selection-list__border-inner scroll">
+            <label class="selection-list__wrapper js-data-target">
+   <input type="radio" name="port" hidden>
+   <span class="selection-list__text-group js-data-get">
+      <span>1 Гбит/с безлимит</span>
+      
+      
+   </span>
+</label><label class="selection-list__wrapper js-data-target">
+   <input type="radio" name="port" hidden>
+   <span class="selection-list__text-group js-data-get">
+      <span>2 Гбит</span>
+      
+      
+   </span>
+</label><label class="selection-list__wrapper js-data-target">
+   <input type="radio" name="port" hidden>
+   <span class="selection-list__text-group js-data-get">
+      <span>3 Гбит/с безлимит</span>
+      
+      
+   </span>
+</label><label class="selection-list__wrapper js-data-target">
+   <input type="radio" name="port" hidden>
+   <span class="selection-list__text-group js-data-get">
+      <span>4 Гбит/с безлимит</span>
+      
+      
+   </span>
+</label><label class="selection-list__wrapper js-data-target">
+   <input type="radio" name="port" hidden>
+   <span class="selection-list__text-group js-data-get">
+      <span>5 Гбит/с безлимит</span>
+      
+      
+   </span>
+</label>
+         </div>
+      </div>
+   </div>
+</div>
+</div>
+</div>
+         <div class="configuration__parameter">
+   <div class="configuration__parameter-name">
+      <span>Публичный IP-адрес</span>
+      <button type="button" aria-label="описание">
+         <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M10 20C4.47715 20 0 15.5228 0 10C0 4.47715 4.47715 0 10 0C15.5228 0 20 4.47715 20 10C20 15.5228 15.5228 20 10 20ZM9 13V15H11V13H9ZM11 11.3551C12.4457 10.9248 13.5 9.5855 13.5 8C13.5 6.067 11.933 4.5 10 4.5C8.302 4.5 6.88637 5.70919 6.56731 7.31346L8.5288 7.70577C8.6656 7.01823 9.2723 6.5 10 6.5C10.8284 6.5 11.5 7.17157 11.5 8C11.5 8.8284 10.8284 9.5 10 9.5C9.4477 9.5 9 9.9477 9 10.5V12H11V11.3551Z" fill="#B5B5B5" />
+         </svg>
+      </button>
+   </div>
+   <div class="configuration__selection-group">
+   <div class="selection-list js-tabs-body js-tabs-toggle js-tabs-closing js-data-scope width-md">
+   <button class="selection-list__border" type="button">
+      <span class="selection-list__wrapper">
+         <span class="selection-list__text-group js-data-replace">
+            <span>1 Гбит/с безлимит</span>
+            
+            
+         </span>
+         <span class="selection-list__arrow">
+            <svg width="9" height="6" viewBox="0 0 9 6" fill="none" xmlns="http://www.w3.org/2000/svg">
+               <path d="M4.24268 5.65685L0 1.41425L1.41422 0L4.24268 2.82845L7.07108 0L8.48528 1.41425L4.24268 5.65685Z" fill="#191919" />
+            </svg>
+         </span>
+      </span>
+   </button>
+   <div class="selection-list__shell js-tabs-shell">
+      <div class="js-tabs-inner">
+         <div class="selection-list__border-inner scroll">
+            <label class="selection-list__wrapper js-data-target">
+   <input type="radio" name="port" hidden>
+   <span class="selection-list__text-group js-data-get">
+      <span>1 Гбит/с безлимит</span>
+      
+      
+   </span>
+</label><label class="selection-list__wrapper js-data-target">
+   <input type="radio" name="port" hidden>
+   <span class="selection-list__text-group js-data-get">
+      <span>2 Гбит</span>
+      
+      
+   </span>
+</label><label class="selection-list__wrapper js-data-target">
+   <input type="radio" name="port" hidden>
+   <span class="selection-list__text-group js-data-get">
+      <span>3 Гбит/с безлимит</span>
+      
+      
+   </span>
+</label><label class="selection-list__wrapper js-data-target">
+   <input type="radio" name="port" hidden>
+   <span class="selection-list__text-group js-data-get">
+      <span>4 Гбит/с безлимит</span>
+      
+      
+   </span>
+</label><label class="selection-list__wrapper js-data-target">
+   <input type="radio" name="port" hidden>
+   <span class="selection-list__text-group js-data-get">
+      <span>5 Гбит/с безлимит</span>
+      
+      
+   </span>
+</label>
+         </div>
+      </div>
+   </div>
+</div>
+</div>
+</div>
+         <div class="configuration__parameter">
+   <div class="configuration__parameter-name">
+      <span>Локальная сеть</span>
+      <button type="button" aria-label="описание">
+         <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M10 20C4.47715 20 0 15.5228 0 10C0 4.47715 4.47715 0 10 0C15.5228 0 20 4.47715 20 10C20 15.5228 15.5228 20 10 20ZM9 13V15H11V13H9ZM11 11.3551C12.4457 10.9248 13.5 9.5855 13.5 8C13.5 6.067 11.933 4.5 10 4.5C8.302 4.5 6.88637 5.70919 6.56731 7.31346L8.5288 7.70577C8.6656 7.01823 9.2723 6.5 10 6.5C10.8284 6.5 11.5 7.17157 11.5 8C11.5 8.8284 10.8284 9.5 10 9.5C9.4477 9.5 9 9.9477 9 10.5V12H11V11.3551Z" fill="#B5B5B5" />
+         </svg>
+      </button>
+   </div>
+   <div class="configuration__selection-group">
+   <div class="selection-list js-tabs-body js-tabs-toggle js-tabs-closing js-data-scope width-md">
+   <button class="selection-list__border" type="button">
+      <span class="selection-list__wrapper">
+         <span class="selection-list__text-group js-data-replace">
+            <span>1 Гбит/с безлимит</span>
+            
+            
+         </span>
+         <span class="selection-list__arrow">
+            <svg width="9" height="6" viewBox="0 0 9 6" fill="none" xmlns="http://www.w3.org/2000/svg">
+               <path d="M4.24268 5.65685L0 1.41425L1.41422 0L4.24268 2.82845L7.07108 0L8.48528 1.41425L4.24268 5.65685Z" fill="#191919" />
+            </svg>
+         </span>
+      </span>
+   </button>
+   <div class="selection-list__shell js-tabs-shell">
+      <div class="js-tabs-inner">
+         <div class="selection-list__border-inner scroll">
+            <label class="selection-list__wrapper js-data-target">
+   <input type="radio" name="port" hidden>
+   <span class="selection-list__text-group js-data-get">
+      <span>1 Гбит/с безлимит</span>
+      
+      
+   </span>
+</label><label class="selection-list__wrapper js-data-target">
+   <input type="radio" name="port" hidden>
+   <span class="selection-list__text-group js-data-get">
+      <span>2 Гбит</span>
+      
+      
+   </span>
+</label><label class="selection-list__wrapper js-data-target">
+   <input type="radio" name="port" hidden>
+   <span class="selection-list__text-group js-data-get">
+      <span>3 Гбит/с безлимит</span>
+      
+      
+   </span>
+</label><label class="selection-list__wrapper js-data-target">
+   <input type="radio" name="port" hidden>
+   <span class="selection-list__text-group js-data-get">
+      <span>4 Гбит/с безлимит</span>
+      
+      
+   </span>
+</label><label class="selection-list__wrapper js-data-target">
+   <input type="radio" name="port" hidden>
+   <span class="selection-list__text-group js-data-get">
+      <span>5 Гбит/с безлимит</span>
+      
+      
+   </span>
+</label>
+         </div>
+      </div>
+   </div>
+</div>
+</div>
+</div>
+
+      </div>
+
+
+   </div>
+</div>
+               </div>
+               <div class="server-placement__result">
+                  <div class="configuration__section">
+   <div class="configuration__section-title">Итого к оплате</div>
+   <div class="configuration__section-wrapper">
+
+      <div class="configuration__parameter-list-result-number">45 550 <span>руб/мес</span></div>
+
+      <div class="configuration__note">
+         размещение серверов с GPU, а также блейд-серверов производится по индивидуальным условиям
+      </div>
+
+      
+<button class="button button-purple" type="button" >
+   <span>Заказать сервер</span>
+   <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <path d="M16.1716 10.9715L10.8076 5.45454L12.2218 4L20 12.0001L12.2218 20L10.8076 18.5455L16.1716 13.0286H4V10.9715H16.1716Z" fill="#191919" />
+   </svg>
+</button>
+
+      <div class="configuration__parameter-info">Цена всех услуг указана с учетом НДС 20%</div>
+
+   </div>
+</div>
+               </div>
+            </div>
+         </div>
+      </div>
+      <div class="js-server-placement-tab tabs-switching__wrapper" data-tab_ts="2">
+         <div class="background-block">
+            <div class="server-placement__wrapper">
+               <div class="server-placement__parameter">
+                  <div class="configuration__section">
+   <div class="configuration__section-title">Параметры</div>
+   <div class="configuration__section-wrapper">
+
+      <div class="configuration__section-grid">
+
+
+         <div class="configuration__parameter">
+   <div class="configuration__parameter-name">
+      <span>Количество юнитов</span>
+      <button type="button" aria-label="описание">
+         <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M10 20C4.47715 20 0 15.5228 0 10C0 4.47715 4.47715 0 10 0C15.5228 0 20 4.47715 20 10C20 15.5228 15.5228 20 10 20ZM9 13V15H11V13H9ZM11 11.3551C12.4457 10.9248 13.5 9.5855 13.5 8C13.5 6.067 11.933 4.5 10 4.5C8.302 4.5 6.88637 5.70919 6.56731 7.31346L8.5288 7.70577C8.6656 7.01823 9.2723 6.5 10 6.5C10.8284 6.5 11.5 7.17157 11.5 8C11.5 8.8284 10.8284 9.5 10 9.5C9.4477 9.5 9 9.9477 9 10.5V12H11V11.3551Z" fill="#B5B5B5" />
+         </svg>
+      </button>
+   </div>
+   <div class="configuration__selection-group">
+   <div class="selection-list js-tabs-body js-tabs-toggle js-tabs-closing js-data-scope width-md">
+   <button class="selection-list__border" type="button">
+      <span class="selection-list__wrapper">
+         <span class="selection-list__text-group js-data-replace">
+            <span>1 Гбит/с безлимит</span>
+            
+            
+         </span>
+         <span class="selection-list__arrow">
+            <svg width="9" height="6" viewBox="0 0 9 6" fill="none" xmlns="http://www.w3.org/2000/svg">
+               <path d="M4.24268 5.65685L0 1.41425L1.41422 0L4.24268 2.82845L7.07108 0L8.48528 1.41425L4.24268 5.65685Z" fill="#191919" />
+            </svg>
+         </span>
+      </span>
+   </button>
+   <div class="selection-list__shell js-tabs-shell">
+      <div class="js-tabs-inner">
+         <div class="selection-list__border-inner scroll">
+            <label class="selection-list__wrapper js-data-target">
+   <input type="radio" name="port" hidden>
+   <span class="selection-list__text-group js-data-get">
+      <span>1 Гбит/с безлимит</span>
+      
+      
+   </span>
+</label><label class="selection-list__wrapper js-data-target">
+   <input type="radio" name="port" hidden>
+   <span class="selection-list__text-group js-data-get">
+      <span>2 Гбит</span>
+      
+      
+   </span>
+</label><label class="selection-list__wrapper js-data-target">
+   <input type="radio" name="port" hidden>
+   <span class="selection-list__text-group js-data-get">
+      <span>3 Гбит/с безлимит</span>
+      
+      
+   </span>
+</label><label class="selection-list__wrapper js-data-target">
+   <input type="radio" name="port" hidden>
+   <span class="selection-list__text-group js-data-get">
+      <span>4 Гбит/с безлимит</span>
+      
+      
+   </span>
+</label><label class="selection-list__wrapper js-data-target">
+   <input type="radio" name="port" hidden>
+   <span class="selection-list__text-group js-data-get">
+      <span>5 Гбит/с безлимит</span>
+      
+      
+   </span>
+</label>
+         </div>
+      </div>
+   </div>
+</div>
+</div>
+</div>
+
+         <div class="configuration__parameter">
+   <div class="configuration__parameter-name">
+      <span>Интернет с базовой защитой от DDoS</span>
+      <button type="button" aria-label="описание">
+         <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M10 20C4.47715 20 0 15.5228 0 10C0 4.47715 4.47715 0 10 0C15.5228 0 20 4.47715 20 10C20 15.5228 15.5228 20 10 20ZM9 13V15H11V13H9ZM11 11.3551C12.4457 10.9248 13.5 9.5855 13.5 8C13.5 6.067 11.933 4.5 10 4.5C8.302 4.5 6.88637 5.70919 6.56731 7.31346L8.5288 7.70577C8.6656 7.01823 9.2723 6.5 10 6.5C10.8284 6.5 11.5 7.17157 11.5 8C11.5 8.8284 10.8284 9.5 10 9.5C9.4477 9.5 9 9.9477 9 10.5V12H11V11.3551Z" fill="#B5B5B5" />
+         </svg>
+      </button>
+   </div>
+   <div class="configuration__selection-group">
+   <div class="selection-list js-tabs-body js-tabs-toggle js-tabs-closing js-data-scope width-md">
+   <button class="selection-list__border" type="button">
+      <span class="selection-list__wrapper">
+         <span class="selection-list__text-group js-data-replace">
+            <span>1 Гбит/с безлимит</span>
+            
+            
+         </span>
+         <span class="selection-list__arrow">
+            <svg width="9" height="6" viewBox="0 0 9 6" fill="none" xmlns="http://www.w3.org/2000/svg">
+               <path d="M4.24268 5.65685L0 1.41425L1.41422 0L4.24268 2.82845L7.07108 0L8.48528 1.41425L4.24268 5.65685Z" fill="#191919" />
+            </svg>
+         </span>
+      </span>
+   </button>
+   <div class="selection-list__shell js-tabs-shell">
+      <div class="js-tabs-inner">
+         <div class="selection-list__border-inner scroll">
+            <label class="selection-list__wrapper js-data-target">
+   <input type="radio" name="port" hidden>
+   <span class="selection-list__text-group js-data-get">
+      <span>1 Гбит/с безлимит</span>
+      
+      
+   </span>
+</label><label class="selection-list__wrapper js-data-target">
+   <input type="radio" name="port" hidden>
+   <span class="selection-list__text-group js-data-get">
+      <span>2 Гбит</span>
+      
+      
+   </span>
+</label><label class="selection-list__wrapper js-data-target">
+   <input type="radio" name="port" hidden>
+   <span class="selection-list__text-group js-data-get">
+      <span>3 Гбит/с безлимит</span>
+      
+      
+   </span>
+</label><label class="selection-list__wrapper js-data-target">
+   <input type="radio" name="port" hidden>
+   <span class="selection-list__text-group js-data-get">
+      <span>4 Гбит/с безлимит</span>
+      
+      
+   </span>
+</label><label class="selection-list__wrapper js-data-target">
+   <input type="radio" name="port" hidden>
+   <span class="selection-list__text-group js-data-get">
+      <span>5 Гбит/с безлимит</span>
+      
+      
+   </span>
+</label>
+         </div>
+      </div>
+   </div>
+</div>
+</div>
+</div>
+
+         <div class="configuration__parameter">
+   <div class="configuration__parameter-name">
+      <span>Выделенная мощность</span>
+      <button type="button" aria-label="описание">
+         <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M10 20C4.47715 20 0 15.5228 0 10C0 4.47715 4.47715 0 10 0C15.5228 0 20 4.47715 20 10C20 15.5228 15.5228 20 10 20ZM9 13V15H11V13H9ZM11 11.3551C12.4457 10.9248 13.5 9.5855 13.5 8C13.5 6.067 11.933 4.5 10 4.5C8.302 4.5 6.88637 5.70919 6.56731 7.31346L8.5288 7.70577C8.6656 7.01823 9.2723 6.5 10 6.5C10.8284 6.5 11.5 7.17157 11.5 8C11.5 8.8284 10.8284 9.5 10 9.5C9.4477 9.5 9 9.9477 9 10.5V12H11V11.3551Z" fill="#B5B5B5" />
+         </svg>
+      </button>
+   </div>
+   <div class="configuration__selection-group">
+   <div class="selection-list js-tabs-body js-tabs-toggle js-tabs-closing js-data-scope width-md">
+   <button class="selection-list__border" type="button">
+      <span class="selection-list__wrapper">
+         <span class="selection-list__text-group js-data-replace">
+            <span>1 Гбит/с безлимит</span>
+            
+            
+         </span>
+         <span class="selection-list__arrow">
+            <svg width="9" height="6" viewBox="0 0 9 6" fill="none" xmlns="http://www.w3.org/2000/svg">
+               <path d="M4.24268 5.65685L0 1.41425L1.41422 0L4.24268 2.82845L7.07108 0L8.48528 1.41425L4.24268 5.65685Z" fill="#191919" />
+            </svg>
+         </span>
+      </span>
+   </button>
+   <div class="selection-list__shell js-tabs-shell">
+      <div class="js-tabs-inner">
+         <div class="selection-list__border-inner scroll">
+            <label class="selection-list__wrapper js-data-target">
+   <input type="radio" name="port" hidden>
+   <span class="selection-list__text-group js-data-get">
+      <span>1 Гбит/с безлимит</span>
+      
+      
+   </span>
+</label><label class="selection-list__wrapper js-data-target">
+   <input type="radio" name="port" hidden>
+   <span class="selection-list__text-group js-data-get">
+      <span>2 Гбит</span>
+      
+      
+   </span>
+</label><label class="selection-list__wrapper js-data-target">
+   <input type="radio" name="port" hidden>
+   <span class="selection-list__text-group js-data-get">
+      <span>3 Гбит/с безлимит</span>
+      
+      
+   </span>
+</label><label class="selection-list__wrapper js-data-target">
+   <input type="radio" name="port" hidden>
+   <span class="selection-list__text-group js-data-get">
+      <span>4 Гбит/с безлимит</span>
+      
+      
+   </span>
+</label><label class="selection-list__wrapper js-data-target">
+   <input type="radio" name="port" hidden>
+   <span class="selection-list__text-group js-data-get">
+      <span>5 Гбит/с безлимит</span>
+      
+      
+   </span>
+</label>
+         </div>
+      </div>
+   </div>
+</div>
+</div>
+</div>
+
+         <div class="configuration__parameter">
+   <div class="configuration__parameter-name">
+      <span>Дата-центр</span>
+      <button type="button" aria-label="описание">
+         <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M10 20C4.47715 20 0 15.5228 0 10C0 4.47715 4.47715 0 10 0C15.5228 0 20 4.47715 20 10C20 15.5228 15.5228 20 10 20ZM9 13V15H11V13H9ZM11 11.3551C12.4457 10.9248 13.5 9.5855 13.5 8C13.5 6.067 11.933 4.5 10 4.5C8.302 4.5 6.88637 5.70919 6.56731 7.31346L8.5288 7.70577C8.6656 7.01823 9.2723 6.5 10 6.5C10.8284 6.5 11.5 7.17157 11.5 8C11.5 8.8284 10.8284 9.5 10 9.5C9.4477 9.5 9 9.9477 9 10.5V12H11V11.3551Z" fill="#B5B5B5" />
+         </svg>
+      </button>
+   </div>
+   <div class="configuration__selection-group">
+   <div class="selection-list js-tabs-body js-tabs-toggle js-tabs-closing js-data-scope width-md">
+   <button class="selection-list__border" type="button">
+      <span class="selection-list__wrapper">
+         <span class="selection-list__text-group js-data-replace">
+            <span>1 Гбит/с безлимит</span>
+            
+            
+         </span>
+         <span class="selection-list__arrow">
+            <svg width="9" height="6" viewBox="0 0 9 6" fill="none" xmlns="http://www.w3.org/2000/svg">
+               <path d="M4.24268 5.65685L0 1.41425L1.41422 0L4.24268 2.82845L7.07108 0L8.48528 1.41425L4.24268 5.65685Z" fill="#191919" />
+            </svg>
+         </span>
+      </span>
+   </button>
+   <div class="selection-list__shell js-tabs-shell">
+      <div class="js-tabs-inner">
+         <div class="selection-list__border-inner scroll">
+            <label class="selection-list__wrapper js-data-target">
+   <input type="radio" name="port" hidden>
+   <span class="selection-list__text-group js-data-get">
+      <span>1 Гбит/с безлимит</span>
+      
+      
+   </span>
+</label><label class="selection-list__wrapper js-data-target">
+   <input type="radio" name="port" hidden>
+   <span class="selection-list__text-group js-data-get">
+      <span>2 Гбит</span>
+      
+      
+   </span>
+</label><label class="selection-list__wrapper js-data-target">
+   <input type="radio" name="port" hidden>
+   <span class="selection-list__text-group js-data-get">
+      <span>3 Гбит/с безлимит</span>
+      
+      
+   </span>
+</label><label class="selection-list__wrapper js-data-target">
+   <input type="radio" name="port" hidden>
+   <span class="selection-list__text-group js-data-get">
+      <span>4 Гбит/с безлимит</span>
+      
+      
+   </span>
+</label><label class="selection-list__wrapper js-data-target">
+   <input type="radio" name="port" hidden>
+   <span class="selection-list__text-group js-data-get">
+      <span>5 Гбит/с безлимит</span>
+      
+      
+   </span>
+</label>
+         </div>
+      </div>
+   </div>
+</div>
+</div>
+</div>
+
+      </div>
+
+
+   </div>
+</div>
+               </div>
+               <div class="server-placement__result">
+                  <div class="configuration__section">
+   <div class="configuration__section-title">Итого к оплате</div>
+   <div class="configuration__section-wrapper">
+
+      <div class="configuration__parameter-list-result-number">45 550 <span>руб/мес</span></div>
+
+      <div class="configuration__note">
+         размещение серверов с GPU, а также блейд-серверов производится по индивидуальным условиям
+      </div>
+
+      
+<button class="button button-purple" type="button" >
+   <span>Заказать сервер</span>
+   <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <path d="M16.1716 10.9715L10.8076 5.45454L12.2218 4L20 12.0001L12.2218 20L10.8076 18.5455L16.1716 13.0286H4V10.9715H16.1716Z" fill="#191919" />
+   </svg>
+</button>
+
+      <div class="configuration__parameter-info">Цена всех услуг указана с учетом НДС 20%</div>
+
+   </div>
+</div>
+               </div>
+            </div>
+         </div>
+      </div>
+      <div class="js-server-placement-tab tabs-switching__wrapper" data-tab_ts="3">
+         <div class="background-block">
+            <div class="server-placement__wrapper">
+               <div class="server-placement__parameter">
+                  <div class="configuration__section">
+   <div class="configuration__section-title">Параметры</div>
+   <div class="configuration__section-wrapper">
+
+      <div class="configuration__section-grid">
+
+
+         <div class="configuration__parameter">
+   <div class="configuration__parameter-name">
+      <span>Количество юнитов</span>
+      <button type="button" aria-label="описание">
+         <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M10 20C4.47715 20 0 15.5228 0 10C0 4.47715 4.47715 0 10 0C15.5228 0 20 4.47715 20 10C20 15.5228 15.5228 20 10 20ZM9 13V15H11V13H9ZM11 11.3551C12.4457 10.9248 13.5 9.5855 13.5 8C13.5 6.067 11.933 4.5 10 4.5C8.302 4.5 6.88637 5.70919 6.56731 7.31346L8.5288 7.70577C8.6656 7.01823 9.2723 6.5 10 6.5C10.8284 6.5 11.5 7.17157 11.5 8C11.5 8.8284 10.8284 9.5 10 9.5C9.4477 9.5 9 9.9477 9 10.5V12H11V11.3551Z" fill="#B5B5B5" />
+         </svg>
+      </button>
+   </div>
+   <div class="configuration__selection-group">
+   <div class="selection-list js-tabs-body js-tabs-toggle js-tabs-closing js-data-scope width-md">
+   <button class="selection-list__border" type="button">
+      <span class="selection-list__wrapper">
+         <span class="selection-list__text-group js-data-replace">
+            <span>1 Гбит/с безлимит</span>
+            
+            
+         </span>
+         <span class="selection-list__arrow">
+            <svg width="9" height="6" viewBox="0 0 9 6" fill="none" xmlns="http://www.w3.org/2000/svg">
+               <path d="M4.24268 5.65685L0 1.41425L1.41422 0L4.24268 2.82845L7.07108 0L8.48528 1.41425L4.24268 5.65685Z" fill="#191919" />
+            </svg>
+         </span>
+      </span>
+   </button>
+   <div class="selection-list__shell js-tabs-shell">
+      <div class="js-tabs-inner">
+         <div class="selection-list__border-inner scroll">
+            <label class="selection-list__wrapper js-data-target">
+   <input type="radio" name="port" hidden>
+   <span class="selection-list__text-group js-data-get">
+      <span>1 Гбит/с безлимит</span>
+      
+      
+   </span>
+</label><label class="selection-list__wrapper js-data-target">
+   <input type="radio" name="port" hidden>
+   <span class="selection-list__text-group js-data-get">
+      <span>2 Гбит</span>
+      
+      
+   </span>
+</label><label class="selection-list__wrapper js-data-target">
+   <input type="radio" name="port" hidden>
+   <span class="selection-list__text-group js-data-get">
+      <span>3 Гбит/с безлимит</span>
+      
+      
+   </span>
+</label><label class="selection-list__wrapper js-data-target">
+   <input type="radio" name="port" hidden>
+   <span class="selection-list__text-group js-data-get">
+      <span>4 Гбит/с безлимит</span>
+      
+      
+   </span>
+</label><label class="selection-list__wrapper js-data-target">
+   <input type="radio" name="port" hidden>
+   <span class="selection-list__text-group js-data-get">
+      <span>5 Гбит/с безлимит</span>
+      
+      
+   </span>
+</label>
+         </div>
+      </div>
+   </div>
+</div>
+</div>
+</div>
+
+         <div class="configuration__parameter">
+   <div class="configuration__parameter-name">
+      <span>Интернет с базовой защитой от DDoS</span>
+      <button type="button" aria-label="описание">
+         <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M10 20C4.47715 20 0 15.5228 0 10C0 4.47715 4.47715 0 10 0C15.5228 0 20 4.47715 20 10C20 15.5228 15.5228 20 10 20ZM9 13V15H11V13H9ZM11 11.3551C12.4457 10.9248 13.5 9.5855 13.5 8C13.5 6.067 11.933 4.5 10 4.5C8.302 4.5 6.88637 5.70919 6.56731 7.31346L8.5288 7.70577C8.6656 7.01823 9.2723 6.5 10 6.5C10.8284 6.5 11.5 7.17157 11.5 8C11.5 8.8284 10.8284 9.5 10 9.5C9.4477 9.5 9 9.9477 9 10.5V12H11V11.3551Z" fill="#B5B5B5" />
+         </svg>
+      </button>
+   </div>
+   <div class="configuration__selection-group">
+   <div class="selection-list js-tabs-body js-tabs-toggle js-tabs-closing js-data-scope width-md">
+   <button class="selection-list__border" type="button">
+      <span class="selection-list__wrapper">
+         <span class="selection-list__text-group js-data-replace">
+            <span>1 Гбит/с безлимит</span>
+            
+            
+         </span>
+         <span class="selection-list__arrow">
+            <svg width="9" height="6" viewBox="0 0 9 6" fill="none" xmlns="http://www.w3.org/2000/svg">
+               <path d="M4.24268 5.65685L0 1.41425L1.41422 0L4.24268 2.82845L7.07108 0L8.48528 1.41425L4.24268 5.65685Z" fill="#191919" />
+            </svg>
+         </span>
+      </span>
+   </button>
+   <div class="selection-list__shell js-tabs-shell">
+      <div class="js-tabs-inner">
+         <div class="selection-list__border-inner scroll">
+            <label class="selection-list__wrapper js-data-target">
+   <input type="radio" name="port" hidden>
+   <span class="selection-list__text-group js-data-get">
+      <span>1 Гбит/с безлимит</span>
+      
+      
+   </span>
+</label><label class="selection-list__wrapper js-data-target">
+   <input type="radio" name="port" hidden>
+   <span class="selection-list__text-group js-data-get">
+      <span>2 Гбит</span>
+      
+      
+   </span>
+</label><label class="selection-list__wrapper js-data-target">
+   <input type="radio" name="port" hidden>
+   <span class="selection-list__text-group js-data-get">
+      <span>3 Гбит/с безлимит</span>
+      
+      
+   </span>
+</label><label class="selection-list__wrapper js-data-target">
+   <input type="radio" name="port" hidden>
+   <span class="selection-list__text-group js-data-get">
+      <span>4 Гбит/с безлимит</span>
+      
+      
+   </span>
+</label><label class="selection-list__wrapper js-data-target">
+   <input type="radio" name="port" hidden>
+   <span class="selection-list__text-group js-data-get">
+      <span>5 Гбит/с безлимит</span>
+      
+      
+   </span>
+</label>
+         </div>
+      </div>
+   </div>
+</div>
+</div>
+</div>
+
+         <div class="configuration__parameter">
+   <div class="configuration__parameter-name">
+      <span>Выделенная мощность</span>
+      <button type="button" aria-label="описание">
+         <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M10 20C4.47715 20 0 15.5228 0 10C0 4.47715 4.47715 0 10 0C15.5228 0 20 4.47715 20 10C20 15.5228 15.5228 20 10 20ZM9 13V15H11V13H9ZM11 11.3551C12.4457 10.9248 13.5 9.5855 13.5 8C13.5 6.067 11.933 4.5 10 4.5C8.302 4.5 6.88637 5.70919 6.56731 7.31346L8.5288 7.70577C8.6656 7.01823 9.2723 6.5 10 6.5C10.8284 6.5 11.5 7.17157 11.5 8C11.5 8.8284 10.8284 9.5 10 9.5C9.4477 9.5 9 9.9477 9 10.5V12H11V11.3551Z" fill="#B5B5B5" />
+         </svg>
+      </button>
+   </div>
+   <div class="configuration__selection-group">
+   <div class="selection-list js-tabs-body js-tabs-toggle js-tabs-closing js-data-scope width-md">
+   <button class="selection-list__border" type="button">
+      <span class="selection-list__wrapper">
+         <span class="selection-list__text-group js-data-replace">
+            <span>1 Гбит/с безлимит</span>
+            
+            
+         </span>
+         <span class="selection-list__arrow">
+            <svg width="9" height="6" viewBox="0 0 9 6" fill="none" xmlns="http://www.w3.org/2000/svg">
+               <path d="M4.24268 5.65685L0 1.41425L1.41422 0L4.24268 2.82845L7.07108 0L8.48528 1.41425L4.24268 5.65685Z" fill="#191919" />
+            </svg>
+         </span>
+      </span>
+   </button>
+   <div class="selection-list__shell js-tabs-shell">
+      <div class="js-tabs-inner">
+         <div class="selection-list__border-inner scroll">
+            <label class="selection-list__wrapper js-data-target">
+   <input type="radio" name="port" hidden>
+   <span class="selection-list__text-group js-data-get">
+      <span>1 Гбит/с безлимит</span>
+      
+      
+   </span>
+</label><label class="selection-list__wrapper js-data-target">
+   <input type="radio" name="port" hidden>
+   <span class="selection-list__text-group js-data-get">
+      <span>2 Гбит</span>
+      
+      
+   </span>
+</label><label class="selection-list__wrapper js-data-target">
+   <input type="radio" name="port" hidden>
+   <span class="selection-list__text-group js-data-get">
+      <span>3 Гбит/с безлимит</span>
+      
+      
+   </span>
+</label><label class="selection-list__wrapper js-data-target">
+   <input type="radio" name="port" hidden>
+   <span class="selection-list__text-group js-data-get">
+      <span>4 Гбит/с безлимит</span>
+      
+      
+   </span>
+</label><label class="selection-list__wrapper js-data-target">
+   <input type="radio" name="port" hidden>
+   <span class="selection-list__text-group js-data-get">
+      <span>5 Гбит/с безлимит</span>
+      
+      
+   </span>
+</label>
+         </div>
+      </div>
+   </div>
+</div>
+</div>
+</div>
+
+         <div class="configuration__parameter">
+   <div class="configuration__parameter-name">
+      <span>Дата-центр</span>
+      <button type="button" aria-label="описание">
+         <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M10 20C4.47715 20 0 15.5228 0 10C0 4.47715 4.47715 0 10 0C15.5228 0 20 4.47715 20 10C20 15.5228 15.5228 20 10 20ZM9 13V15H11V13H9ZM11 11.3551C12.4457 10.9248 13.5 9.5855 13.5 8C13.5 6.067 11.933 4.5 10 4.5C8.302 4.5 6.88637 5.70919 6.56731 7.31346L8.5288 7.70577C8.6656 7.01823 9.2723 6.5 10 6.5C10.8284 6.5 11.5 7.17157 11.5 8C11.5 8.8284 10.8284 9.5 10 9.5C9.4477 9.5 9 9.9477 9 10.5V12H11V11.3551Z" fill="#B5B5B5" />
+         </svg>
+      </button>
+   </div>
+   <div class="configuration__selection-group">
+   <div class="selection-list js-tabs-body js-tabs-toggle js-tabs-closing js-data-scope width-md">
+   <button class="selection-list__border" type="button">
+      <span class="selection-list__wrapper">
+         <span class="selection-list__text-group js-data-replace">
+            <span>1 Гбит/с безлимит</span>
+            
+            
+         </span>
+         <span class="selection-list__arrow">
+            <svg width="9" height="6" viewBox="0 0 9 6" fill="none" xmlns="http://www.w3.org/2000/svg">
+               <path d="M4.24268 5.65685L0 1.41425L1.41422 0L4.24268 2.82845L7.07108 0L8.48528 1.41425L4.24268 5.65685Z" fill="#191919" />
+            </svg>
+         </span>
+      </span>
+   </button>
+   <div class="selection-list__shell js-tabs-shell">
+      <div class="js-tabs-inner">
+         <div class="selection-list__border-inner scroll">
+            <label class="selection-list__wrapper js-data-target">
+   <input type="radio" name="port" hidden>
+   <span class="selection-list__text-group js-data-get">
+      <span>1 Гбит/с безлимит</span>
+      
+      
+   </span>
+</label><label class="selection-list__wrapper js-data-target">
+   <input type="radio" name="port" hidden>
+   <span class="selection-list__text-group js-data-get">
+      <span>2 Гбит</span>
+      
+      
+   </span>
+</label><label class="selection-list__wrapper js-data-target">
+   <input type="radio" name="port" hidden>
+   <span class="selection-list__text-group js-data-get">
+      <span>3 Гбит/с безлимит</span>
+      
+      
+   </span>
+</label><label class="selection-list__wrapper js-data-target">
+   <input type="radio" name="port" hidden>
+   <span class="selection-list__text-group js-data-get">
+      <span>4 Гбит/с безлимит</span>
+      
+      
+   </span>
+</label><label class="selection-list__wrapper js-data-target">
+   <input type="radio" name="port" hidden>
+   <span class="selection-list__text-group js-data-get">
+      <span>5 Гбит/с безлимит</span>
+      
+      
+   </span>
+</label>
+         </div>
+      </div>
+   </div>
+</div>
+</div>
+</div>
+
+      </div>
+
+
+   </div>
+</div>
+               </div>
+               <div class="server-placement__result">
+                  <div class="configuration__section">
+   <div class="configuration__section-title">Итого к оплате</div>
+   <div class="configuration__section-wrapper">
+
+      <div class="configuration__parameter-list-result-number">45 550 <span>руб/мес</span></div>
+
+      <div class="configuration__note">
+         размещение серверов с GPU, а также блейд-серверов производится по индивидуальным условиям
+      </div>
+
+      
+<button class="button button-purple" type="button" >
+   <span>Заказать сервер</span>
+   <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <path d="M16.1716 10.9715L10.8076 5.45454L12.2218 4L20 12.0001L12.2218 20L10.8076 18.5455L16.1716 13.0286H4V10.9715H16.1716Z" fill="#191919" />
+   </svg>
+</button>
+
+      <div class="configuration__parameter-info">Цена всех услуг указана с учетом НДС 20%</div>
+
+   </div>
+</div>
+               </div>
+            </div>
+         </div>
+      </div>
+
+
+
+
+
+   </div>
+
+</section>
 
       </div>
 
@@ -3045,7 +4171,7 @@
 
 
    
-<script defer src='./js/app.js?t=1766849947062'></script>
+<script defer src='./js/app.js?t=1766871336408'></script>
 
 
 </body>

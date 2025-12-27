@@ -13,10 +13,6 @@
       padding: 25px;
    }
 
-   .button {
-      width: 100%;
-   }
-
    &__body {
       display: flex;
       flex-direction: column;
@@ -54,6 +50,10 @@
 
       @media (min-width:2560px) {
          border-radius: 8px;
+      }
+
+      .button {
+         width: 100%;
       }
 
       &:not(:last-child) {
@@ -746,6 +746,10 @@
       &._center {
          align-items: center;
       }
+
+      .configuration__parameter-list-result-number {
+         text-align: right;
+      }
    }
 
    &__parameter-list-name {
@@ -806,7 +810,6 @@
       font-size: 26px;
       line-height: 100%;
       letter-spacing: -0.02em;
-      text-align: right;
       @include size_adaptive (font-size, 26, 50, 1366, 2560);
 
       @media (min-width:2560px) {
@@ -822,7 +825,6 @@
       margin-top: 15px;
       font-size: 11px;
       line-height: 140%;
-      text-align: center;
       color: #575757;
 
       @media (min-width:1920px) {
@@ -872,6 +874,154 @@
       }
    }
 
+   &__case {
+      display: flex;
+      gap: 10px;
+      max-width: 100%;
+      overflow-x: auto;
 
+      @media (min-width:1366px) {
+         // flex-wrap: wrap;
+      }
 
+      &::-webkit-scrollbar {
+         display: none;
+      }
+   }
+
+   &__case-item {
+      padding: 10px;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+      height: 100%;
+      width: 150px;
+      border-radius: 5px;
+      border: 1px solid #B5B5B5;
+      background-color: #F3F3F3;
+
+      @media (min-width:2560px) {
+         padding: 25px;
+         width: 320px;
+      }
+   }
+
+   &__case-icon {
+      padding: 5px;
+      display: flex;
+      flex-direction: column;
+      background: linear-gradient(180deg, #979797 0%, #363535 100%);
+      border-radius: 7px;
+   }
+
+   &__case-text {
+      padding-top: 13px;
+      display: block;
+      font-family: var(--font-family-second);
+      font-weight: 800;
+      font-size: 16px;
+      line-height: 110%;
+      letter-spacing: -0.01em;
+      text-align: center;
+      @include size_adaptive (font-size, 16, 24, 1366, 2560);
+
+      @media (min-width:2560px) {
+         font-size: 24px;
+      }
+   }
+
+   &__button-text {
+      display: block;
+      padding: 0.8em 1em;
+      border-radius: 5px;
+      border: 1px solid #B5B5B5;
+      background-color: #F3F3F3;
+      font-weight: 500;
+      font-size: 13px;
+      line-height: 140%;
+      letter-spacing: -0.02em;
+
+      @include size_adaptive (font-size, 13, 20, 1366, 2560);
+
+      @media (min-width:2560px) {
+         font-size: 20px;
+      }
+   }
+
+   &__note {
+      padding-top: 10px;
+      padding-bottom: 45px;
+      font-size: 12px;
+      line-height: 140%;
+      color: #575757;
+
+      @media (min-width:1920px) {
+         font-size: 14px;
+      }
+
+      @media (min-width:2560px) {
+         font-size: 16px;
+      }
+
+      &::before {
+         content: '*';
+         color: #6E48F5;
+      }
+   }
+
+   &__stepper {
+      padding: 0.7em 0.9em;
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      font-weight: 500;
+      font-size: 13px;
+      line-height: 140%;
+      letter-spacing: -0.02em;
+      background-color: #F3F3F3;
+      border: 1px solid #B5B5B5;
+      border-radius: 5px;
+      @include size_adaptive (font-size, 13, 22, 1366, 2560);
+
+      @media (min-width:2560px) {
+         font-size: 22px;
+      }
+   }
+
+   &__stepper-body {
+      display: flex;
+      align-items: center;
+      gap: 0.2em;
+   }
+
+   &__stepper-button {
+      --size: 14px;
+      flex: 0 0 var(--size);
+      height: var(--size);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 3px;
+
+      @include size_adaptive (--size, 14, 24, 1366, 2560);
+
+      @media (min-width:2560px) {
+         --size: 24px;
+      }
+   }
+
+   &__stepper-value {
+      display: flex;
+      flex-direction: column;
+   }
+
+   &__stepper-value-item {
+      display: none;
+
+      input:checked+& {
+         display: block;
+      }
+   }
+
+   &__stepper-text {}
 }

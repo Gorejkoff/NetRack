@@ -1,0 +1,20 @@
+[
+   {
+      "name": "Размещение сервера",
+      "class": "js-server-placement-tab-button",
+      "active": true,
+      "number": 1
+   },
+   {
+      "name": "Аренда секций в стойках",
+      "class": "js-server-placement-tab-button",
+      "active": false,
+      "number": 2
+   },
+   {
+      "name": "Аренда серверных стоек",
+      "class": "js-server-placement-tab-button",
+      "active": false,
+      "number": 3
+   }
+]
