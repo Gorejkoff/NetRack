@@ -9,6 +9,7 @@
 @use "../../html/UI/Button/button";
 @use "../../html/UI/Cards/Device-Card/device-card";
 @use "../../html/UI/Selection/selection";
+@use "../../html/UI/Tab-Dropdowm/tab";
 
 // components
 @use '../../html/Components/Included/included';
@@ -19,5 +20,5 @@
 @use '../../html/Components/Info-Block/info-block';
 @use '../../html/Components/Enabled-Support/enabled-support';
 @use '../../html/Components/Trust/trust';
-@use '../../html/Components/Questions/questions';
 @use '../../html/Components/Models/models';
+@use '../../html/Components/Questions/questions';

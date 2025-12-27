@@ -1,0 +1,22 @@
+<div class="tab js-tabs-body">
+   <button class="tab__button js-tabs-toggle" type="button">
+      <div class="tab__button-text">@@text</div>
+      @@if(context.pricetext){<div class="tab__price">
+         @@if(context.pricenumber){<span>@@pricenumber</span>}
+         <span class="tab__price-text">@@pricetext</span>
+      </div>}
+      <div class="tab__button-arrow">
+         <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M13.0008 16.1716L18.3648 10.8076L19.779 12.2218L12.0008 20L4.22266 12.2218L5.63688 10.8076L11.0008 16.1716V4H13.0008V16.1716Z" fill="#6E48F5" />
+         </svg>
+      </div>
+   </button>
+   <div class="tab__shell js-tabs-shell">
+      <div class="tab__inner js-tabs-inner">
+         <p>У каждого клиента есть лицевой счёт, на котором хранится остаток денежных средств. Со счёта ежедневно списывается оплата за аренду виртуального сервера. Пополнить счёт можно через раздел «Финансы» — «Платежи».</p>
+         <p>Например, вы используете VDS-Форсаж за 749 рублей в месяц. В феврале (28 дней) со счёта будет списываться сумма 749 / 28 = 26,75 рублей ежедневно.</p>
+         <p>Таким образом тарифицируются виртуальные серверы и дополнительные услуги: панель управления, дополнительные IP-адреса, дополнительные ресурсы сервера, лицензии Windows Server.</p>
+         <p>Пока на счёте имеются деньги — VPS и остальные услуги работают. Посмотреть список всех расходов можно в <a href="#0" class="link link--color-purple">Личном кабинете</a> в разделе «Финансы» — «Расходы».</p>
+      </div>
+   </div>
+</div>

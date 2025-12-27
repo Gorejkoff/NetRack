@@ -2,12 +2,12 @@
 
 .button {
    padding: 7px 15px;
-   display: flex;
+   display: inline-flex;
    align-items: center;
    justify-content: space-between;
    gap: 20px;
    min-height: 35px;
-   width: 100%;
+   // width: 100%;
    font-family: var(--font-family-second);
    font-weight: 800;
    font-size: 14px;
