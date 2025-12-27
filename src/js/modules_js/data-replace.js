@@ -11,7 +11,6 @@ document.addEventListener('click', (event) => {
       const dataGet = dataTarget.classList.contains('js-data-get') ?
          dataTarget :
          dataTarget.querySelector('.js-data-get');
-      console.log(dataGet);
       if (!dataGet) return;
       const dataReplace = dataScope.querySelector('.js-data-replace');
       if (!dataReplace) return;

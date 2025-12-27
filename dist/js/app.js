@@ -86,7 +86,6 @@ document.addEventListener('click', (event) => {
       const dataGet = dataTarget.classList.contains('js-data-get') ?
          dataTarget :
          dataTarget.querySelector('.js-data-get');
-      console.log(dataGet);
       if (!dataGet) return;
       const dataReplace = dataScope.querySelector('.js-data-replace');
       if (!dataReplace) return;
@@ -105,9 +104,13 @@ document.addEventListener('click', (event) => {
 class InputDoubleRangeMetods {
    constructor() {
       this.startEvent = (event) => {
-         isPC ? this.mouseX = event.clientX : this.mouseX = event.changedTouches[0].clientX;
+         isPC ?
+            this.mouseX = event.clientX :
+            this.mouseX = event.changedTouches[0].clientX;
          this.getProperties();
-         document.addEventListener('mousemove', this.mouseMove);
+         isPC ?
+            document.addEventListener('mousemove', this.mouseMove) :
+            document.addEventListener('touchmove', this.mouseMove);
          if (event.target.closest('.js-double-range-spin-max')) {
             this.spinMove = true;
             this.spin_max.style.zIndex = 2;
@@ -127,7 +130,9 @@ class InputDoubleRangeMetods {
          this.spinMove = false;
          const hover = document.querySelector('.js-double-range-spin.hover');
          if (hover) hover.classList.remove('hover');
-         document.removeEventListener('mousemove', this.mouseMove)
+         isPC ?
+            document.removeEventListener('mousemove', this.mouseMove) :
+            document.removeEventListener('touchmove ', this.mouseMove)
       };
       this.mouseMove = this.throttle((event) => {
          isPC ? this.mouseX = event.clientX : this.mouseX = event.changedTouches[0].clientX;
@@ -184,6 +189,7 @@ class InputDoubleRangeMetods {
       isPC && this.spin_max.addEventListener('mousedown', this.startEvent);
       isPC && this.spin_min.addEventListener('mousedown', this.startEvent);
       isPC && document.addEventListener('mouseup', this.andEvent);
+      !isPC && document.addEventListener('touchend', this.andEvent);
       !isPC && this.spin_max.addEventListener('touchstart', this.startEvent);
       !isPC && this.spin_min.addEventListener('touchstart', this.startEvent);
    }

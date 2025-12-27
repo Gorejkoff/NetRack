@@ -581,9 +581,10 @@
    &__range-group {
       display: flex;
       flex-direction: column;
-      gap: 40px;
+      gap: 10px;
 
       @media (min-width:768px) {
+         gap: 40px;
          flex-direction: row;
       }
    }
@@ -612,9 +613,14 @@
 
       flex: 1 0 300px;
       --size-spin: 19px;
-      font-size: 18px;
-      padding-top: calc(var(--size-spin) + 1em);
+      font-size: 14px;
+      padding-top: calc(var(--size-spin) + 0.6em);
       padding-bottom: calc(var(--size-spin) / 2);
+
+      @media (min-width:1024px) {
+         font-size: 18px;
+         padding-top: calc(var(--size-spin) + 1em);
+      }
 
       @include size_adaptive_flex (1, 0, 100, 300, 1366, 2560);
 
@@ -653,6 +659,7 @@
    }
 
    &__double-range-input {
+      padding-bottom: 0.2em;
       position: absolute;
       display: block;
       bottom: 100%;
@@ -666,10 +673,14 @@
    }
 
    &__filter-checkboxes {
-      margin-top: 18px;
+      margin-top: 10px;
       display: flex;
       flex-wrap: wrap;
       gap: 15px;
+
+      @media (min-width:1024px) {
+         margin-top: 18px;
+      }
    }
 
    &__filter-checkbox {
