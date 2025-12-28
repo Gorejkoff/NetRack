@@ -2,7 +2,9 @@
    <div class="server-placement__container">
 
       <div class="header-section">
-         <div class="title-section">Цены на размещение сервера</div>
+         <div class="server-placement__title title-section js-server-placement-tab active" data-tab_ts="1">Цены на размещение сервера</div>
+         <div class="server-placement__title title-section js-server-placement-tab" data-tab_ts="2">Цены на аренду секций в стойках</div>
+         <div class="server-placement__title title-section js-server-placement-tab" data-tab_ts="3">Цены на аренду серверной стойки</div>
       </div>
 
       @@include('../../UI/Tabs-Switching-Buttons/Tabs-Switching-Buttons.html',{ json: 'json/lists/tabs-server-placement.json'})

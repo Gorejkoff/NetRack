@@ -2806,6 +2806,14 @@ input:checked + .configuration__stepper-value-item {
   grid-template-columns: 1fr 1fr 1fr 1fr;
 }
 
+.server-placement__title {
+  display: none;
+}
+
+.server-placement__title.active {
+  display: block;
+}
+
 .server-placement__wrapper {
   display: -webkit-box;
   display: -ms-flexbox;

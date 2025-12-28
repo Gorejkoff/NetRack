@@ -2,7 +2,13 @@
 
 .server-placement {
 
-   &__container {}
+   &__title {
+      display: none;
+
+      &.active {
+         display: block;
+      }
+   }
 
    &__wrapper {
       display: flex;
