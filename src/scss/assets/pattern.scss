@@ -41,6 +41,27 @@ body {
    max-width: var(--max-width-container);
 }
 
+.background-section {
+   position: absolute;
+   top: 0;
+   left: 0;
+   z-index: -1;
+   width: 100%;
+   height: 100%;
+   overflow-x: hidden;
+   border-radius: 20px;
+
+   img {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+   }
+}
+
 label {
    cursor: pointer;
 }
@@ -184,48 +205,39 @@ label {
 
 .title-section {
    font-family: var(--font-family-second);
-   font-size: 30px;
+   font-size: var(--font-size-title);
    font-weight: 800;
    line-height: 100%;
    letter-spacing: -0.02em;
-
-   @include size_adaptive (font-size, 30, 36, 768, 1366);
-   @include size_adaptive (font-size, 36, 70, 1366, 2560);
 
    @media (min-width:1366px) {
       max-width: 60%;
    }
 
-   @media (min-width:2560px) {
-      font-size: 70px;
+   .dark--scheme & {
+      color: #ffffff;
    }
+
+   span {
+      color: #6E48F5;
+   }
+
 }
 
 .subtitle-section {
    font-family: var(--font-family-second);
    margin-bottom: 40px;
    font-weight: 800;
-   font-size: 26px;
+   font-size: var(--font-size-subtitle);
    line-height: 100%;
    letter-spacing: -0.02em;
-   @include size_adaptive (font-size, 26, 30, 768, 1366);
-   @include size_adaptive (font-size, 30, 60, 1366, 2560);
-
-   @media (min-width:2560px) {
-      font-size: 60px;
-   }
 }
 
 .text-section {
    margin-top: 20px;
    font-weight: 500;
-   font-size: 20px;
+   font-size: var(--font-size-2xl);
    line-height: 140%;
-   @include size_adaptive (font-size, 20, 30, 1366, 2560);
-
-   @media (min-width:2560px) {
-      font-size: 30px;
-   }
 
    span {
       color: #6E48F5;
@@ -233,6 +245,7 @@ label {
 }
 
 .padding-section {
+   position: relative;
    margin-top: 10px;
    margin-bottom: 10px;
    padding-top: var(--indent-section);
@@ -322,20 +335,20 @@ label {
    }
 }
 
-// .swiper-wrapper {
-//    position: relative;
-//    z-index: 1;
-//    display: flex;
-//    transition-property: transform;
-// }
+.swiper-wrapper {
+   position: relative;
+   z-index: 1;
+   display: flex;
+   transition-property: transform;
+}
 
-// .swiper-slide {
-//    flex-shrink: 0;
-//    width: 100%;
-//    position: relative;
-//    transition-property: transform;
-//    touch-action: pan-y;
-// }
+.swiper-slide {
+   flex-shrink: 0;
+   width: 100%;
+   position: relative;
+   transition-property: transform;
+   touch-action: pan-y;
+}
 
 .js-tabs-shell {
    will-change: height;

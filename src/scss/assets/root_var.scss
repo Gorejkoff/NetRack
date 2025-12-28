@@ -1,3 +1,5 @@
+@use '../utils' as *;
+
 :root {
    --font-family: "InterTight", sans-serif;
    --font-family-second: "Jeko", sans-serif;
@@ -6,6 +8,99 @@
    --color-black: #191919;
    --color-modal-bg: rgba(0, 0, 0, 0.6);
    --vh: 100vh;
+
+   // --padding-lg
+   --padding-lg: 10px;
+   @include size_adaptive (--padding-lg, 10, 36, 768, 1366);
+   @include size_adaptive (--padding-lg, 36, 70, 1366, 2560);
+
+   @media (min-width:2560px) {
+      --padding-lg: 70px;
+   }
+
+   // --padding-md
+   --padding-md: 10px;
+   @include size_adaptive (--padding-md, 10, 26, 768, 1366);
+   @include size_adaptive (--padding-md, 26, 50, 1366, 2560);
+
+   @media (min-width:2560px) {
+      --padding-md: 50px;
+   }
+
+   // --font-size-sm
+   --font-size-sm: 10px;
+   @include size_adaptive (--font-size-sm, 10, 20, 1366, 2560);
+
+   @media (min-width:2560px) {
+      --font-size-sm: 20px;
+   }
+
+   // --font-size-md
+   --font-size-md: 13px;
+   @include size_adaptive (--font-size-md, 13, 22, 1366, 2560);
+
+   @media (min-width:2560px) {
+      --font-size-md: 22px;
+   }
+
+   // --font-size-ml
+   --font-size-ml: 14px;
+   @include size_adaptive (--font-size-ml, 14, 24, 1366, 2560);
+
+   @media (min-width:2560px) {
+      --font-size-ml: 24px;
+   }
+
+   // --font-size-lg
+   --font-size-lg: 15px;
+   @include size_adaptive (--font-size-lg, 15, 26, 1366, 2560);
+
+   @media (min-width:2560px) {
+      --font-size-lg: 26px;
+   }
+
+   // --font-size-xl
+   --font-size-xl: 15px;
+   @include size_adaptive (--font-size-xl, 15, 26, 1366, 2560);
+
+   @media (min-width:2560px) {
+      --font-size-xl: 26px;
+   }
+
+   // --font-size-2xl
+   --font-size-2xl: 20px;
+   @include size_adaptive (--font-size-2xl, 20, 30, 1366, 2560);
+
+   @media (min-width:2560px) {
+      --font-size-2xl: 30px;
+   }
+
+   // --font-size-3xl
+   --font-size-3xl: 16px;
+   @include size_adaptive (--font-size-3xl, 16, 20, 768, 1366);
+   @include size_adaptive (--font-size-3xl, 20, 36, 1366, 2560);
+
+   @media (min-width:2560px) {
+      --font-size-3xl: 36px;
+   }
+
+   // --font-size-subtitle
+   --font-size-subtitle: 24px;
+   @include size_adaptive (--font-size-subtitle, 24, 32, 768, 1366);
+   @include size_adaptive (--font-size-subtitle, 32, 60, 1366, 2560);
+
+   @media (min-width:2560px) {
+      --font-size-subtitle: 60px;
+   }
+
+   // --font-size-title
+   --font-size-title: 30px;
+   @include size_adaptive (--font-size-title, 30, 36, 768, 1366);
+   @include size_adaptive (--font-size-title, 36, 70, 1366, 2560);
+
+   @media (min-width:2560px) {
+      --font-size-title: 70px;
+   }
 
    // @supports (height: 100dvh) {
    //    --vh: 100dvh;

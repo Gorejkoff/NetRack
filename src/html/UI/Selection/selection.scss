@@ -115,14 +115,9 @@
 
    &__text-group {
       font-weight: 500;
-      font-size: 12px;
+      font-size: var(--font-size-md);
       line-height: 140%;
       letter-spacing: -0.02em;
-      @include size_adaptive (font-size, 12, 22, 1366, 2560);
-
-      @media (min-width:2560px) {
-         font-size: 22px;
-      }
    }
 
    &__subtext {

@@ -20,17 +20,9 @@
       flex: 1 1 auto;
       font-family: var(--font-family-second);
       font-weight: 800;
-      font-size: 24px;
+      font-size: var(--font-size-subtitle);
       line-height: 100%;
       letter-spacing: -0.02em;
-
-
-      @include size_adaptive (font-size, 24, 32, 768, 1366);
-      @include size_adaptive (font-size, 32, 60, 1366, 2560);
-
-      @media (min-width:2560px) {
-         font-size: 60px;
-      }
 
       span {
          color: #6E48F5;
@@ -42,17 +34,10 @@
       display: grid;
       grid-template-columns: 1fr;
       gap: 0.72em;
-      font-size: 13px;
+      font-size: var(--font-size-md);
 
       @media (min-width:1024px) {
          grid-template-columns: 1fr 1fr;
-
-      }
-
-      @include size_adaptive (font-size, 13, 22, 1366, 2560);
-
-      @media (min-width:2560px) {
-         font-size: 22px;
       }
    }
 

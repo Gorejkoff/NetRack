@@ -1,0 +1,49 @@
+<section class="padding-section dark--scheme">
+   <div class="container">
+      <div class="header-section ">
+         <h2 class="title-section">Услуги дата-центра</h2>
+      </div>
+      <div class="list-card__grid four--columns">
+
+         @@include('../../UI/Cards/List-Card/List-Card.html',{
+         title: 'Выделенные серверы',
+         icon:'svg/server.svg',
+         list: [
+         '6 уровней физической безопасности',
+         'видеонаблюдение и детекторы движения',
+         'биометрический контроль доступа и тамбур-шлюзы',
+         'круглосуточная охрана',
+         ],
+         linktext: 'Разместить сервер'
+         })
+         @@include('../../UI/Cards/List-Card/List-Card.html',{
+         title: 'Размещение оборудования',
+         icon:'svg/placement.svg',
+         list: [
+         'семь площадок на выбор',
+         'круглосуточный доступ в ЦОД',
+         'модель “мульти-ЦОД”: размещение и связность в двух независимых дата-центрах'
+         ],
+         linktext: 'Разместить сервер'
+         })
+         @@include('../../UI/Cards/List-Card/List-Card.html',{
+         title: 'Сеть и безопасность',
+         icon:'svg/secure.svg',
+         list: [
+         'интернет-каналы до 100 Гбит/с',
+         'BGP, прямые стыки с MSK-IX, DATA-IX и 50+ операторами, собственная ASN',
+         'DDoS-защита с центрами очистки на территории РФ'
+         ],
+         linktext: 'Разместить сервер'
+         })
+         @@include('../../UI/Cards/List-Card/List-Card.html',{
+         title: 'Техническая поддержка',
+         icon:'svg/support.svg',
+         list: [
+         '24/7/365, отклик &lt; 5 минут',
+         'общение напрямую с инженерами' , 'поддержка через тикеты, Telegram, WhatsApp, e-mail и телефон' ], linktext: 'Разместить сервер' }) </div>
+   </div>
+   <div class="background-section">
+      <img class="" src="@img/webp/bg-1.webp" alt="фон" aria-hidden="true">
+   </div>
+</section>

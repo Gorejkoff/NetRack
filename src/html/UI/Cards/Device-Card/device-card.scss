@@ -77,17 +77,10 @@
       display: flex;
       align-items: center;
       font-weight: 600;
-      font-size: 16px;
+      font-size: var(--font-size-ml);
       line-height: 140%;
       border-radius: 3px;
       background-color: #F3F3F3;
-
-      @include size_adaptive (font-size, 16, 24, 1366, 2560);
-
-      @media (min-width:2560px) {
-         font-size: 24px;
-      }
-
    }
 
    &__wrapper {
@@ -118,12 +111,7 @@
    &__grid {
       display: grid;
       grid-template-columns: auto 1fr;
-      font-size: 13px;
-      @include size_adaptive (font-size, 13, 22, 1366, 2560);
-
-      @media (min-width:2560px) {
-         font-size: 22px;
-      }
+      font-size: var(--font-size-md);
    }
 
    &__comps {
@@ -167,12 +155,7 @@
       padding: 10px 0;
       line-height: 140%;
       color: #B5B5B5;
-      font-size: 13px;
-      @include size_adaptive (font-size, 13, 22, 1366, 2560);
-
-      @media (min-width:2560px) {
-         font-size: 22px;
-      }
+      font-size: var(--font-size-md);
    }
 
    &__price {

@@ -1,7 +1,19 @@
 <div class="list-card__cell">
-   <div class="list-card__cell-title">@@title</div>
-   <ul class="list-card__list">
+   @@if(context.icon){<div class="list-card__icon">
+      <img src="@img/@@icon" alt="иконка">
+   </div>}
+   <div class="list-card__title">@@title</div>
+   @@if(context.list){<ul class="list-card__text">
       @@for( var i = 0; i < context.list.length; i++ ){ <li>`+context.list[i]+`</li> }
-   </ul>
-   <img class="list-card__background-icon" src="@img/@@image" alt="иконка" aria-hidden="true">
+   </ul>}
+   @@if(context.text){<p class="list-card__text">@@text</p>}
+   @@if(context.linktext){<a class="list-card__link" href="#0">
+      @@linktext
+      <span>
+         <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M16.1716 10.9715L10.8076 5.45454L12.2218 4L20 12.0001L12.2218 20L10.8076 18.5455L16.1716 13.0286H4V10.9715H16.1716Z" fill="#B7FE56" />
+         </svg>
+      </span>
+   </a> }
+   @@if(context.bgimage){<img class="list-card__background-image" src="@img/@@bgimage" alt="иконка" aria-hidden="true">}
 </div>

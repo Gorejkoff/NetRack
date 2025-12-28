@@ -8,8 +8,14 @@
       grid-template-columns: 1fr;
       gap: 10px;
 
-      @media (min-width:768px) {
+      @media (min-width:600px) {
          grid-template-columns: 1fr 1fr;
+      }
+
+      &.three--columns {
+         @media (min-width:1366px) {
+            grid-template-columns: 1fr 1fr 1fr;
+         }
       }
 
       &.four--columns {
@@ -20,50 +26,108 @@
    }
 
    &__cell {
+      --position: 10px;
+      --size: 132px;
       position: relative;
-      --padding: 10px;
-      padding: var(--padding);
+      padding: var(--padding-lg);
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      min-height: calc(var(--size) + var(--position) * 3);
       border-radius: 10px;
       border: 1px solid #B5B5B5;
 
-      @include size_adaptive (--padding, 10, 36, 768, 1366);
-      @include size_adaptive (--padding, 36, 70, 1366, 2560);
+      @include size_adaptive (--size, 132, 250, 1366, 2560);
 
-      @media (min-width:2560px) {
-         --padding: 70px;
+      @media (min-width:1366px) {
+         --position: 30px;
       }
 
-      .four--columns & {
-         @include size_adaptive (--padding, 20, 50, 1366, 2560);
+      @media (min-width:2560px) {
+         --size: 250px;
+      }
+
+      .three--columns & {
+         @include size_adaptive (--size, 132, 200, 1366, 2560);
 
          @media (min-width:2560px) {
-            --padding: 50px;
+            --size: 200px;
+         }
+      }
+
+      .three--columns &,
+      .four--columns & {
+         @media (min-width:2560px) {
+            padding: var(--padding-md);
+         }
+      }
+
+      .dark--scheme & {
+         background-color: #242424;
+         color: #ffffff;
+         border-color: #575757;
+      }
+   }
+
+   &__icon {
+      display: inline-block;
+      position: relative;
+      z-index: 1;
+      margin-bottom: 26px;
+      padding: 20px;
+
+      &::before {
+         content: '';
+         position: absolute;
+         top: 50%;
+         left: 50%;
+         z-index: -1;
+         width: 80%;
+         height: 80%;
+         transform: translate(-50%, -50%);
+         filter: blur(15px);
+         background-color: #B7FE56;
+         border-radius: 50%;
+
+         @media (min-width:1024px) {
+            width: 100%;
+            height: 100%;
+            filter: blur(30px);
+         }
+      }
+
+      svg,
+      img {
+         width: 50px;
+         height: auto;
+         @include size_adaptive (width, 50, 100, 1366, 2560);
+
+         @media (min-width:2560px) {
+            width: 100px;
          }
       }
    }
 
-   &__cell-title {
+   &__title {
       margin-bottom: 16px;
       font-family: var(--font-family-second);
-      font-size: 19px;
+      font-size: var(--font-size-3xl);
       font-weight: 800;
       line-height: 110%;
       letter-spacing: -0.02em;
 
       @include size_adaptive (margin-bottom, 16, 30, 1366, 2560);
-      @include size_adaptive (font-size, 19, 36, 1366, 2560);
 
       @media (min-width:2560px) {
          margin-bottom: 30px;
-         font-size: 36px;
       }
    }
 
-   &__list {
-      font-size: 13px;
+   &__text {
+      flex: 1 1 auto;
+      font-size: var(--font-size-md);
       line-height: 140%;
       color: #575757;
-      @include size_adaptive (font-size, 13, 22, 1366, 2560);
 
       @media (min-width:1366px) {
          max-width: 84%;
@@ -73,8 +137,8 @@
          }
       }
 
-      @media (min-width:2560px) {
-         font-size: 22px;
+      .dark--scheme & {
+         color: #F3F3F3;
       }
 
       li {
@@ -87,18 +151,31 @@
       }
    }
 
-   &__background-icon {
+   &__background-image {
       position: absolute;
-      bottom: 30px;
-      right: 30px;
+      bottom: var(--position);
+      right: var(--position);
       z-index: -1;
-      width: 132px;
+      width: var(--size);
       height: auto;
+   }
 
-      @include size_adaptive (width, 132, 250, 1366, 2560);
 
-      @media (min-width:2560px) {
-         width: 250px;
+
+   &__link {
+      margin-top: 16px;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5em;
+      font-weight: 600;
+      font-size: var(--font-size-sm);
+      letter-spacing: -0.02em;
+      text-decoration: underline;
+      text-decoration-style: dotted;
+      text-underline-offset: 0.2em;
+
+      @media (min-width:1024px) {
+         margin-top: 30px;
       }
    }
 }

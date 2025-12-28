@@ -102,7 +102,7 @@
       min-height: 62px;
       min-width: 100px;
       font-weight: 600;
-      font-size: 24px;
+      font-size: var(--font-size-ml);
       line-height: 100%;
       letter-spacing: -0.02em;
       color: #B7FE56;
@@ -145,7 +145,7 @@
    }
 
    &__about-text {
-      font-size: 22px;
+      font-size: var(--font-size-md);
       line-height: 140%;
       color: #575757;
    }

@@ -1,8 +1,7 @@
 @use '../../../../scss/utils' as *;
 
 .feature-card {
-   --padding: 10px;
-   padding: var(--padding);
+   padding: var(--padding-lg);
    display: flex;
    flex-direction: column;
    gap: 16px;
@@ -10,16 +9,13 @@
    border-radius: 10px;
    background-color: #F3F3F3;
 
-   @include size_adaptive (--padding, 10, 36, 768, 1366);
    @include size_adaptive (min-height, 265, 500, 1366, 2560);
-   @include size_adaptive (--padding, 36, 70, 1366, 2560);
 
    @media (min-width:1024px) {
       gap: 30px;
    }
 
    @media (min-width:2560px) {
-      --padding: 70px;
       min-height: 500px;
    }
 
@@ -47,25 +43,16 @@
    &__title {
       font-family: var(--font-family-second);
       font-weight: 800;
-      font-size: 19px;
+      font-size: var(--font-size-3xl);
       line-height: 110%;
       letter-spacing: -0.02em;
-      @include size_adaptive (font-size, 19, 36, 1366, 2560);
 
-      @media (min-width:2560px) {
-         font-size: 36px;
-      }
 
    }
 
    &__text {
-      font-size: 13px;
+      font-size: var(--font-size-md);
       line-height: 140%;
       color: #575757;
-      @include size_adaptive (font-size, 13, 22, 1366, 2560);
-
-      @media (min-width:2560px) {
-         font-size: 22px;
-      }
    }
 }

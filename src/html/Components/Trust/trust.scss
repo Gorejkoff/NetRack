@@ -43,7 +43,7 @@
    }
 
    &__text {
-      font-size: 24px;
+      font-size: var(--font-size-ml);
       line-height: 140%;
       color: #ffffff;
    }
