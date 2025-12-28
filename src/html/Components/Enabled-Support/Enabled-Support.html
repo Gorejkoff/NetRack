@@ -1,43 +1,39 @@
-<section class="enabled-support margin-section">
-   <div class="enabled-support__container">
+<section class="margin-section">
+   <div class="container">
       <div class="header-section">
          <h2 class="title-section">Техподдержка от инженеров, а не от ботов</h2>
          <div class="text-section">Все перечисленные работы <span>включены в стоимость</span> размещения сервера</div>
       </div>
 
-      <div class="enabled-support__grid">
-         <div class="enabled-support__cell">
-            <div class="enabled-support__cell-title">Оборудование</div>
-            <ul class="enabled-support__list">
-               <li>Проверка и замена неисправного оборудования</li>
-               <li>Удалённый перезапуск (через IPMI или вручную)</li>
-               <li>Подключение USB устройств</li>
-               <li>Предоставление KVM/IPMI доступа</li>
-               <li>Установка/снятие дополнительных компонентов (HDD, RAM, RAID-карты)</li>
-               <li>Диагностика и устранение проблем с RAID-массивами</li>
-               <li>Мониторинг температур и состояния железа</li>
-               <li>Проверка SMART-статуса дисков</li>
-            </ul>
-            <img class="enabled-support__background-icon" src="@img/svg/enabled-support-bg-1.svg" alt="иконка" aria-hidden="true">
-         </div>
-         <div class="enabled-support__cell">
-            <div class="enabled-support__cell-title">Сеть и доступ</div>
-            <ul class="enabled-support__list">
-               <li>Настройка/перенастройка сетевых интерфейсов</li>
-               <li>Восстановление сетевого доступа (в случае блокировки, сбоев)</li>
-               <li>Выдача и настройка дополнительных IP-адресов</li>
-               <li>Настройка VLAN, LACP, trunk-портов</li>
-               <li>Проверка маршрутизации и таблиц ARP</li>
-               <li>Трассировка, выявление потерь пакетов, пингов и прочее</li>
-            </ul>
-            <img class="enabled-support__background-icon" src="@img/svg/enabled-support-bg-2.svg" alt="иконка" aria-hidden="true">
-
-         </div>
+      <div class="list-card__grid">
+         @@include('../../UI/Cards/List-Card/List-Card.html', {
+         title: 'Оборудование',
+         image: 'svg/list-card-icon-1.svg',
+         list: [
+         "Проверка и замена неисправного оборудования",
+         "Удалённый перезапуск (через IPMI или вручную)",
+         "Подключение USB устройств, Предоставление KVM/IPMI доступа",
+         "Установка/снятие дополнительных компонентов (HDD, RAM, RAID-карты)",
+         "Диагностика и устранение проблем с RAID-массивами",
+         "Мониторинг температур и состояния железа",
+         "Проверка SMART-статуса дисков"
+         ] })
+         @@include('../../UI/Cards/List-Card/List-Card.html', {
+         title: 'Сеть и доступ',
+         image: 'svg/list-card-icon-2.svg',
+         list: [
+         "Настройка/перенастройка сетевых интерфейсов",
+         "Восстановление сетевого доступа (в случае блокировки, сбоев)",
+         "Выдача и настройка дополнительных IP-адресов",
+         "Настройка VLAN, LACP, trunk-портов",
+         "Проверка маршрутизации и таблиц ARP",
+         "Трассировка, выявление потерь пакетов, пингов и прочее"
+         ] })
       </div>
 
-      <h3 class="enabled-support__connection-title">Используем все доступные каналы связи</h3>
-      <div class="enabled-support__connection-grid">
-         @@loop('./Enebled-Support-Connection-Cell.html', 'json/lists/enebled-support-connection.json')
+      <h3 class="subtitle-section">Используем все доступные каналы связи</h3>
+      <div class="feature-card__grid">
+         @@loop('../../UI/Cards/Feature-Card/Feature-Card.html', 'json/lists/enebled-support-connection.json')
       </div>
 
    </div>

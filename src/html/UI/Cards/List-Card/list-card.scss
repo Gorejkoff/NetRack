@@ -1,0 +1,104 @@
+@use '../../../../scss/utils' as*;
+
+.list-card {
+
+   &__grid {
+      margin-bottom: 30px;
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 10px;
+
+      @media (min-width:768px) {
+         grid-template-columns: 1fr 1fr;
+      }
+
+      &.four--columns {
+         @media (min-width:1366px) {
+            grid-template-columns: 1fr 1fr 1fr 1fr;
+         }
+      }
+   }
+
+   &__cell {
+      position: relative;
+      --padding: 10px;
+      padding: var(--padding);
+      border-radius: 10px;
+      border: 1px solid #B5B5B5;
+
+      @include size_adaptive (--padding, 10, 36, 768, 1366);
+      @include size_adaptive (--padding, 36, 70, 1366, 2560);
+
+      @media (min-width:2560px) {
+         --padding: 70px;
+      }
+
+      .four--columns & {
+         @include size_adaptive (--padding, 20, 50, 1366, 2560);
+
+         @media (min-width:2560px) {
+            --padding: 50px;
+         }
+      }
+   }
+
+   &__cell-title {
+      margin-bottom: 16px;
+      font-family: var(--font-family-second);
+      font-size: 19px;
+      font-weight: 800;
+      line-height: 110%;
+      letter-spacing: -0.02em;
+
+      @include size_adaptive (margin-bottom, 16, 30, 1366, 2560);
+      @include size_adaptive (font-size, 19, 36, 1366, 2560);
+
+      @media (min-width:2560px) {
+         margin-bottom: 30px;
+         font-size: 36px;
+      }
+   }
+
+   &__list {
+      font-size: 13px;
+      line-height: 140%;
+      color: #575757;
+      @include size_adaptive (font-size, 13, 22, 1366, 2560);
+
+      @media (min-width:1366px) {
+         max-width: 84%;
+
+         .four--columns & {
+            max-width: none;
+         }
+      }
+
+      @media (min-width:2560px) {
+         font-size: 22px;
+      }
+
+      li {
+         margin-left: 1.5em;
+         list-style: disc;
+
+         &:not(:last-child) {
+            margin-bottom: 0.5em;
+         }
+      }
+   }
+
+   &__background-icon {
+      position: absolute;
+      bottom: 30px;
+      right: 30px;
+      z-index: -1;
+      width: 132px;
+      height: auto;
+
+      @include size_adaptive (width, 132, 250, 1366, 2560);
+
+      @media (min-width:2560px) {
+         width: 250px;
+      }
+   }
+}

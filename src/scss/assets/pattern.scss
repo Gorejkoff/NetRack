@@ -201,13 +201,29 @@ label {
    }
 }
 
+.subtitle-section {
+   font-family: var(--font-family-second);
+   margin-bottom: 40px;
+   font-weight: 800;
+   font-size: 26px;
+   line-height: 100%;
+   letter-spacing: -0.02em;
+   @include size_adaptive (font-size, 26, 30, 768, 1366);
+   @include size_adaptive (font-size, 30, 60, 1366, 2560);
+
+   @media (min-width:2560px) {
+      font-size: 60px;
+   }
+}
+
 .text-section {
    margin-top: 20px;
    font-weight: 500;
    font-size: 20px;
    line-height: 140%;
+   @include size_adaptive (font-size, 20, 30, 1366, 2560);
 
-   @media (min-width:1024px) {
+   @media (min-width:2560px) {
       font-size: 30px;
    }
 

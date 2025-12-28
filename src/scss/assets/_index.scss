@@ -10,6 +10,8 @@
 @use "../../html/UI/Cards/Device-Card/device-card";
 @use "../../html/UI/Selection/selection";
 @use "../../html/UI/Tab-Dropdowm/tab";
+@use "../../html/UI/Cards/List-Card/list-card";
+@use "../../html/UI/Cards/Feature-Card/feature-card";
 
 // components
 @use '../../html/Components/Included/included';
@@ -18,7 +20,6 @@
 @use '../../html/Components/Ideal-Infrastructur/ideal-infrastructur';
 @use '../../html/Components/Gallery-Accordion/gallery-accordion';
 @use '../../html/Components/Info-Block/info-block';
-@use '../../html/Components/Enabled-Support/enabled-support';
 @use '../../html/Components/Trust/trust';
 @use '../../html/Components/Models/models';
 @use '../../html/Components/Questions/questions';
