@@ -350,6 +350,23 @@ label {
    touch-action: pan-y;
 }
 
+.swiper-button {
+   --size: 60px;
+   width: var(--size);
+   height: var(--size);
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   background-color: #575757;
+   border-radius: 8px;
+
+   svg,
+   img {
+      width: 70%;
+      height: auto;
+   }
+}
+
 .js-tabs-shell {
    will-change: height;
    transform: translateZ(0);
