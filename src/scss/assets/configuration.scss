@@ -60,6 +60,9 @@
          margin-bottom: 10px;
       }
 
+      .configuration__double-range-track {
+         --color-in: #F3F3F3;
+      }
    }
 
    &__section-title {
@@ -598,12 +601,14 @@
    }
 
    &__double-range-track {
+      --color-out: #6E48F5;
+      --color-in: #ffffff;
       position: relative;
       height: 6px;
       border-radius: 100px;
-      background: linear-gradient(90deg, #6E48F5 0% var(--minGradient),
-            #ffffff var(--minGradient) var(--maxGradient),
-            #6E48F5 var(--maxGradient) 100%);
+      background: linear-gradient(90deg, var(--color-out) 0% var(--minGradient),
+            var(--color-in) var(--minGradient) var(--maxGradient),
+            var(--color-out) var(--maxGradient) 100%);
    }
 
    &__double-range-spin {
