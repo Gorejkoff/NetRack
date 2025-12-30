@@ -1,6 +1,7 @@
 @use '../../../scss/utils' as *;
 
 .button {
+   --background: #ffffff;
    padding: 7px 15px;
    display: inline-flex;
    align-items: center;
@@ -16,8 +17,7 @@
    background-color: var(--background);
    border-radius: 100px;
    transition: background-color $tr-time, color $tr-time, border-color $tr-time;
-   --background: #ffffff;
-
+   color: #191919;
    @include size_adaptive (min-height, 35, 65, 1366, 2560);
 
    @media (min-width:1920px) {

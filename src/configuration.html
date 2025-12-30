@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="ru">
+
+<head>
+   @@include('html/head.html',{"title":"Configuration"})
+</head>
+
+
+<body>
+
+   <div class="wrapper">
+
+      @@include('html/Components/Header/header.html',{})
+
+      <div class="main">
+
+         @@include('html/Components/Server-Configuration/Server-Configuration.html',{})
+
+
+         @@include('html/Components/Included/Included.html',{})
+
+
+         @@include('html/Components/Models/Models.html',{})
+
+
+         @@include('html/Components/Server-Placement/Server-Placement.html',{})
+
+
+      </div>
+
+      @@include('html/Components/Footer/footer.html',{})
+
+   </div>
+
+
+   @@include('html/scripts.html',{
+   swiper: true,
+   })
+
+
+</body>
+
+</html>

@@ -9,13 +9,13 @@
    --color-modal-bg: rgba(0, 0, 0, 0.6);
    --vh: 100vh;
 
-   // --padding-lg
-   --padding-lg: 10px;
-   @include size_adaptive (--padding-lg, 10, 36, 768, 1366);
-   @include size_adaptive (--padding-lg, 36, 70, 1366, 2560);
+   // --padding-sm
+   --padding-sm: 10px;
+   @include size_adaptive (--padding-sm, 10, 20, 768, 1366);
+   @include size_adaptive (--padding-sm, 20, 40, 1366, 2560);
 
    @media (min-width:2560px) {
-      --padding-lg: 70px;
+      --padding-sm: 40px;
    }
 
    // --padding-md
@@ -25,6 +25,25 @@
 
    @media (min-width:2560px) {
       --padding-md: 50px;
+   }
+
+   // --padding-lg
+   --padding-lg: 10px;
+   @include size_adaptive (--padding-lg, 10, 36, 768, 1366);
+   @include size_adaptive (--padding-lg, 36, 70, 1366, 2560);
+
+   @media (min-width:2560px) {
+      --padding-lg: 70px;
+   }
+
+
+
+   // --font-size-xs
+   --font-size-xs: 10px;
+   @include size_adaptive (--font-size-xs, 10, 18, 1366, 2560);
+
+   @media (min-width:2560px) {
+      --font-size-xs: 18px;
    }
 
    // --font-size-sm
@@ -100,6 +119,15 @@
 
    @media (min-width:2560px) {
       --font-size-title: 70px;
+   }
+
+   // --font-size-max
+   --font-size-max: 30px;
+   @include size_adaptive (--font-size-max, 30, 42, 768, 1366);
+   @include size_adaptive (--font-size-max, 42, 80, 1366, 2560);
+
+   @media (min-width:2560px) {
+      --font-size-max: 80px;
    }
 
    // @supports (height: 100dvh) {

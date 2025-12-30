@@ -13,31 +13,11 @@
       @@include('html/Components/Header/header.html',{})
 
       <div class="main">
-
-         @@include('html/Components/Server-Configuration/Server-Configuration.html',{})
-         @@include('html/Components/Included/Included.html',{})
-
-         <!-- @@include('html/Components/Get-Help/Get-Help.html',{}) -->
-
-         @@include('html/Components/Ideal-Infrastructur/Ideal-Infrastructur.html',{})
-
-         <!-- @@include('html/Components/Gallery-Accordion/Gallery-Accordion.html',{}) -->
-
-         @@include('html/Components/Info-Block/Info-Block.html',{})
-
-         @@include('html/Components/Data-Center-Services/Data-Center-Services.html',{})
-         @@include('html/Components/Who-For/Who-For.html',{})
-         @@include('html/Components/Arrangement/Arrangement.html',{})
-         @@include('html/Components/Enabled-Support/Enabled-Support.html',{})
-
-         <!-- @@include('html/Components/Trust/Trust.html', {}) -->
-
-         @@include('html/Components/Questions/Questions.html', {})
-         @@include('html/Components/Models/Models.html',{})
-         @@include('html/Components/Server-Placement/Server-Placement.html',{})
-
-         @@include('html/Components/Wide-Slider/Wide-Slider.html',{})
-
+         <div class="container" style="display: flex; flex-direction: column; gap: 20px; align-items: center; justify-content: center; min-height: 100vh;">
+            <a href="configuration.html" style="font-size: 2vw; margin-bottom: 20px;">Конфигуратор</a>
+            <a href="intro.html" style="font-size: 2vw; margin-bottom: 20px;">Первые экраны</a>
+            <a href="other.html" style="font-size: 2vw; margin-bottom: 20px;">Остальное</a>
+         </div>
       </div>
 
       @@include('html/Components/Footer/footer.html',{})

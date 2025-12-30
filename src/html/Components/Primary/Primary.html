@@ -1,0 +1,123 @@
+<section class="primary margin-bottom-section">
+   <div class="primary__container">
+      <div class="primary__grid">
+         @@if(context.header){<div class="primary__header">
+            <h1 class="primary__title">ДАТА-ЦЕНТРЫ В МОСКВЕ</h1>
+            <p class="text-section">Являемся официальными партнёрами надёжных и современных дата-центров</p>
+         </div>}
+
+
+         <div class="primary__large">
+            @@if(context.contents){<div class="primary__content">
+               <h1 class="primary__title">Дата-центр <br><span>IXcellerate North</span></h1>
+               <div>
+                  <p class="primary__text">IXcellerate — один из ведущих российских операторов коммерческих дата-центров. </p>
+                  <p class="primary__subtext">Северный кампус (IXcellerate North) включает в себя 4 ЦОДа: два действующих MOS1, MOS2 и два в стадии строительства/проектирования MOS3, MOS4.</p>
+                  <div class="primary__button">
+                     @@include('../../UI/Button/Button.html',{
+                     text: 'Записаться на экскурсию',
+                     class:'button-purple'
+                     })
+                  </div>
+               </div>
+            </div>}
+            @@if(!context.contents){<div class="primary__large-banner">IXcellerate North</div>
+            <img src="@img/webp/image-1.webp" alt="data центр">}
+         </div>
+
+         <div class="primary__large">
+            <div class="primary__large-banner">IXcellerate North</div>
+            <img src="@img/webp/image-3.webp" alt="data центр">
+         </div>
+
+
+         @@if(!context.bgscheme){<div class="primary__small">
+            <div class="primary__small-icon">
+               <img src="@img/svg/secure-2.svg" alt="логотип">
+            </div>
+            <div class="primary__small-text">
+               Уровень надёжности <br>
+               <b>Tier III</b>
+            </div>
+         </div>
+         <div class="primary__small">
+            <div class="primary__small-icon">
+               <img src="@img/svg/geo-2.svg" alt="логотип">
+            </div>
+            <div class="primary__small-text">Москва
+               Алтуфьевское шоссе, 33Г</div>
+         </div>
+         <div class="primary__small">
+            <div class="primary__small-icon">
+               <img src="@img/svg/server.svg" alt="логотип">
+            </div>
+            <div class="primary__small-text">
+               MOS1: <b>1835 стоек</b><br>
+               MOS2: <b>1580 стоек</b></div>
+         </div>
+         <div class="primary__small">
+            <div class="primary__small-icon">
+               <img src="@img/svg/power.svg" alt="логотип">
+            </div>
+            <div class="primary__small-text">
+               <b>26,7 МВт </b><br>
+               до 10-12 кВт на стойку
+            </div>
+         </div>
+         <div class="primary__small">
+            <div class="primary__small-icon">
+               <img src="@img/svg/certificates.svg" alt="логотип">
+            </div>
+            <div class="primary__small-text">
+               PCI DSS v.4.0, ISO 9001:2015,<br>
+               ISO 45001:2018, IBM Level 3</div>
+         </div>}
+
+
+         @@if(context.bgscheme){<div class="primary__small bg-scheme">
+            <div class="primary__small-icon">
+               <img src="@img/webp/StoreData.webp" alt="логотип">
+            </div>
+            <div class="primary__small-text">
+               StoreData
+            </div>
+            <img class="primary__small-background" src="@img/webp/image-4.webp" alt="фотография здания фирмы">
+         </div>
+         <div class="primary__small bg-scheme">
+            <div class="primary__small-icon">
+               <img src="@img/webp/DataLineNord.webp" alt="логотип">
+            </div>
+            <div class="primary__small-text">
+               DataLine Nord
+            </div>
+            <img class="primary__small-background" src="@img/webp/image-5.webp" alt="фотография здания фирмы">
+         </div>
+         <div class="primary__small bg-scheme">
+            <div class="primary__small-icon">
+               <img src="@img/webp/DataPro.webp" alt="логотип">
+            </div>
+            <div class="primary__small-text">
+               DataPro
+            </div>
+            <img class="primary__small-background" src="@img/webp/image-6.webp" alt="фотография здания фирмы">
+         </div>
+         <div class="primary__small bg-scheme">
+            <div class="primary__small-icon">
+               <img src="@img/webp/ostankino.webp" alt="логотип">
+            </div>
+            <div class="primary__small-text">
+               Останкино
+            </div>
+            <img class="primary__small-background" src="@img/webp/image-7.webp" alt="фотография здания фирмы">
+         </div>
+         <div class="primary__small bg-scheme">
+            <div class="primary__small-icon">
+               <img src="@img/webp/ММТС-9.webp" alt="логотип">
+            </div>
+            <div class="primary__small-text">
+               ММТС-9
+            </div>
+            <img class="primary__small-background" src="@img/webp/image-8.webp" alt="фотография здания фирмы">
+         </div>}
+      </div>
+</section>

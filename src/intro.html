@@ -2,7 +2,7 @@
 <html lang="ru">
 
 <head>
-   @@include('html/head.html',{"title":"Index"})
+   @@include('html/head.html',{"title":"Intro"})
 </head>
 
 
@@ -14,7 +14,14 @@
 
       <div class="main">
 
-
+         @@include('html/Components/Intro/Intro.html',{})
+         @@include('html/Components/Primary/Primary.html',{
+         contents: true,
+         })
+         @@include('html/Components/Primary/Primary.html',{
+         header: true,
+         bgscheme: true
+         })
 
       </div>
 
