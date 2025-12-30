@@ -790,21 +790,6 @@
       }
    }
 
-   &__parameter-info {
-      margin-top: 15px;
-      font-size: 11px;
-      line-height: 140%;
-      color: #575757;
-
-      @media (min-width:1920px) {
-         font-size: 13px;
-      }
-
-      @media (min-width:2560px) {
-         font-size: 16px;
-      }
-   }
-
    &__actions {
       padding: 10px;
       display: grid;
@@ -913,20 +898,9 @@
       }
    }
 
-   &__note {
+   &__asterisked {
       padding-top: 10px;
       padding-bottom: 45px;
-      font-size: 12px;
-      line-height: 140%;
-      color: #575757;
-
-      @media (min-width:1920px) {
-         font-size: 14px;
-      }
-
-      @media (min-width:2560px) {
-         font-size: 16px;
-      }
 
       &::before {
          content: '*';

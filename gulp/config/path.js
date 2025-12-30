@@ -14,7 +14,7 @@ export const path = {
    build: {
       js: `${buildFolder}/js/`,
       images: `${buildFolder}/img/`,
-      webp: `${buildFolder}/img/`,
+      webp: `${buildFolder}/img/webp/`,
       svgSprite: `${buildFolder}/img/svgSprite/`,
       css: `${buildFolder}/css/`,
       html: `${buildFolder}/`,
@@ -26,9 +26,9 @@ export const path = {
       appjs: `${srcFolder}/js/app_js/app.js`, // путь к главному файлу, будет первый в сборке
       jsmodules: `${srcFolder}/js/modules_js/!(_)*.js`, // модули, которые собираются в один файл (с _ игнорируются)
       js: `${srcFolder}/js/!(_)*.js`, // путь к файлам, которые не объединяются (с _ игнорируются)
-      images: `${srcFolder}/img/**/*.{jpg,jpeg,png,gif}`,
+      images: `${srcFolder}/img/!(webp)**/*.*`,
       svg: `${srcFolder}/img/**/*.svg`,
-      webp: `${srcFolder}/img/**/*.webp`,
+      webp: `${srcFolder}/img/webp/*.*`,
       scss: `${srcFolder}/scss/*.scss`,
       css: `${srcFolder}/css/!(_)*.css`,
       html: `${srcFolder}/*.html`,

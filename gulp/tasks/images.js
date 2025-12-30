@@ -4,9 +4,9 @@ import webp from "gulp-webp";
 
 
 export const images = () => {
-   return app.gulp.src(app.path.src.svg)
+   return app.gulp.src(app.path.src.images)
       .pipe(app.gulp.dest(app.path.build.images))
-      .pipe(app.gulp.src(app.path.src.images))
+      .pipe(app.gulp.src(app.path.src.webp))
       .pipe(app.plugins.plumber(
          app.plugins.notify.onError({
             title: "IMAGES",

@@ -1,0 +1,128 @@
+@use '../../../scss/utils' as *;
+
+.initial {
+   position: relative;
+   border-radius: 20px;
+   overflow: hidden;
+
+   &__container {}
+
+   &__body {}
+
+   &__content {}
+
+   &__mask {
+      position: relative;
+
+      img {
+         width: 100%;
+      }
+   }
+
+   &__mask {
+      margin-bottom: 60px;
+      position: relative;
+      -webkit-mask: url('../img/png/mask-natrack.png') no-repeat center;
+      mask: url('../img/png/mask-natrack.png') no-repeat center;
+      -webkit-mask-size: 100% 100%;
+      mask-size: 100% 100%;
+
+      @media (min-width:1120px) {
+         width: 70%;
+      }
+   }
+
+   &__mask-size {
+      position: relative;
+      z-index: 2;
+      width: 100%;
+      opacity: 0;
+      visibility: hidden;
+   }
+
+   &__mask-bg {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      z-index: 1;
+      transform: translate(-50%, -50%);
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+   }
+
+   &__title {
+      position: relative;
+      --width: 20px;
+      --height: max(0.12em, 1px);
+      padding-left: calc(var(--width) + 0.5em);
+      font-family: var(--font-family-second);
+      font-weight: 800;
+      margin-bottom: 40px;
+      font-size: 18px;
+      line-height: 110%;
+      letter-spacing: -0.02em;
+
+
+      @include size_adaptive (--width, 20, 50, 1366, 2560);
+      @include size_adaptive (--width, 50, 116, 1366, 2560);
+
+      @include size_adaptive (font-size, 18, 24, 768, 1366);
+      @include size_adaptive (font-size, 24, 45, 1366, 2560);
+
+      @media (min-width:2560px) {
+         font-size: 45px;
+         --width: 116px;
+      }
+
+      &::before {
+         content: '';
+         position: absolute;
+         left: 0;
+         top: calc(0.5em + var(--height) / 2);
+         width: var(--width);
+         height: var(--height);
+         background-color: #6E48F5;
+      }
+
+      span {
+         color: #6E48F5;
+      }
+   }
+
+   &__text {
+      font-weight: 500;
+      font-size: var(--font-size-md);
+      line-height: 140%;
+
+      @media (min-width:1120px) {
+         max-width: 60%;
+      }
+
+      p {
+         &:not(:last-child) {
+            margin-bottom: 30px;
+         }
+      }
+   }
+
+   &__button {
+      margin-top: 30px;
+
+      @media (max-width:1119.98px) {
+         .button {
+            width: 100%;
+         }
+      }
+   }
+
+   &__background {
+      position: absolute;
+      top: 0;
+      right: 0;
+      z-index: -1;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+   }
+}

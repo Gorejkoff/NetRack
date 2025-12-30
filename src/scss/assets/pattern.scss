@@ -66,6 +66,17 @@ label {
    cursor: pointer;
 }
 
+.asterisked {
+   margin-top: 20px;
+   font-size: var(--font-size-xs);
+   line-height: 140%;
+   color: #575757;
+
+   &::before {
+      content: '*';
+   }
+}
+
 .hover-button {
    transition: background-color $tr-time, border-color $tr-time, color $tr-time;
 
@@ -262,14 +273,10 @@ label {
 }
 
 .background-block {
-   padding: 10px;
+   position: relative;
+   padding: var(--padding-md);
    border-radius: 10px;
    background-color: #F3F3F3;
-   @include size_adaptive (padding, 26, 50, 1366, 2560);
-
-   @media (min-width:2560px) {
-      padding: 50px;
-   }
 }
 
 .cards-grid {
@@ -288,18 +295,6 @@ label {
 
    @media (min-width:1920px) {
       grid-template-columns: 1fr 1fr 1fr 1fr;
-   }
-
-   &__note {
-      margin-top: 20px;
-      font-size: 13px;
-      line-height: 140%;
-      color: #575757;
-      @include size_adaptive (font-size, 13, 18, 1366, 2560);
-
-      @media (min-width:2560px) {
-         font-size: 18px;
-      }
    }
 }
 
