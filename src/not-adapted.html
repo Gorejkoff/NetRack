@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="ru">
+
+<head>
+   @@include('html/head.html',{"title":"Not adapted"})
+</head>
+
+
+<body>
+
+   <div class="wrapper">
+
+      @@include('html/Components/Header/header.html',{})
+
+      <div class="main">
+
+         @@include('html/Components/Get-Help/Get-Help.html',{})
+
+         @@include('html/Components/Rate/Rate-DDoS.html',{})
+         @@include('html/Components/Rate/Rate-Lan.html',{})
+
+         @@include('html/Components/Gallery-Accordion/Gallery-Accordion.html',{})
+
+         @@include('html/Components/Trust/Trust.html', {})
+
+
+      </div>
+
+      @@include('html/Components/Footer/footer.html',{})
+
+   </div>
+
+
+   @@include('html/scripts.html',{
+   swiper: true,
+   })
+
+
+</body>
+
+</html>

@@ -1,0 +1,19 @@
+<table class="rate__table">
+   <thead>
+      <tr>
+         <th scope="col">Скорость порта</th>
+         <th scope="col">Уровень</th>
+         <th scope="col">Стоимость в месяц</th>
+         <th scope="col"></th>
+      </tr>
+   </thead>
+   <tbody>
+      <tr>
+         <td>0,1 - 10 Гбит/с</td>
+         <td>базовый</td>
+         <td>0 руб.</td>
+         <td>включено по-умолчанию</td>
+      </tr>
+      @@loop('./Rate-tr.html', 'json/lists/table-1.json')
+   </tbody>
+</table>

@@ -195,8 +195,8 @@ label {
 .header-section {
    margin-bottom: 20px;
 
-   @include size_adaptive (font-size, 20, 40, 768, 1366);
-   @include size_adaptive (font-size, 40, 70, 1366, 2560);
+   @include size_adaptive (margin-bottom, 20, 40, 768, 1366);
+   @include size_adaptive (margin-bottom, 40, 70, 1366, 2560);
 
    @media (min-width:2560px) {
       margin-bottom: 70px;
@@ -253,6 +253,12 @@ label {
    span {
       color: #6E48F5;
    }
+}
+
+.subtext-section {
+   margin-top: 30px;
+   font-size: var(--font-size-xl);
+   line-height: 140%;
 }
 
 .padding-section {
