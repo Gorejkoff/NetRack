@@ -21,7 +21,21 @@ if (document.querySelector('.wide-slider__swiper')) {
    });
 }
 
-
+if (document.querySelector('.primary__swiper')) {
+   const list = document.querySelectorAll('.primary__swiper');
+   list.forEach(e => {
+      const swiper = new Swiper(e, {
+         spaceBetween: 10,
+         speed: 300,
+         slidesPerView: 2.1,
+         breakpoints: {
+            768: {
+               slidesPerView: 5
+            }
+         },
+      });
+   })
+}
 
 /* пример инициализации слайдера */
 // if (document.querySelector('.swiper')) {

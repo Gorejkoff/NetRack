@@ -3201,12 +3201,17 @@ input:checked + .configuration__stepper-value-item {
      object-fit: cover;
 }
 
-.primary__grid {
+.primary__grid-large {
   display: -ms-grid;
   display: grid;
   -ms-grid-columns: 1fr;
   grid-template-columns: 1fr;
   gap: 10px;
+}
+
+.primary__swiper {
+  margin-top: 10px;
+  overflow: hidden;
 }
 
 .primary__header {
@@ -3664,28 +3669,18 @@ input:checked + .configuration__stepper-value-item {
     display: flex;
   }
 
-  .primary__grid {
-    -ms-grid-columns: (1fr)[10];
-    grid-template-columns: repeat(10, 1fr);
+  .primary__grid-large {
+    -ms-grid-columns: (1fr)[2];
+    grid-template-columns: repeat(2, 1fr);
   }
 
   .primary__header {
-    -ms-grid-column-span: 10;
-    grid-column: span 10;
-  }
-
-  .primary__large {
-    -ms-grid-column-span: 5;
-    grid-column: span 5;
+    -ms-grid-column-span: 2;
+    grid-column: span 2;
   }
 
   .primary__content {
     min-height: 400px;
-  }
-
-  .primary__small {
-    -ms-grid-column-span: 2;
-    grid-column: span 2;
   }
 }
 
