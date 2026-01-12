@@ -1,6 +1,9 @@
 @use "fonts";
 @use "root_var";
 @use "normalize";
+
+@use "legacy";
+
 @use "pattern";
 @use "configuration";
 
@@ -29,3 +32,5 @@
 @use '../../html/Components/Primary/primary';
 @use '../../html/Components/Initial/initial';
 @use '../../html/Components/Table/table';
+@use '../../html/Components/Connection-Scheme/connection-scheme';
+@use '../../html/Components/DDoS/ddos';

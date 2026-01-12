@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width initial-scale=1.0">
 <meta name="description" content="Аренда выделенного сервера">
 <!-- <link rel="preload" as="font" type="font/woff2" href="./fonts/Raleway-Regular.woff2" crossorigin=""> -->
-<link rel="stylesheet" href="css/style.css?t=1768206772587">
+<link rel="stylesheet" href="css/style.css?t=1768218747482">
 </head>
 
 
@@ -119,6 +119,29 @@
             </div>
          </div>
       </div>
+   </div>
+</section>
+
+         <section class="ddos padding-section">
+   <div class="ddos__container">
+      <div class="header-section dark--scheme">
+         <div class="title-section">Как работает защита</div>
+      </div>
+
+      <div class="ddos__body">
+         <div class="ddos__image">
+            <img src="./img/svg/ddos.svg" alt="схема работы защиты">
+         </div>
+         <div class="ddos__text">
+            <p>Система обнаружения DDoS автоматически анализирует входящий трафик на все серверы и при превышении усредненных пороговых значений меняет маршрут трафика, перенаправляя трафик сети под атакой на устройства фильтрации.</p>
+            <p>По прошествии атаки маршрут трафика меняется на исходный.</p>
+            <p>Перевод трафика под защиту может занимать до нескольких минут</p>
+         </div>
+      </div>
+
+   </div>
+   <div class="background-section">
+      <img class="" src="./img/webp/bg-1.webp" alt="фон" aria-hidden="true">
    </div>
 </section>
 
@@ -353,6 +376,92 @@
    </div>
 </section>
 
+         <section class="connection-scheme padding-section">
+   <div class="connection-scheme__container">
+      <div class="header-section dark--scheme">
+         <h2 class="title-section">Как подключить локальную сеть внутри ЦОД</h2>
+      </div>
+
+      <div class="connection-scheme__item">
+
+         <div class="connection-scheme__cell">
+   <div class="connection-scheme__cell-arrow">
+      <svg width="703" height="25" viewBox="0 0 703 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+         <path d="M-2.5 12.0605H700.247M700.247 12.0605L688.133 1.06055M700.247 12.0605L688.133 23.0605" stroke="#6E48F5" stroke-width="3" />
+      </svg>
+   </div>
+   <div class="connection-scheme__cell-content">
+      <div class="connection-scheme__cell-title">Запрос</div>
+      <div class="connection-scheme__cell-text">Оставьте заявку на подключение LAN через сайт или менеджера, укажите серверы (по ID) и желаемую скорость сети для объединения</div>
+   </div>
+
+</div><div class="connection-scheme__cell">
+   <div class="connection-scheme__cell-arrow">
+      <svg width="703" height="25" viewBox="0 0 703 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+         <path d="M-2.5 12.0605H700.247M700.247 12.0605L688.133 1.06055M700.247 12.0605L688.133 23.0605" stroke="#6E48F5" stroke-width="3" />
+      </svg>
+   </div>
+   <div class="connection-scheme__cell-content">
+      <div class="connection-scheme__cell-title">Подготовка портов</div>
+      <div class="connection-scheme__cell-text">Наш инженер выделяет свободные порты на сетевом коммутаторе агрегации, физически близком к вашему серверу</div>
+   </div>
+
+</div><div class="connection-scheme__cell">
+   <div class="connection-scheme__cell-arrow">
+      <svg width="703" height="25" viewBox="0 0 703 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+         <path d="M-2.5 12.0605H700.247M700.247 12.0605L688.133 1.06055M700.247 12.0605L688.133 23.0605" stroke="#6E48F5" stroke-width="3" />
+      </svg>
+   </div>
+   <div class="connection-scheme__cell-content">
+      <div class="connection-scheme__cell-title">Подключение</div>
+      <div class="connection-scheme__cell-text">В каждый указанный сервер устанавливается дополнительная сетевая карта (если необходимо) и прокладывается кабель от сервера до выделенного порта на коммутаторе</div>
+   </div>
+
+</div><div class="connection-scheme__cell">
+   <div class="connection-scheme__cell-arrow">
+      <svg width="703" height="25" viewBox="0 0 703 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+         <path d="M-2.5 12.0605H700.247M700.247 12.0605L688.133 1.06055M700.247 12.0605L688.133 23.0605" stroke="#6E48F5" stroke-width="3" />
+      </svg>
+   </div>
+   <div class="connection-scheme__cell-content">
+      <div class="connection-scheme__cell-title">Настройка LAN</div>
+      <div class="connection-scheme__cell-text">На коммутаторе для вас создается уникальный VLAN ID. Все подключенные порты серверов логически объединяются в этот VLAN, обеспечивая изоляцию трафика</div>
+   </div>
+
+</div><div class="connection-scheme__cell">
+   <div class="connection-scheme__cell-arrow">
+      <svg width="703" height="25" viewBox="0 0 703 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+         <path d="M-2.5 12.0605H700.247M700.247 12.0605L688.133 1.06055M700.247 12.0605L688.133 23.0605" stroke="#6E48F5" stroke-width="3" />
+      </svg>
+   </div>
+   <div class="connection-scheme__cell-content">
+      <div class="connection-scheme__cell-title">Выделение IP-адресов</div>
+      <div class="connection-scheme__cell-text">Вам выдается диапазон приватных IP-адресов, которые будут использоваться только внутри этой локальной сети</div>
+   </div>
+
+</div><div class="connection-scheme__cell">
+   <div class="connection-scheme__cell-arrow">
+      <svg width="703" height="25" viewBox="0 0 703 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+         <path d="M-2.5 12.0605H700.247M700.247 12.0605L688.133 1.06055M700.247 12.0605L688.133 23.0605" stroke="#6E48F5" stroke-width="3" />
+      </svg>
+   </div>
+   <div class="connection-scheme__cell-content">
+      <div class="connection-scheme__cell-title">Настройка и тестирование</div>
+      <div class="connection-scheme__cell-text">На каждом сервере настройте статические IP-адреса из выданного диапазона и проведите пингование</div>
+   </div>
+
+</div>
+
+      </div>
+
+   </div>
+
+   <div class="background-section">
+      <img class="" src="./img/webp/bg-3.webp" alt="фон" aria-hidden="true">
+   </div>
+
+</section>
+
          <section class="gallery-accordion padding-section">
    <img class="gallery-accordion__background" src="./img/webp/bg-1.webp" alt="фон" aria-hidden="true">
    <div class="gallery-accordion__container">
@@ -565,6 +674,7 @@
 </section>
 
 
+
       </div>
 
       <footer id="footer" class="footer">
@@ -581,9 +691,9 @@
 
 
    
-<script defer src='./js/swiper.js?t=1768206772587'></script>
+<script defer src='./js/swiper.js?t=1768218747482'></script>
 
-<script defer src='./js/app.js?t=1768206772587'></script>
+<script defer src='./js/app.js?t=1768218747482'></script>
 
 
 </body>
