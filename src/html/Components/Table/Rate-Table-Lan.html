@@ -1,0 +1,24 @@
+<div class="table__shell">
+   <table class="table">
+      <thead>
+         <tr>
+            <th scope="col">Скорость порта</th>
+            <th scope="col">Стоимость в месяц</th>
+            <th scope="col"></th>
+         </tr>
+      </thead>
+      <tbody>
+         @@loop('./Rate-tr.html', 'json/lists/table-2.json')
+      </tbody>
+   </table>
+   <div class="table__info">
+      <div class="table__info-body">
+         <p>
+            Получите выделенный порт коммутатора/маршрутизатора с <span>гарантированной</span> пропускной способностью.
+         </p>
+         <p>
+            Весь трафик между серверами внутри локальной сети не тарифицируется и не учитывается как внешний.
+         </p>
+      </div>
+   </div>
+</div>

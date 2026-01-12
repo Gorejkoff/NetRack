@@ -3505,43 +3505,65 @@ input:checked + .configuration__stepper-value-item {
      object-fit: cover;
 }
 
-.rate__table {
+.table {
   border-collapse: collapse;
   width: 100%;
   table-layout: auto;
 }
 
-.rate__table thead {
+.table thead {
   font-weight: 600;
   font-size: 24px;
   line-height: 140%;
   background-color: #F3F3F3;
 }
 
-.rate__table tbody tr {
+.table tbody tr {
   font-weight: 500;
   font-size: 22px;
   line-height: 140%;
 }
 
-.rate__table tbody td {
+.table tbody th,
+.table tbody td {
+  vertical-align: top;
   border-bottom: 1px solid #B5B5B5;
 }
 
-.rate__table td,
-.rate__table th {
+.table td ul {
+  font-size: 20px;
+  line-height: 140%;
+  color: #575757;
+}
+
+.table td li {
+  list-style: disc;
+  margin-left: 1.5em;
+}
+
+.table td,
+.table th {
   text-align: left;
   padding: 20px 32px;
 }
 
-.rate__table td:last-child,
-.rate__table th:last-child {
-  width: 1%;
+.table td:last-child,
+.table th:last-child {
+  padding-left: 0;
+  padding-right: 0;
+  width: 1px;
   white-space: nowrap;
   text-align: right;
 }
 
-.rate__table-button {
+.table__shell {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 50px;
+}
+
+.table__button {
   display: -webkit-inline-box;
   display: -ms-inline-flexbox;
   display: inline-flex;
@@ -3562,8 +3584,38 @@ input:checked + .configuration__stepper-value-item {
   border: 1px solid #B5B5B5;
 }
 
-.rate__table-short {
-  max-width: 1475px;
+.table__info {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 27%;
+          flex: 0 0 27%;
+}
+
+.table__info-body {
+  padding: 40px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  height: 100%;
+  gap: 40px;
+  font-size: 22px;
+  line-height: 140%;
+  background-color: #F3F3F3;
+  border-radius: 10px;
+}
+
+.table__info-body span {
+  color: #6E48F5;
+}
+
+.table__info-body p:first-child {
+  font-weight: 500;
 }
 
 @media (min-width: 600px) {
