@@ -2,7 +2,7 @@
 @use "root_var";
 @use "normalize";
 
-@use "legacy";
+// @use "legacy";
 
 @use "pattern";
 @use "configuration";
@@ -34,3 +34,4 @@
 @use '../../html/Components/Table/table';
 @use '../../html/Components/Connection-Scheme/connection-scheme';
 @use '../../html/Components/DDoS/ddos';
+@use '../../html/Components/Contacts/contacts';
