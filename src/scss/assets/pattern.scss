@@ -272,6 +272,10 @@ label {
 .margin-section {
    margin-top: var(--indent-section);
    margin-bottom: var(--indent-section);
+
+   // &+.services-swiper {
+   //    margin-top: calc(var(--indent-section) * -1 + 10px);
+   // }
 }
 
 .margin-bottom-section {

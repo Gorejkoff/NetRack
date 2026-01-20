@@ -1,0 +1,92 @@
+@use '../../../scss/utils' as *;
+
+.services-swiper {
+   margin-top: 10px;
+   margin-bottom: 10px;
+
+   &__body {
+      overflow: hidden;
+   }
+
+   &__card {
+      padding: 10px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 20px;
+      border: 1px solid #B5B5B5;
+      border-radius: 10px;
+      transition: border-color 0.3s, background-color 0.3s;
+
+      @media (min-width:2200px) {
+         padding: 24px;
+      }
+
+      ._pc &:hover {
+         border-color: #F3F3F3;
+         background-color: #F3F3F3;
+      }
+   }
+
+   &__card-content {
+      padding-left: 10px;
+
+      @media (min-width:2200px) {
+         padding-left: 24px;
+      }
+   }
+
+   &__card-title {
+      margin-bottom: 10px;
+      font-family: var(--font-family-second);
+      font-weight: 800;
+      font-size: 18px;
+      line-height: 118%;
+      letter-spacing: -0.02em;
+
+      @media (min-width:768px) {
+         font-size: 24px;
+      }
+
+      @media (min-width:1600px) {
+         font-size: 28px;
+      }
+
+      @media (min-width:2560px) {
+         font-size: 34px;
+      }
+
+   }
+
+   &__card-price {
+      font-size: 13px;
+      letter-spacing: -0.02em;
+      color: #575757;
+      @include size_adaptive (font-size, 13, 20, 1366, 2560);
+
+      @media (min-width:2560px) {
+         font-size: 20px;
+      }
+
+      span {
+         color: #6E48F5;
+      }
+   }
+
+   &__icon {
+      flex: 0 0 70px;
+
+      @include size_adaptive_flex (0, 0, 70, 128, 1366, 2560);
+
+      @media (min-width:2560px) {
+         flex: 0 0 128px;
+      }
+
+      img,
+      svg {
+         width: 100%;
+         height: auto;
+      }
+   }
+
+}

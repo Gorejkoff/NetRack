@@ -6,7 +6,10 @@
 
       <div class="ddos__body">
          <div class="ddos__image">
-            <img src="@img/svg/ddos.svg" alt="схема работы защиты">
+            <picture>
+               <source srcset="@img/svg/ddos.svg" media="(min-width: 768px)" />
+               <img src="@img/svg/ddos-m.svg" alt="схема работы защиты">
+            </picture>
          </div>
          <div class="ddos__text">
             <p>Система обнаружения DDoS автоматически анализирует входящий трафик на все серверы и при превышении усредненных пороговых значений меняет маршрут трафика, перенаправляя трафик сети под атакой на устройства фильтрации.</p>
@@ -17,6 +20,6 @@
 
    </div>
    <div class="background-section">
-      <img class="" src="@img/webp/bg-1.webp" alt="фон" aria-hidden="true">
+      <img class="" src="@img/webp/bg-3.webp" alt="фон" aria-hidden="true">
    </div>
 </section>

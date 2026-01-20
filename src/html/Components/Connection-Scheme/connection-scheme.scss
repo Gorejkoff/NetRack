@@ -1,12 +1,19 @@
+@use '../../../scss/utils' as *;
+
 .connection-scheme {
    position: relative;
 
    &__container {}
 
    &__item {
-      padding: calc(var(--offset, 200px) + 20px) 0;
       display: flex;
+      flex-direction: column;
       counter-reset: item;
+
+      @media (min-width:992px) {
+         padding: calc(var(--offset, 200px) + 20px) 0;
+         flex-direction: row;
+      }
 
       &>* {
          flex: 1 1 1%;
@@ -14,77 +21,146 @@
    }
 
    &__cell {
+      padding-top: 1.96em;
       position: relative;
       display: flex;
+      gap: 15px;
+      font-size: 20px;
+
+      @media (min-width:992px) {
+         padding-top: 0;
+         gap: 0;
+      }
+
+      @include size_adaptive (font-size, 30, 50, 1366, 2560);
+
+      @media (min-width:2560px) {
+         font-size: 50px;
+      }
 
       &::before {
          content: counter(item) '.';
          counter-increment: item;
+         position: absolute;
+         top: 0;
+         left: 0;
          display: flex;
          align-items: center;
          justify-content: center;
-         width: 98px;
-         height: 98px;
+         min-width: 1.96em;
+         width: 1.96em;
+         height: 1.96em;
          font-family: var(--font-family-second);
          font-weight: 800;
          color: #ffffff;
-         font-size: 50px;
          line-height: 100%;
          letter-spacing: -0.02em;
          background-color: #6E48F5;
          border-radius: 50%;
-      }
+         box-shadow: 0 0 24px 0 rgba(147, 117, 255, 0.46);
 
-      &:nth-child(even) {
-         .connection-scheme__cell-content {
-            bottom: calc(100% + 20px);
-         }
-      }
-
-      &:nth-child(odd) {
-         .connection-scheme__cell-content {
-            top: calc(100% + 20px);
+         @media (min-width:992px) {
+            position: static;
          }
       }
 
       &:last-child {
-         .connection-scheme__cell-arrow {
+         .connection-scheme__cell-arrow svg {
+            visibility: hidden;
             opacity: 0;
+         }
+      }
+
+      &:not(:last-child) {
+         .connection-scheme__cell-content {
+            width: 120%;
+         }
+      }
+
+      @media (min-width:992px) {
+         &:nth-child(even) {
+            .connection-scheme__cell-content {
+               bottom: calc(100% + 20px);
+            }
+         }
+
+         &:nth-child(odd) {
+            .connection-scheme__cell-content {
+               top: calc(100% + 20px);
+            }
+         }
+      }
+
+
+
+      @media (min-width:1250px) {
+         &:last-child {
+            .connection-scheme__cell-content {
+               width: 120%;
+            }
          }
       }
    }
 
    &__cell-content {
-      position: absolute;
-      left: 0;
-      width: 120%;
+      margin-top: calc(-1.96em + 9px);
+
+      @media (min-width:992px) {
+         margin-top: 0;
+         position: absolute;
+         left: 0;
+      }
    }
 
    &__cell-arrow {
       position: relative;
-      flex: 1 1 auto;
-      height: 100%;
+      min-height: 100%;
+      min-width: 1.96em;
       overflow: hidden;
+
+      @media (min-width:992px) {
+         flex: 1 1 auto;
+         min-height: auto;
+         min-width: auto;
+      }
 
       svg {
          position: absolute;
-         top: 50%;
-         right: 0;
-         transform: translateY(-50%);
+         top: 100%;
+         right: 50%;
+         transform-origin: 100% 50%;
+         transform: translateY(-50%) rotate(90deg);
+
+
+         @media (min-width:992px) {
+            top: 50%;
+            right: 0;
+            transform: translateY(-50%);
+         }
       }
    }
 
    &__cell-title {
       margin-bottom: 10px;
       font-weight: 600;
-      font-size: 22px;
+      font-size: 16px;
       line-height: 140%;
       color: #ffffff;
+
+      @media (min-width:992px) {
+         font-size: var(--font-size-md);
+      }
    }
 
    &__cell-text {
-      font-size: 18px;
+      padding-bottom: 10px;
+      font-size: 13px;
       line-height: 140%;
       color: #F3F3F3;
+
+      @media (min-width:992px) {
+         padding-bottom: 0;
+         font-size: var(--font-size-xs);
+      }
    }
 }

@@ -1,0 +1,26 @@
+[
+   {
+      "link": "https://netrack.ru/add-services/internet",
+      "title": "Интернет",
+      "price": "от 1000 Р/мес",
+      "image": "svg/internet.svg"
+   },
+   {
+      "link": "https://netrack.ru/add-services/security",
+      "title": "Защита от DDoS",
+      "price": "от 1500 Р/мес",
+      "image": "svg/secure-3.svg"
+   },
+   {
+      "link": "https://netrack.ru/add-services/ip-address",
+      "title": "IP-адреса",
+      "price": "от 850 Р/мес",
+      "image": "svg/geo-4.svg"
+   },
+   {
+      "link": "https://netrack.ru/add-services/lan",
+      "title": "Локальная сеть",
+      "price": "от 4000 Р/мес",
+      "image": "svg/network.svg"
+   }
+]

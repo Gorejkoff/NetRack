@@ -37,6 +37,25 @@ function throttle(callee, timeout) {
    }
 }
 
+// // Функция для получения ширины полосы прокрутки
+// function getScrollbarWidth() {
+//    const div = document.createElement('div');
+//    div.style.cssText = `
+//      width: 100px;
+//      height: 100px;
+//      overflow: scroll;
+//      position: absolute;
+//      top: -9999px;
+//         `;
+//    document.body.appendChild(div);
+//    const scrollbarWidth = div.offsetWidth - div.clientWidth;
+//    document.body.removeChild(div);
+//    return scrollbarWidth;
+// }
+// // запсь переменной ширины полосы прокрутки
+// function setVarScrollbarWidth() {
+//    document.body.style.setProperty('--scrollbarWidth', getScrollbarWidth() + 'px')
+// }
 
 
 /* запись переменных высоты элементов */

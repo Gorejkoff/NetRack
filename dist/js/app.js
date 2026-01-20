@@ -37,6 +37,25 @@ function throttle(callee, timeout) {
    }
 }
 
+// // Функция для получения ширины полосы прокрутки
+// function getScrollbarWidth() {
+//    const div = document.createElement('div');
+//    div.style.cssText = `
+//      width: 100px;
+//      height: 100px;
+//      overflow: scroll;
+//      position: absolute;
+//      top: -9999px;
+//         `;
+//    document.body.appendChild(div);
+//    const scrollbarWidth = div.offsetWidth - div.clientWidth;
+//    document.body.removeChild(div);
+//    return scrollbarWidth;
+// }
+// // запсь переменной ширины полосы прокрутки
+// function setVarScrollbarWidth() {
+//    document.body.style.setProperty('--scrollbarWidth', getScrollbarWidth() + 'px')
+// }
 
 
 /* запись переменных высоты элементов */
@@ -269,50 +288,51 @@ window.addEventListener('resize', () => {
 
 // map
 const mapContainer = document.getElementById('map');
-const data = {
-   coordinates: '37.686374, 55.737314',
-}
+if (mapContainer) {
+   const data = {
+      coordinates: '37.686374, 55.737314',
+   }
 
-function loadYMapsAPI() {
-   return new Promise((resolve, reject) => {
-      if (window.ymaps3) {
-         resolve();
-         // console.log(" API Яндекс Карт загружено");
-         return;
-      }
-   });
-}
-
-async function initMap() {
-   await loadYMapsAPI();
-   await ymaps3.ready;
-   const { YMap, YMapMarker, YMapDefaultSchemeLayer, YMapDefaultFeaturesLayer } = ymaps3;
-
-   const map = new YMap(
-      mapContainer,
-      {
-         location: {
-            center: data.coordinates.split(','),
-            zoom: 17,
+   function loadYMapsAPI() {
+      return new Promise((resolve, reject) => {
+         if (window.ymaps3) {
+            resolve();
+            // console.log(" API Яндекс Карт загружено");
+            return;
          }
-      }, [
-      new YMapDefaultSchemeLayer(),
-      new YMapDefaultFeaturesLayer()
-   ]
-   );
+      });
+   }
 
-   const markerTemplate = document.getElementById('marker');
-   const markerClone = markerTemplate.content.cloneNode(true);
-   const marker = new YMapMarker(
-      {
-         coordinates: data.coordinates.split(','),
-      },
-      markerClone
-   );
-   map.addChild(marker);
+   async function initMap() {
+      await loadYMapsAPI();
+      await ymaps3.ready;
+      const { YMap, YMapMarker, YMapDefaultSchemeLayer, YMapDefaultFeaturesLayer } = ymaps3;
+
+      const map = new YMap(
+         mapContainer,
+         {
+            location: {
+               center: data.coordinates.split(','),
+               zoom: 17,
+            }
+         }, [
+         new YMapDefaultSchemeLayer(),
+         new YMapDefaultFeaturesLayer()
+      ]
+      );
+
+      const markerTemplate = document.getElementById('marker');
+      const markerClone = markerTemplate.content.cloneNode(true);
+      const marker = new YMapMarker(
+         {
+            coordinates: data.coordinates.split(','),
+         },
+         markerClone
+      );
+      map.addChild(marker);
+   }
+   initMap();
 }
-initMap();
-
 const steppers = document.querySelectorAll('.js-stepper');
 if (steppers.length > 0) {
    steppers.forEach(stepper => {
@@ -368,6 +388,27 @@ if (document.querySelector('.primary__swiper')) {
          breakpoints: {
             768: {
                slidesPerView: 5
+            }
+         },
+      });
+   })
+}
+if (document.querySelector('.services-swiper__body')) {
+   const list = document.querySelectorAll('.services-swiper__body');
+   list.forEach(e => {
+      const swiper = new Swiper(e, {
+         spaceBetween: 10,
+         speed: 300,
+         slidesPerView: 1.5,
+         breakpoints: {
+            768: {
+               slidesPerView: 2.5
+            },
+            992: {
+               slidesPerView: 3.5
+            },
+            1200: {
+               slidesPerView: 4
             }
          },
       });

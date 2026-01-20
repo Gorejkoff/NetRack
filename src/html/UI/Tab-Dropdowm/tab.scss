@@ -15,6 +15,18 @@
       background-color: #F3F3F3;
    }
 
+   &:hover {
+      .tab__button-arrow {
+         background-color: #6E48F5;
+
+         svg {
+            path {
+               fill: #B7FE56
+            }
+         }
+      }
+   }
+
    &__button {
       padding: var(--padding-md);
       display: flex;
@@ -113,7 +125,7 @@
    }
 
    &__inner {
-      padding: var(--padding);
+      padding: var(--padding-md);
       padding-top: 0;
       font-size: var(--font-size-md);
       line-height: 140%;

@@ -13,8 +13,14 @@
       @@include('html/Components/Header/header.html',{})
 
       <div class="main">
+         @@include('html/Components/Intro/Intro.html',{
+         swiper: true,
+         support: true,
+         asterisked:true,
+         tags: true
+         })
+         @@include('html/Components/Intro/Intro.html',{ })
 
-         @@include('html/Components/Intro/Intro.html',{})
          @@include('html/Components/Primary/Primary.html',{
          contents: true,
          })
