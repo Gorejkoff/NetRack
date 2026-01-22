@@ -104,14 +104,6 @@
       height: 650px;
       border-radius: 20px;
       overflow: hidden;
-
-      .ymaps3x0--main-engine-container {
-         filter: grayscale(100%);
-      }
-
-      [class*="container"] {
-         padding: 0;
-      }
    }
 
    &__grid-footer {
@@ -139,18 +131,5 @@
       font-size: 22px;
       line-height: 140%;
       color: #575757;
-   }
-}
-
-.map-marker {
-   position: relative;
-
-   svg {
-      position: absolute;
-      bottom: 0;
-      left: 50%;
-      transform: translateX(-50%);
-      width: 150px;
-      height: auto;
    }
 }

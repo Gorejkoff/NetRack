@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="ru">
+
+<head>
+   @@include('html/head.html',{"title":"Forms"})
+</head>
+
+
+<body>
+
+   <div class="wrapper">
+
+      @@include('html/Components/Header/header.html',{})
+
+      <div class="main">
+
+         @@include('html/Components/Contact-Form/Contact-Form.html',{
+         contentblock: true,
+         text: true,
+         person: false,
+         textarea: true,
+         })
+
+         @@include('html/Components/Contact-Form/Contact-Form.html',{
+         contentblock: true,
+         twoparts: true,
+         lightbg: true,
+         subtitle: true,
+         person:true,
+         formtitle: true,
+         textarea: true,
+         })
+         @@include('html/Components/Contact-Form/Contact-Form.html',{
+         map: true,
+         twoparts: true,
+         })
+
+      </div>
+
+      @@include('html/Components/Footer/footer.html',{})
+
+   </div>
+
+   <script defer src="https://api-maps.yandex.ru/v3/?apikey=6f1ea5a8-bc6c-4023-a413-08b9577cdfcf&lang=ru_RU"></script>
+   @@include('html/scripts.html',{
+   swiper: true,
+   })
+
+
+</body>
+
+</html>

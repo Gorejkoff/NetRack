@@ -130,6 +130,18 @@
       --font-size-max: 80px;
    }
 
+
+
+   --radius-m: 10px;
+
+   @media (min-width:1024px) {
+      --radius-m: 15px;
+   }
+
+   @media (min-width:1366px) {
+      --radius-m: 20px;
+   }
+
    // @supports (height: 100dvh) {
    //    --vh: 100dvh;
    // }
