@@ -19,54 +19,11 @@
          </div>
       </div>
    </div>
-   <div class="ordering__quantity js-tabs-body js-data-scope js-tabs-closing js-tabs-toggle">
-      <button class="ordering__item-button" type="button">
-         <span class="ordering____text-group js-data-replace">
-            <span>1</span>
-         </span>
-         <span class="ordering__arrow">
-            <svg width="9" height="6" viewBox="0 0 9 6" fill="none" xmlns="http://www.w3.org/2000/svg">
-               <path d="M4.24268 5.65685L0 1.41425L1.41422 0L4.24268 2.82845L7.07108 0L8.48528 1.41425L4.24268 5.65685Z" fill="#191919"></path>
-            </svg>
-         </span>
-      </button>
-      <div class="ordering__shell js-tabs-shell">
-         <div class="js-tabs-inner">
-            <div class="ordering__inner scroll">
-               <div class="ordering__inner-list">
-                  <label class="ordering__target js-data-target">
-                     <input type="radio" name="quantity" value="1" hidden="">
-                     <span class="js-data-get">
-                        <span>1</span>
-                     </span>
-                  </label>
-                  <label class="ordering__target js-data-target">
-                     <input type="radio" name="quantity" value="2" hidden="">
-                     <span class="js-data-get">
-                        <span>2</span>
-                     </span>
-                  </label>
-                  <label class="ordering__target js-data-target">
-                     <input type="radio" name="quantity" value="3" hidden="">
-                     <span class="js-data-get">
-                        <span>3</span>
-                     </span>
-                  </label>
-                  <label class="ordering__target js-data-target">
-                     <input type="radio" name="quantity" value="4" hidden="">
-                     <span class="js-data-get">
-                        <span>4</span>
-                     </span>
-                  </label>
-                  <label class="ordering__target js-data-target">
-                     <input type="radio" name="quantity" value="5" hidden="">
-                     <span class="js-data-get">
-                        <span>5</span>
-                     </span>
-                  </label>
-               </div>
-            </div>
-         </div>
+   <div class="ordering__quantity">
+      <div class="ordering__count js-form-count">
+         <button class="js-form-dicrement" type="button">-</button>
+         <input class="js-form-value" type="number" min="1" max="20" value="22">
+         <button class="js-form-increment" type="button">+</button>
       </div>
    </div>
    <button class="ordering__delete" type="button" aria-label="удалить">

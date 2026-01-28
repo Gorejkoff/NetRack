@@ -212,13 +212,8 @@
    }
 
    &__quantity {
-      width: 50px;
-      min-width: 50px;
-
-      @media (min-width:768px) {
-         width: 70px;
-         min-width: 70px;
-      }
+      width: 70px;
+      min-width: 70px;
    }
 
    &__delete {
@@ -279,6 +274,35 @@
    &__forms {
       @media (min-width:1024px) {
          flex: 1 1 auto;
+      }
+   }
+
+   &__count {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      width: 100%;
+      height: var(--size);
+      border: 1px solid #d9d9d9;
+      border-radius: 5px;
+      font-size: 12px;
+      background-color: #F3F3F3;
+
+      button {
+         align-self: stretch;
+
+         &:first-child {
+            padding-left: 12px;
+         }
+
+         &:last-child {
+            padding-right: 12px;
+         }
+      }
+
+      input {
+         width: 1.5em;
+         text-align: center;
       }
    }
 }

@@ -7326,8 +7326,8 @@ option span {
 }
 
 .ordering__quantity {
-  width: 50px;
-  min-width: 50px;
+  width: 70px;
+  min-width: 70px;
 }
 
 .ordering__delete {
@@ -7384,6 +7384,43 @@ option span {
 .ordering__result b {
   font-family: var(--font-family-second);
   font-size: var(--font-size-lg);
+}
+
+.ordering__count {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  width: 100%;
+  height: var(--size);
+  border: 1px solid #d9d9d9;
+  border-radius: 5px;
+  font-size: 12px;
+  background-color: #F3F3F3;
+}
+
+.ordering__count button {
+  -ms-flex-item-align: stretch;
+      -ms-grid-row-align: stretch;
+      align-self: stretch;
+}
+
+.ordering__count button:first-child {
+  padding-left: 12px;
+}
+
+.ordering__count button:last-child {
+  padding-right: 12px;
+}
+
+.ordering__count input {
+  width: 1.5em;
+  text-align: center;
 }
 
 .modal {
@@ -7586,11 +7623,6 @@ option span {
 
   .ordering__item-button {
     padding: 8px 20px;
-  }
-
-  .ordering__quantity {
-    width: 70px;
-    min-width: 70px;
   }
 }
 
