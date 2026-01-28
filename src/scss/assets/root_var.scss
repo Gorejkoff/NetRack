@@ -9,6 +9,15 @@
    --color-modal-bg: rgba(0, 0, 0, 0.6);
    --vh: 100vh;
 
+   // --padding-xs
+   --padding-xs: 10px;
+   @include size_adaptive (--padding-xs, 10, 20, 768, 1366);
+   @include size_adaptive (--padding-xs, 20, 26, 1366, 2560);
+
+   @media (min-width:2560px) {
+      --padding-xs: 26px;
+   }
+
    // --padding-sm
    --padding-sm: 10px;
    @include size_adaptive (--padding-sm, 10, 20, 768, 1366);
@@ -35,7 +44,6 @@
    @media (min-width:2560px) {
       --padding-lg: 70px;
    }
-
 
 
    // --font-size-xs

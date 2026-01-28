@@ -14,6 +14,8 @@
 
       <div class="main">
 
+         <button type="button" class="js-modal-open" data-modal_open="orderin-popap" style="padding: 40px; background-color: #6E48F5; color: #ffffff; border-radius: 10px;">Открыть фотму заказа</button>
+
          @@include('html/Components/Contact-Form/Contact-Form.html',{
          contentblock: true,
          text: true,
@@ -35,11 +37,13 @@
          twoparts: true,
          })
 
+
       </div>
 
       @@include('html/Components/Footer/footer.html',{})
 
    </div>
+   @@include('html/Components/Modals/Modal-Ordering.html',{})
 
    <script defer src="https://api-maps.yandex.ru/v3/?apikey=6f1ea5a8-bc6c-4023-a413-08b9577cdfcf&lang=ru_RU"></script>
    @@include('html/scripts.html',{

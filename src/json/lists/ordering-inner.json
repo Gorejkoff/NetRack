@@ -1,0 +1,66 @@
+[
+   {
+      "name": "CPU",
+      "value": "2 х Xeon Platinum 8352V"
+   },
+   {
+      "name": "GPU",
+      "value": "2 x Nvidia A4000 16GB"
+   },
+   {
+      "name": "RAM",
+      "value": "256 GB DDR4"
+   },
+   {
+      "name": "NMVe",
+      "value": "2 x 16 TB"
+   },
+   {
+      "name": "SSD",
+      "value": "2 x 1,92 TB"
+   },
+   {
+      "name": "RAID",
+      "value": "SATA+NVMe RAID-контроллеры"
+   },
+   {
+      "name": "Internet",
+      "value": "1 Гбит/с безлимит"
+   },
+   {
+      "name": "Сетевой интерфейс",
+      "value": "2 порта 1G"
+   },
+   {
+      "name": "Защита от DDoS",
+      "value": "Продвинутая 100 Мбит/с"
+   },
+   {
+      "name": "IP-адрес",
+      "value": "подсеть /29"
+   },
+   {
+      "name": "LAN внутри ЦОД",
+      "value": "10 Гбит/с"
+   },
+   {
+      "name": "LAN между ЦОД",
+      "value": "10 Гбит/с"
+   },
+   {
+      "name": "Канал до ММТС-9",
+      "value": "10 Гбит/с"
+   },
+   {
+      "name": "ОС",
+      "value": "AstraLinux Common Edition"
+   },
+   {
+      "name": "Файловое хранилище",
+      "value": "20 TB"
+   },
+   {
+      "name": "Размещение",
+      "value": "ЦОД Tier III NETRACK "
+   }
+]

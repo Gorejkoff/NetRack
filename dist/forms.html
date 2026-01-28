@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width initial-scale=1.0">
 <meta name="description" content="Аренда выделенного сервера">
 <!-- <link rel="preload" as="font" type="font/woff2" href="./fonts/Raleway-Regular.woff2" crossorigin=""> -->
-<link rel="stylesheet" href="css/style.css?t=1769080056863">
+<link rel="stylesheet" href="css/style.css?t=1769559455015">
 </head>
 
 
@@ -26,6 +26,8 @@
 </header>
 
       <div class="main">
+
+         <button type="button" class="js-modal-open" data-modal_open="orderin-popap" style="padding: 40px; background-color: #6E48F5; color: #ffffff; border-radius: 10px;">Открыть фотму заказа</button>
 
          <section class="contact-form padding-section ">
    <div class="background-section">
@@ -366,6 +368,7 @@
    </div>
 </section>
 
+
       </div>
 
       <footer id="footer" class="footer">
@@ -379,12 +382,481 @@
 </footer>
 
    </div>
+   <div id="orderin-popap" class="modal js-modal-hidden js-modal-close">
+   <div class="modal__container">
+      <div class="modal__body js-modal-stop-close">
+         <button type="button" class="ordering__close js-modal-close" aria-label="закрыть окно">
+            <svg width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+               <path d="M8 23.75L6.25 22L13.25 15L6.25 8L8 6.25L15 13.25L22 6.25L23.75 8L16.75 15L23.75 22L22 23.75L15 16.75L8 23.75Z" fill="#1D1B20" />
+            </svg>
+         </button>
+         <form class="ordering" action="#" method="post" name="ordering" id="ordering">
+   <div class="ordering__title">Заказ оборудования</div>
+   <div class="ordering__body">
+      <div class="ordering__list">
+         <div class="ordering__block">
+   <div class="ordering__item js-tabs-body">
+      <button class="ordering__item-button ordering__number js-tabs-toggle" type="button">
+         <b>Сервер 1</b>
+         <span>
+            <b>10 000</b>
+            <span>руб/мес</span>
+         </span>
+      </button>
+      <div class="ordering__shell js-tabs-shell">
+         <div class="js-tabs-inner">
+            <div class="ordering__item-inner">
+               <table>
+                  <tbody>
+                     <tr>
+   <td>CPU</td>
+   <td>2 х Xeon Platinum 8352V</td>
+</tr><tr>
+   <td>GPU</td>
+   <td>2 x Nvidia A4000 16GB</td>
+</tr><tr>
+   <td>RAM</td>
+   <td>256 GB DDR4</td>
+</tr><tr>
+   <td>NMVe</td>
+   <td>2 x 16 TB</td>
+</tr><tr>
+   <td>SSD</td>
+   <td>2 x 1,92 TB</td>
+</tr><tr>
+   <td>RAID</td>
+   <td>SATA+NVMe RAID-контроллеры</td>
+</tr><tr>
+   <td>Internet</td>
+   <td>1 Гбит/с безлимит</td>
+</tr><tr>
+   <td>Сетевой интерфейс</td>
+   <td>2 порта 1G</td>
+</tr><tr>
+   <td>Защита от DDoS</td>
+   <td>Продвинутая 100 Мбит/с</td>
+</tr><tr>
+   <td>IP-адрес</td>
+   <td>подсеть /29</td>
+</tr><tr>
+   <td>LAN внутри ЦОД</td>
+   <td>10 Гбит/с</td>
+</tr><tr>
+   <td>LAN между ЦОД</td>
+   <td>10 Гбит/с</td>
+</tr><tr>
+   <td>Канал до ММТС-9</td>
+   <td>10 Гбит/с</td>
+</tr><tr>
+   <td>ОС</td>
+   <td>AstraLinux Common Edition</td>
+</tr><tr>
+   <td>Файловое хранилище</td>
+   <td>20 TB</td>
+</tr><tr>
+   <td>Размещение</td>
+   <td>ЦОД Tier III NETRACK </td>
+</tr>
+                  </tbody>
+               </table>
+            </div>
+         </div>
+      </div>
+   </div>
+   <div class="ordering__quantity js-tabs-body js-data-scope js-tabs-closing js-tabs-toggle">
+      <button class="ordering__item-button" type="button">
+         <span class="ordering____text-group js-data-replace">
+            <span>1</span>
+         </span>
+         <span class="ordering__arrow">
+            <svg width="9" height="6" viewBox="0 0 9 6" fill="none" xmlns="http://www.w3.org/2000/svg">
+               <path d="M4.24268 5.65685L0 1.41425L1.41422 0L4.24268 2.82845L7.07108 0L8.48528 1.41425L4.24268 5.65685Z" fill="#191919"></path>
+            </svg>
+         </span>
+      </button>
+      <div class="ordering__shell js-tabs-shell">
+         <div class="js-tabs-inner">
+            <div class="ordering__inner scroll">
+               <div class="ordering__inner-list">
+                  <label class="ordering__target js-data-target">
+                     <input type="radio" name="quantity" value="1" hidden="">
+                     <span class="js-data-get">
+                        <span>1</span>
+                     </span>
+                  </label>
+                  <label class="ordering__target js-data-target">
+                     <input type="radio" name="quantity" value="2" hidden="">
+                     <span class="js-data-get">
+                        <span>2</span>
+                     </span>
+                  </label>
+                  <label class="ordering__target js-data-target">
+                     <input type="radio" name="quantity" value="3" hidden="">
+                     <span class="js-data-get">
+                        <span>3</span>
+                     </span>
+                  </label>
+                  <label class="ordering__target js-data-target">
+                     <input type="radio" name="quantity" value="4" hidden="">
+                     <span class="js-data-get">
+                        <span>4</span>
+                     </span>
+                  </label>
+                  <label class="ordering__target js-data-target">
+                     <input type="radio" name="quantity" value="5" hidden="">
+                     <span class="js-data-get">
+                        <span>5</span>
+                     </span>
+                  </label>
+               </div>
+            </div>
+         </div>
+      </div>
+   </div>
+   <button class="ordering__delete" type="button" aria-label="удалить">
+      <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+         <path d="M5.33366 15.8332L4.16699 14.6665L8.83366 9.99984L4.16699 5.33317L5.33366 4.1665L10.0003 8.83317L14.667 4.1665L15.8337 5.33317L11.167 9.99984L15.8337 14.6665L14.667 15.8332L10.0003 11.1665L5.33366 15.8332Z" fill="#7F7F7F" />
+      </svg>
+   </button>
+</div>
+         <div class="ordering__block">
+   <div class="ordering__item js-tabs-body">
+      <button class="ordering__item-button ordering__number js-tabs-toggle" type="button">
+         <b>Сервер 1</b>
+         <span>
+            <b>10 000</b>
+            <span>руб/мес</span>
+         </span>
+      </button>
+      <div class="ordering__shell js-tabs-shell">
+         <div class="js-tabs-inner">
+            <div class="ordering__item-inner">
+               <table>
+                  <tbody>
+                     <tr>
+   <td>CPU</td>
+   <td>2 х Xeon Platinum 8352V</td>
+</tr><tr>
+   <td>GPU</td>
+   <td>2 x Nvidia A4000 16GB</td>
+</tr><tr>
+   <td>RAM</td>
+   <td>256 GB DDR4</td>
+</tr><tr>
+   <td>NMVe</td>
+   <td>2 x 16 TB</td>
+</tr><tr>
+   <td>SSD</td>
+   <td>2 x 1,92 TB</td>
+</tr><tr>
+   <td>RAID</td>
+   <td>SATA+NVMe RAID-контроллеры</td>
+</tr><tr>
+   <td>Internet</td>
+   <td>1 Гбит/с безлимит</td>
+</tr><tr>
+   <td>Сетевой интерфейс</td>
+   <td>2 порта 1G</td>
+</tr><tr>
+   <td>Защита от DDoS</td>
+   <td>Продвинутая 100 Мбит/с</td>
+</tr><tr>
+   <td>IP-адрес</td>
+   <td>подсеть /29</td>
+</tr><tr>
+   <td>LAN внутри ЦОД</td>
+   <td>10 Гбит/с</td>
+</tr><tr>
+   <td>LAN между ЦОД</td>
+   <td>10 Гбит/с</td>
+</tr><tr>
+   <td>Канал до ММТС-9</td>
+   <td>10 Гбит/с</td>
+</tr><tr>
+   <td>ОС</td>
+   <td>AstraLinux Common Edition</td>
+</tr><tr>
+   <td>Файловое хранилище</td>
+   <td>20 TB</td>
+</tr><tr>
+   <td>Размещение</td>
+   <td>ЦОД Tier III NETRACK </td>
+</tr>
+                  </tbody>
+               </table>
+            </div>
+         </div>
+      </div>
+   </div>
+   <div class="ordering__quantity js-tabs-body js-data-scope js-tabs-closing js-tabs-toggle">
+      <button class="ordering__item-button" type="button">
+         <span class="ordering____text-group js-data-replace">
+            <span>1</span>
+         </span>
+         <span class="ordering__arrow">
+            <svg width="9" height="6" viewBox="0 0 9 6" fill="none" xmlns="http://www.w3.org/2000/svg">
+               <path d="M4.24268 5.65685L0 1.41425L1.41422 0L4.24268 2.82845L7.07108 0L8.48528 1.41425L4.24268 5.65685Z" fill="#191919"></path>
+            </svg>
+         </span>
+      </button>
+      <div class="ordering__shell js-tabs-shell">
+         <div class="js-tabs-inner">
+            <div class="ordering__inner scroll">
+               <div class="ordering__inner-list">
+                  <label class="ordering__target js-data-target">
+                     <input type="radio" name="quantity" value="1" hidden="">
+                     <span class="js-data-get">
+                        <span>1</span>
+                     </span>
+                  </label>
+                  <label class="ordering__target js-data-target">
+                     <input type="radio" name="quantity" value="2" hidden="">
+                     <span class="js-data-get">
+                        <span>2</span>
+                     </span>
+                  </label>
+                  <label class="ordering__target js-data-target">
+                     <input type="radio" name="quantity" value="3" hidden="">
+                     <span class="js-data-get">
+                        <span>3</span>
+                     </span>
+                  </label>
+                  <label class="ordering__target js-data-target">
+                     <input type="radio" name="quantity" value="4" hidden="">
+                     <span class="js-data-get">
+                        <span>4</span>
+                     </span>
+                  </label>
+                  <label class="ordering__target js-data-target">
+                     <input type="radio" name="quantity" value="5" hidden="">
+                     <span class="js-data-get">
+                        <span>5</span>
+                     </span>
+                  </label>
+               </div>
+            </div>
+         </div>
+      </div>
+   </div>
+   <button class="ordering__delete" type="button" aria-label="удалить">
+      <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+         <path d="M5.33366 15.8332L4.16699 14.6665L8.83366 9.99984L4.16699 5.33317L5.33366 4.1665L10.0003 8.83317L14.667 4.1665L15.8337 5.33317L11.167 9.99984L15.8337 14.6665L14.667 15.8332L10.0003 11.1665L5.33366 15.8332Z" fill="#7F7F7F" />
+      </svg>
+   </button>
+</div>
+         <div class="ordering__block">
+   <div class="ordering__item js-tabs-body">
+      <button class="ordering__item-button ordering__number js-tabs-toggle" type="button">
+         <b>Сервер 1</b>
+         <span>
+            <b>10 000</b>
+            <span>руб/мес</span>
+         </span>
+      </button>
+      <div class="ordering__shell js-tabs-shell">
+         <div class="js-tabs-inner">
+            <div class="ordering__item-inner">
+               <table>
+                  <tbody>
+                     <tr>
+   <td>CPU</td>
+   <td>2 х Xeon Platinum 8352V</td>
+</tr><tr>
+   <td>GPU</td>
+   <td>2 x Nvidia A4000 16GB</td>
+</tr><tr>
+   <td>RAM</td>
+   <td>256 GB DDR4</td>
+</tr><tr>
+   <td>NMVe</td>
+   <td>2 x 16 TB</td>
+</tr><tr>
+   <td>SSD</td>
+   <td>2 x 1,92 TB</td>
+</tr><tr>
+   <td>RAID</td>
+   <td>SATA+NVMe RAID-контроллеры</td>
+</tr><tr>
+   <td>Internet</td>
+   <td>1 Гбит/с безлимит</td>
+</tr><tr>
+   <td>Сетевой интерфейс</td>
+   <td>2 порта 1G</td>
+</tr><tr>
+   <td>Защита от DDoS</td>
+   <td>Продвинутая 100 Мбит/с</td>
+</tr><tr>
+   <td>IP-адрес</td>
+   <td>подсеть /29</td>
+</tr><tr>
+   <td>LAN внутри ЦОД</td>
+   <td>10 Гбит/с</td>
+</tr><tr>
+   <td>LAN между ЦОД</td>
+   <td>10 Гбит/с</td>
+</tr><tr>
+   <td>Канал до ММТС-9</td>
+   <td>10 Гбит/с</td>
+</tr><tr>
+   <td>ОС</td>
+   <td>AstraLinux Common Edition</td>
+</tr><tr>
+   <td>Файловое хранилище</td>
+   <td>20 TB</td>
+</tr><tr>
+   <td>Размещение</td>
+   <td>ЦОД Tier III NETRACK </td>
+</tr>
+                  </tbody>
+               </table>
+            </div>
+         </div>
+      </div>
+   </div>
+   <div class="ordering__quantity js-tabs-body js-data-scope js-tabs-closing js-tabs-toggle">
+      <button class="ordering__item-button" type="button">
+         <span class="ordering____text-group js-data-replace">
+            <span>1</span>
+         </span>
+         <span class="ordering__arrow">
+            <svg width="9" height="6" viewBox="0 0 9 6" fill="none" xmlns="http://www.w3.org/2000/svg">
+               <path d="M4.24268 5.65685L0 1.41425L1.41422 0L4.24268 2.82845L7.07108 0L8.48528 1.41425L4.24268 5.65685Z" fill="#191919"></path>
+            </svg>
+         </span>
+      </button>
+      <div class="ordering__shell js-tabs-shell">
+         <div class="js-tabs-inner">
+            <div class="ordering__inner scroll">
+               <div class="ordering__inner-list">
+                  <label class="ordering__target js-data-target">
+                     <input type="radio" name="quantity" value="1" hidden="">
+                     <span class="js-data-get">
+                        <span>1</span>
+                     </span>
+                  </label>
+                  <label class="ordering__target js-data-target">
+                     <input type="radio" name="quantity" value="2" hidden="">
+                     <span class="js-data-get">
+                        <span>2</span>
+                     </span>
+                  </label>
+                  <label class="ordering__target js-data-target">
+                     <input type="radio" name="quantity" value="3" hidden="">
+                     <span class="js-data-get">
+                        <span>3</span>
+                     </span>
+                  </label>
+                  <label class="ordering__target js-data-target">
+                     <input type="radio" name="quantity" value="4" hidden="">
+                     <span class="js-data-get">
+                        <span>4</span>
+                     </span>
+                  </label>
+                  <label class="ordering__target js-data-target">
+                     <input type="radio" name="quantity" value="5" hidden="">
+                     <span class="js-data-get">
+                        <span>5</span>
+                     </span>
+                  </label>
+               </div>
+            </div>
+         </div>
+      </div>
+   </div>
+   <button class="ordering__delete" type="button" aria-label="удалить">
+      <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+         <path d="M5.33366 15.8332L4.16699 14.6665L8.83366 9.99984L4.16699 5.33317L5.33366 4.1665L10.0003 8.83317L14.667 4.1665L15.8337 5.33317L11.167 9.99984L15.8337 14.6665L14.667 15.8332L10.0003 11.1665L5.33366 15.8332Z" fill="#7F7F7F" />
+      </svg>
+   </button>
+</div>
+
+         <div class="ordering__block">
+            <div class="ordering__item js-tabs-body">
+               <button class="ordering__item-button ordering__add js-tabs-toggle" type="button">
+                  <span>Добавить оборудование</span>
+                  <span class="ordering__arrow">
+                     <svg width="9" height="6" viewBox="0 0 9 6" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M4.24268 5.65685L0 1.41425L1.41422 0L4.24268 2.82845L7.07108 0L8.48528 1.41425L4.24268 5.65685Z" fill="#191919"></path>
+                     </svg>
+                  </span>
+               </button>
+               <div class="ordering__shell js-tabs-shell">
+                  <div class="js-tabs-inner">
+                     <div class="ordering__device-list scroll">
+                        <div class="ordering__device-item">
+                           <span>NVMe SATA Enterprise</span>
+                        </div>
+                        <div class="ordering__device-item">
+                           <span>NVMe SATA Enterprise</span>
+                        </div>
+                        <div class="ordering__device-item">
+                           <span>NVMe SATA Enterprise</span>
+                        </div>
+                        <div class="ordering__device-item">
+                           <span>NVMe SATA Enterprise</span>
+                        </div>
+                        <div class="ordering__device-item">
+                           <span>NVMe SATA Enterprise</span>
+                        </div>
+                        <div class="ordering__device-item">
+                           <span>NVMe SATA Enterprise</span>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+            <div class="ordering__quantity"></div>
+            <div class="ordering__delete"></div>
+         </div>
+
+         <div class="ordering__block">
+            <div class="ordering__item">
+               <div class="ordering__result">
+                  <b>Итого</b>
+                  <span><b>240 000</b> руб/мес</span>
+               </div>
+            </div>
+            <div class="ordering__quantity"></div>
+            <div class="ordering__delete"></div>
+         </div>
+
+      </div>
+      <div class="ordering__forms">
+         <input class="input-grey" type="text" placeholder="Имя">
+         <input class="input-grey" type="tel" placeholder="Телефон">
+         <input class="input-grey" type="email" placeholder="E-mail">
+         <input class="input-grey" type="text" placeholder="Telegram/Max">
+         <textarea class="textarea-grey" name="note" placeholder="Примечание"></textarea>
+         <label class="checkbox-grey">
+            <input type="checkbox" name="processing" hidden>
+            <span class="checkbox-grey__icon">
+               <svg width="12" height="10" viewBox="0 0 12 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M0.707031 5.20703L3.70703 8.20703L11.207 0.707031" stroke="currentColor" stroke-width="2" />
+               </svg>
+            </span>
+            <span>Нажимая на кнопку «Заказать», вы соглашаетесь на обработку персональных данных в соответствии с Пользовательским соглашением</span>
+         </label>
+         <div>
+            <a href="#0" class="button button-purple ">
+   <span>Отправить</span>
+   <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <path d="M16.1716 10.9715L10.8076 5.45454L12.2218 4L20 12.0001L12.2218 20L10.8076 18.5455L16.1716 13.0286H4V10.9715H16.1716Z" fill="#191919" />
+   </svg>
+</a>
+
+         </div>
+      </div>
+   </div>
+</form>
+      </div>
+   </div>
+</div>
 
    <script defer src="https://api-maps.yandex.ru/v3/?apikey=6f1ea5a8-bc6c-4023-a413-08b9577cdfcf&lang=ru_RU"></script>
    
-<script defer src='./js/swiper.js?t=1769080056863'></script>
+<script defer src='./js/swiper.js?t=1769559455015'></script>
 
-<script defer src='./js/app.js?t=1769080056863'></script>
+<script defer src='./js/app.js?t=1769559455015'></script>
 
 
 </body>

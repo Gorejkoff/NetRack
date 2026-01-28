@@ -1,0 +1,77 @@
+<div class="ordering__block">
+   <div class="ordering__item js-tabs-body">
+      <button class="ordering__item-button ordering__number js-tabs-toggle" type="button">
+         <b>Сервер 1</b>
+         <span>
+            <b>10 000</b>
+            <span>руб/мес</span>
+         </span>
+      </button>
+      <div class="ordering__shell js-tabs-shell">
+         <div class="js-tabs-inner">
+            <div class="ordering__item-inner">
+               <table>
+                  <tbody>
+                     @@loop('./tr.html', 'json/lists/ordering-inner.json')
+                  </tbody>
+               </table>
+            </div>
+         </div>
+      </div>
+   </div>
+   <div class="ordering__quantity js-tabs-body js-data-scope js-tabs-closing js-tabs-toggle">
+      <button class="ordering__item-button" type="button">
+         <span class="ordering____text-group js-data-replace">
+            <span>1</span>
+         </span>
+         <span class="ordering__arrow">
+            <svg width="9" height="6" viewBox="0 0 9 6" fill="none" xmlns="http://www.w3.org/2000/svg">
+               <path d="M4.24268 5.65685L0 1.41425L1.41422 0L4.24268 2.82845L7.07108 0L8.48528 1.41425L4.24268 5.65685Z" fill="#191919"></path>
+            </svg>
+         </span>
+      </button>
+      <div class="ordering__shell js-tabs-shell">
+         <div class="js-tabs-inner">
+            <div class="ordering__inner scroll">
+               <div class="ordering__inner-list">
+                  <label class="ordering__target js-data-target">
+                     <input type="radio" name="quantity" value="1" hidden="">
+                     <span class="js-data-get">
+                        <span>1</span>
+                     </span>
+                  </label>
+                  <label class="ordering__target js-data-target">
+                     <input type="radio" name="quantity" value="2" hidden="">
+                     <span class="js-data-get">
+                        <span>2</span>
+                     </span>
+                  </label>
+                  <label class="ordering__target js-data-target">
+                     <input type="radio" name="quantity" value="3" hidden="">
+                     <span class="js-data-get">
+                        <span>3</span>
+                     </span>
+                  </label>
+                  <label class="ordering__target js-data-target">
+                     <input type="radio" name="quantity" value="4" hidden="">
+                     <span class="js-data-get">
+                        <span>4</span>
+                     </span>
+                  </label>
+                  <label class="ordering__target js-data-target">
+                     <input type="radio" name="quantity" value="5" hidden="">
+                     <span class="js-data-get">
+                        <span>5</span>
+                     </span>
+                  </label>
+               </div>
+            </div>
+         </div>
+      </div>
+   </div>
+   <button class="ordering__delete" type="button" aria-label="удалить">
+      <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+         <path d="M5.33366 15.8332L4.16699 14.6665L8.83366 9.99984L4.16699 5.33317L5.33366 4.1665L10.0003 8.83317L14.667 4.1665L15.8337 5.33317L11.167 9.99984L15.8337 14.6665L14.667 15.8332L10.0003 11.1665L5.33366 15.8332Z" fill="#7F7F7F" />
+      </svg>
+   </button>
+</div>

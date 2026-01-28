@@ -1,0 +1,84 @@
+<form class="ordering" action="#" method="post" name="ordering" id="ordering">
+   <div class="ordering__title">Заказ оборудования</div>
+   <div class="ordering__body">
+      <div class="ordering__list">
+         @@include('./Ordering-Block.html',{})
+         @@include('./Ordering-Block.html',{})
+         @@include('./Ordering-Block.html',{})
+
+         <div class="ordering__block">
+            <div class="ordering__item js-tabs-body">
+               <button class="ordering__item-button ordering__add js-tabs-toggle" type="button">
+                  <span>Добавить оборудование</span>
+                  <span class="ordering__arrow">
+                     <svg width="9" height="6" viewBox="0 0 9 6" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M4.24268 5.65685L0 1.41425L1.41422 0L4.24268 2.82845L7.07108 0L8.48528 1.41425L4.24268 5.65685Z" fill="#191919"></path>
+                     </svg>
+                  </span>
+               </button>
+               <div class="ordering__shell js-tabs-shell">
+                  <div class="js-tabs-inner">
+                     <div class="ordering__device-list scroll">
+                        <div class="ordering__device-item">
+                           <span>NVMe SATA Enterprise</span>
+                        </div>
+                        <div class="ordering__device-item">
+                           <span>NVMe SATA Enterprise</span>
+                        </div>
+                        <div class="ordering__device-item">
+                           <span>NVMe SATA Enterprise</span>
+                        </div>
+                        <div class="ordering__device-item">
+                           <span>NVMe SATA Enterprise</span>
+                        </div>
+                        <div class="ordering__device-item">
+                           <span>NVMe SATA Enterprise</span>
+                        </div>
+                        <div class="ordering__device-item">
+                           <span>NVMe SATA Enterprise</span>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+            <div class="ordering__quantity"></div>
+            <div class="ordering__delete"></div>
+         </div>
+
+         <div class="ordering__block">
+            <div class="ordering__item">
+               <div class="ordering__result">
+                  <b>Итого</b>
+                  <span><b>240 000</b> руб/мес</span>
+               </div>
+            </div>
+            <div class="ordering__quantity"></div>
+            <div class="ordering__delete"></div>
+         </div>
+
+      </div>
+      <div class="ordering__forms">
+         <input class="input-grey" type="text" placeholder="Имя">
+         <input class="input-grey" type="tel" placeholder="Телефон">
+         <input class="input-grey" type="email" placeholder="E-mail">
+         <input class="input-grey" type="text" placeholder="Telegram/Max">
+         <textarea class="textarea-grey" name="note" placeholder="Примечание"></textarea>
+         <label class="checkbox-grey">
+            <input type="checkbox" name="processing" hidden>
+            <span class="checkbox-grey__icon">
+               <svg width="12" height="10" viewBox="0 0 12 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M0.707031 5.20703L3.70703 8.20703L11.207 0.707031" stroke="currentColor" stroke-width="2" />
+               </svg>
+            </span>
+            <span>Нажимая на кнопку «Заказать», вы соглашаетесь на обработку персональных данных в соответствии с Пользовательским соглашением</span>
+         </label>
+         <div>
+            @@include('../../UI/Button/Button.html',{
+            text:'Отправить',
+            link:'#0',
+            class:'button-purple'
+            })
+         </div>
+      </div>
+   </div>
+</form>
