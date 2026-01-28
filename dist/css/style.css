@@ -7278,13 +7278,13 @@ option span {
 }
 
 .ordering__shell {
+  margin-top: 5px;
   height: 0;
   -webkit-transition: height 0.3s;
   transition: height 0.3s;
 }
 
 .ordering__item-inner {
-  margin-top: 5px;
   border: 1px dashed #acacac;
   border-radius: 5px;
   padding: 8px;
@@ -7901,6 +7901,10 @@ option span {
     -webkit-box-flex: 0;
         -ms-flex: 0 0 min(600px, 60%);
             flex: 0 0 min(600px, 60%);
+  }
+
+  .ordering__item-button {
+    font-size: 16px;
   }
 
   .ordering__item-inner {
@@ -8638,10 +8642,6 @@ option span {
 
   .ordering__title {
     font-size: 42px;
-  }
-
-  .ordering__item-button {
-    font-size: 16px;
   }
 
   .ordering__item-inner {
@@ -11107,10 +11107,6 @@ option span {
     font-size: calc(18px + (100vw - 768px) / 598 * 6);
   }
 
-  .ordering__item-button {
-    font-size: calc(12px + (100vw - 768px) / 598 * 4);
-  }
-
   .ordering__item-inner {
     font-size: calc(10px + (100vw - 768px) / 598 * 4);
   }
@@ -11465,6 +11461,12 @@ option span {
 @media (min-width: 1024px) and (max-width: 2559.98px) {
   .ordering__title {
     font-size: calc(32px + (100vw - 1024px) / 1536 * 10);
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1023.98px) {
+  .ordering__item-button {
+    font-size: calc(12px + (100vw - 768px) / 256 * 4);
   }
 }
 /*# sourceMappingURL=style.css.map */
