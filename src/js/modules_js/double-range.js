@@ -76,6 +76,8 @@ class InputDoubleRangeMetods {
       if (this.input_max == input && value < Number(this.input_min.value)) { value = this.input_min.value };
       if (this.input_min == input && value > Number(this.input_max.value)) { value = this.input_max.value };
       input.value = value;
+      input.dispatchEvent(new Event('input', { bubbles: true }));
+      input.dispatchEvent(new Event('change', { bubbles: true }));
       this.setRange(input, spin);
       requestAnimationFrame(() => this.moveRange(spin, input))
    }
@@ -142,15 +144,3 @@ LIST_DOUBLE_RANGES.forEach((e, index) => {
 window.addEventListener('resize', () => {
    LIST_DOUBLE_RANGES_CONSTRUCTORS.forEach(e => e.getProperties())
 })
-
-
-
-
-
-
-
-
-
-
-
-
