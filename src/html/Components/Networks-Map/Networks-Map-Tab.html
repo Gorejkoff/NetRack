@@ -1,0 +1,34 @@
+<div class="networks-map__tab @@if(context.active){active}" data-tab_ts="@@number">
+   <div class="networks-map__tab-text">
+      <b>IXcellerate</b> — один из ведущих российских операторов коммерческих дата-центров. Северный кампус (IXcellerate North) включает в себя 2 ЦОДа.
+   </div>
+   <a href="#0" class="networks-map__tab-link">
+      <span>узнать подробнее</span>
+      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+         <path d="M16.1716 10.9715L10.8076 5.45454L12.2218 4L20 12.0001L12.2218 20L10.8076 18.5455L16.1716 13.0286H4V10.9715H16.1716Z" fill="#6E48F5" />
+      </svg>
+   </a>
+   <hr style="border-color: #B5B5B5;">
+   <div class="networks-map__tab-data">
+      @@loop('./Networks-Map-Data.html','json/lists/networks-map-data.json')
+   </div>
+   <div class="networks-map__tab-certificates">
+      <div class="networks-map__tab-certificates-title">Сертификаты</div>
+      <div class="networks-map__tab-certificates-grid">
+         <img src="@img/webp/certificates-1.webp" alt="сертификат">
+         <img src="@img/webp/certificates-2.webp" alt="сертификат">
+         <img src="@img/webp/certificates-3.webp" alt="сертификат">
+         <img src="@img/webp/certificates-4.webp" alt="сертификат">
+         <img src="@img/webp/certificates-5.webp" alt="сертификат">
+         <img src="@img/webp/certificates-6.webp" alt="сертификат">
+      </div>
+   </div>
+   <hr>
+   <div class="networks-map__tab-data-button">
+      @@include('../../UI/Button/Button.html',{
+      text:'Рассчитать стоимость размещения',
+      link:'#0',
+      class:'button-purple'
+      })
+   </div>
+</div>

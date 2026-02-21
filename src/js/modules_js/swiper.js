@@ -58,6 +58,24 @@ if (document.querySelector('.services-swiper__body')) {
    })
 }
 
+if (document.querySelector('.feedback__swiper')) {
+   const list = document.querySelectorAll('.feedback__swiper');
+   list.forEach(e => {
+      const swiperItem = e.querySelector('.swiper');
+      const swiper = new Swiper(swiperItem, {
+         spaceBetween: 10,
+         speed: 300,
+         loop: true,
+         slidesPerView: 1,
+         navigation: {
+            nextEl: e.querySelector('.next'),
+            prevEl: e.querySelector('.prev'),
+         },
+
+      });
+   })
+}
+
 /* пример инициализации слайдера */
 // if (document.querySelector('.swiper')) {
 //    const swiper = new Swiper('.swiper', {

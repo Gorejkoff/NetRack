@@ -1,0 +1,212 @@
+.feedback {
+   position: relative;
+
+   --decrease: 30px;
+   --button-size: 85px;
+
+   @media (min-width:1024px) {
+      --decrease: 20px;
+   }
+
+   @media (min-width:1360px) {
+      --decrease: 10px;
+   }
+
+   @media (min-width:1920px) {
+      --decrease: 0px;
+   }
+
+   &__body {
+      display: flex;
+      flex-direction: column;
+      align-items: stretch;
+      gap: 10px;
+
+      @media (min-width:768px) {
+         flex-direction: row;
+      }
+   }
+
+   &__contant {
+      flex: 1 1 auto;
+      display: flex;
+      flex-direction: column;
+   }
+
+   &__title {
+      margin-bottom: var(--padding-md);
+      color: #ffffff;
+   }
+
+   &__info {
+      padding: var(--padding-lg);
+      border-radius: 10px;
+      border: 1px solid #ffffff;
+
+      @media (min-width:768px) {
+         flex: 1 1 auto;
+      }
+   }
+
+   &__info-icon {
+      margin-bottom: var(--padding-sm);
+   }
+
+   &__info-text {
+      font-weight: 500;
+      font-size: var(--font-size-sm);
+      line-height: 140%;
+      letter-spacing: -0.02em;
+      color: #ffffff;
+
+      p:not(:last-child) {
+         margin-bottom: 20px;
+      }
+   }
+
+   &__info-button {
+      padding-top: 10px;
+      display: flex;
+      align-items: flex-end;
+
+      @media (min-width:768px) {
+         min-height: calc(var(--button-size) - var(--decrease) + 10px);
+      }
+   }
+
+   &__swiper {
+      --width: min(calc(var(--max-width-container) / 2), 1050px, calc(100vw / 2 - var(--padding-container)));
+      position: relative;
+      min-height: 100%;
+
+      @media (min-width:768px) {
+         flex: 0 0 var(--width);
+      }
+
+      .swiper {
+         position: relative;
+         width: 100%;
+         overflow: hidden;
+         border-radius: 10px;
+
+         @media (min-width:768px) {
+            width: var(--width);
+            mask-image:
+               linear-gradient(black, black),
+               url('../img/png/swiper-mask.png');
+            mask-composite: exclude;
+            mask-repeat: no-repeat, no-repeat;
+            mask-position: 0 0, 0% 100%;
+            mask-size: 100% 100%, calc((var(--button-size) - var(--decrease)) * 2 + 30px) calc(var(--button-size) - var(--decrease) + 20px);
+
+         }
+      }
+
+      .swiper,
+      .swiper-wrapper {
+         height: 100%;
+      }
+   }
+
+   &__slide {
+      padding: var(--padding-lg);
+      background-color: #ffffff;
+      // background-color: red;
+      border-radius: 10px;
+   }
+
+   &__slide-header {
+      margin-bottom: var(--padding-sm);
+      display: flex;
+      align-items: flex-start;
+      justify-content: space-between;
+   }
+
+   &__slide-title {
+      flex: 1 1 auto;
+      font-size: var(--font-size-3xl);
+      line-height: 120%;
+      letter-spacing: -0.02em;
+      max-width: 560px;
+   }
+
+   &__slide-stars {
+      display: flex;
+      gap: 5px;
+
+      @media (min-width:768px) {
+         flex: 1 1 auto;
+      }
+
+      img,
+      svg {
+         width: 16px;
+         min-width: 16px;
+         height: auto;
+
+         @media (min-width:1024px) {
+            width: 20px;
+            min-width: 20px;
+         }
+
+         @media (min-width:1366px) {
+            width: 30px;
+            min-width: 30px;
+         }
+      }
+   }
+
+   &__slide-text {
+      margin-bottom: var(--padding-sm);
+      font-size: var(--font-size-sm);
+      line-height: 140%;
+      letter-spacing: -0.02em;
+
+      p {
+         &:not(:last-child) {
+            margin-bottom: 1em;
+         }
+      }
+   }
+
+   &__slide-author {
+      margin-left: auto;
+      max-width: 80%;
+   }
+
+   &__slide-author-name {
+      line-height: 150%;
+      letter-spacing: -0.02em;
+      font-weight: 600;
+      font-size: var(--font-size-lg);
+      text-align: right;
+   }
+
+   &__slide-author-post {
+      line-height: 150%;
+      letter-spacing: -0.02em;
+      font-weight: 400;
+      font-size: var(--font-size-xs);
+      text-align: right;
+   }
+
+   &__swiper-buttons {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      z-index: 2;
+      gap: 10px;
+      display: none;
+
+      @media (min-width:768px) {
+         display: flex;
+      }
+
+      button {
+         --size: calc(var(--button-size) - var(--decrease));
+         width: var(--size);
+         min-width: var(--size);
+         height: var(--size);
+      }
+   }
+}

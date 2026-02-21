@@ -486,6 +486,37 @@ label {
    }
 }
 
+.swiper-button-v2 {
+   --size: 85px;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   width: var(--size);
+   min-width: var(--size);
+   height: var(--size);
+   border-radius: 10px;
+   border: 1px solid #ffffff;
+   transition: border-color 0.3s, background-color 0.3s;
+
+   svg {
+      path {
+         fill: #B7FE56;
+         transition: fill 0.3s;
+      }
+   }
+
+   ._pc &:hover {
+      background-color: #B7FE56;
+      border-color: #B7FE56;
+
+      svg {
+         path {
+            fill: #191919;
+         }
+      }
+   }
+}
+
 .js-tabs-shell {
    will-change: height;
    transform: translateZ(0);

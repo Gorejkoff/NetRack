@@ -45,3 +45,94 @@ if (mapContainer) {
    }
    initMap();
 }
+
+
+
+// networks-map
+const networks_map = document.getElementById('networks-map');
+
+if (networks_map) {
+   let coordinates = []
+   const networks_map_marker = document.getElementById('networks-map-marker');
+
+   const networks_map_tab_button = document.querySelectorAll('.networks-map__tab-button');
+   networks_map_tab_button.forEach(e => {
+      const data = e.dataset.coord;
+      if (data) {
+         coordinates.push(data)
+      }
+   })
+
+   function loadYMapsAPI() {
+      return new Promise((resolve, reject) => {
+         if (window.ymaps3) {
+            resolve();
+            // console.log(" API Яндекс Карт загружен");
+            return;
+         }
+      });
+   }
+
+   async function initMap() {
+      await loadYMapsAPI();
+      await ymaps3.ready;
+      const { YMap, YMapMarker, YMapDefaultSchemeLayer, YMapDefaultFeaturesLayer } = ymaps3;
+
+      const mapNetworks = new YMap(
+         networks_map,
+         {
+            location: {
+               center: coordinates[0].split(','),
+               zoom: 11,
+            }
+         }, [
+         new YMapDefaultSchemeLayer(),
+         new YMapDefaultFeaturesLayer()
+      ]
+      );
+
+      function addMarker(coord, index) {
+         if (!networks_map_marker) return;
+         const markerClone = networks_map_marker.content.cloneNode(true);
+         if (index == 0) {
+            markerClone.querySelector('.networks-map__marker').classList.add('active');
+         }
+         const element = markerClone.querySelector('.networks-map__marker');
+         if (element) {
+            element.dataset.index = index;
+            const observer = new MutationObserver((mutationsList, observer) => {
+               if (element.classList.contains('active')) {
+                  mapNetworks.update({
+                     location: {
+                        center: coord.split(','),
+                        // zoom: 11,
+                        duration: 700,
+                     }
+                  })
+               }
+            });
+            observer.observe(element, {
+               attributes: true,
+               attributeFilter: ['class'],
+               childList: false,
+               subtree: false,
+               characterData: false,
+            });
+         }
+         const marker = new YMapMarker(
+            {
+               coordinates: coord.split(','),
+            },
+            markerClone
+         );
+         mapNetworks.addChild(marker);
+      }
+      coordinates.forEach((coord, index) => {
+         addMarker(coord, index)
+      })
+   }
+
+   initMap();
+
+}
+

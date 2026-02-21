@@ -1,0 +1,38 @@
+[
+   {
+      "text": "IXcellerate North",
+      "coord": "37.577382, 55.862550",
+      "number": 0,
+      "active": true
+   },
+   {
+      "text": "IXcellerate South",
+      "coord": "37.532933, 55.831565",
+      "number": 1
+   },
+   {
+      "text": "Останкино",
+      "coord": "37.628469, 55.903625",
+      "number": 2
+   },
+   {
+      "text": "StoreData",
+      "coord": "",
+      "number": 3
+   },
+   {
+      "text": "DataLine Nord",
+      "coord": "",
+      "number": 4
+   },
+   {
+      "text": "DataPro",
+      "coord": "",
+      "number": 5
+   },
+   {
+      "text": "ММТС-9 (М9)",
+      "coord": "",
+      "number": 6
+   }
+]

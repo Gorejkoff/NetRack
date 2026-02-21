@@ -94,8 +94,9 @@ class Tabs {
    };
    closeAll = (event) => {
       const body = event.target.closest('.js-tabs-body');
-      if (this.listClosingTabs.length == 0 && body) return;
-      this.listClosingTabs.forEach((e) => { if (e !== body) this.closeTab(e); })
+      const closingTabs = document.querySelectorAll('.js-tabs-closing');
+      if (!body) return;
+      closingTabs.forEach((e) => { if (e !== body) this.closeTab(e); })
    };
    closeAllHover = (target) => {
       const element = target.closest('.js-tabs-hover');

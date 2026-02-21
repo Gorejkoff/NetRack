@@ -1,0 +1,209 @@
+.networks-map {
+   position: relative;
+   pointer-events: none;
+
+
+   &__container {}
+
+   &__title {
+      position: relative;
+      z-index: 2;
+   }
+
+   &__body {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      gap: 10px;
+
+      @media (min-width:992px) {
+         flex-direction: row;
+      }
+   }
+
+   &__tab-buttons {
+      position: relative;
+      z-index: 2;
+      flex: 0 1 min(415px, 25%);
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      pointer-events: all;
+   }
+
+   &__tab-button {
+      padding: 1em;
+      font-size: var(--font-size-lg);
+      line-height: 154%;
+      letter-spacing: -0.02em;
+      border-radius: 10px;
+
+      &.button.button-arrow-purple.active,
+      ._pc &.button.button-arrow-purple:hover {
+         svg path {
+            fill: #7FC919;
+         }
+      }
+   }
+
+   &__item {
+      position: relative;
+      pointer-events: all;
+      height: 50vh;
+      border-radius: 20px;
+      overflow: hidden;
+
+      @media (min-width:992px) {
+         position: absolute;
+         top: 0;
+         left: 0;
+         width: 100%;
+         height: 100%;
+
+         &::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            background: linear-gradient(#ffffff, transparent 30%);
+            z-index: 1;
+         }
+      }
+
+      [class*="container"] {
+         padding: 0;
+         max-width: none;
+      }
+
+      .ymaps3x0--map,
+      .ymaps3x0--map-container {
+         width: 100% !important;
+      }
+
+      canvas {
+         filter: grayscale(1)
+      }
+   }
+
+   &__tab {
+      position: relative;
+      z-index: 2;
+      padding: var(--padding-md);
+      background-color: #ffffff;
+      border-radius: 8px;
+      border: 1px solid #B5B5B5;
+      pointer-events: all;
+      display: none;
+
+      @media (min-width:992px) {
+         max-width: min(626px, 30%);
+      }
+
+      &.active {
+         display: block;
+      }
+   }
+
+   &__tab-text {
+      margin-bottom: 15px;
+      font-size: var(--font-size-ml);
+      line-height: 140%;
+
+      b {
+         font-weight: 600;
+      }
+   }
+
+   &__tab-link {
+      margin-bottom: 40px;
+      display: flex;
+      align-items: center;
+      gap: 0.2em;
+      font-weight: 600;
+      font-size: 20px;
+      letter-spacing: -0.02em;
+      text-decoration: underline dotted;
+      text-underline-offset: 0.2em;
+   }
+
+   &__tab-data {
+      margin-top: var(--padding-xs);
+   }
+
+   &__tab-data-item {
+      margin-bottom: max(calc(var(--padding-sm) / 2), 10px);
+      display: flex;
+      align-items: flex-start;
+      font-size: var(--font-size-sm);
+      line-height: 140%;
+   }
+
+   &__tab-data-name {
+      flex: 1 1 auto;
+      display: flex;
+      align-items: flex-end;
+      color: #575757;
+
+   }
+
+   &__tab-data-line {
+      flex: 1 0 50px;
+      border-bottom: 1px dashed #B5B5B5;
+   }
+
+   &__tab-data-value {
+      font-weight: 600;
+      color: #242424;
+   }
+
+   &__tab-certificates {
+      margin-bottom: var(--padding-xs);
+
+   }
+
+   &__tab-certificates-title {
+      margin-bottom: var(--padding-xs);
+      color: #575757;
+      font-size: 20px;
+      line-height: 140%;
+   }
+
+   &__tab-certificates-grid {
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 10px;
+
+      img {
+         max-height: 46px;
+         width: auto;
+      }
+   }
+
+   &__tab-data-button {
+      margin-top: 30px;
+
+      .button {
+         max-width: none;
+         width: 100%;
+      }
+   }
+
+   &__marker {
+      transform: translate(-50%, -100%);
+      height: max(4vw, 30px);
+      transition: height 0.4s;
+
+      &:not(.active) {
+         filter: grayscale(1);
+         height: max(2.3vw, 20px);
+      }
+   }
+
+   hr {
+      border-bottom: 1px solid #B5B5B5;
+   }
+}

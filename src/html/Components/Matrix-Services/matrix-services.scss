@@ -1,0 +1,80 @@
+@use '../../../scss/utils' as *;
+
+.matrix-services {
+   display: none;
+
+   @media (min-width:1024px) {
+      display: block;
+   }
+
+   &__container {}
+
+   &__grid {
+      display: grid;
+      grid-template-columns: min-content repeat(10, 1fr);
+
+      @media (min-width:1366px) {
+         grid-template-columns: auto repeat(10, 1fr);
+      }
+
+      &>* {
+         border-bottom: 1px solid #B5B5B5;
+      }
+
+      &>*:nth-child(2) {
+         border-top-left-radius: 10px;
+      }
+
+      &>*:nth-child(11) {
+         border-top-right-radius: 10px;
+      }
+
+      &>*:nth-child(n+12) {
+         border-right: 1px solid #B5B5B5;
+      }
+   }
+
+   &__cell-header {
+      padding: 1em 0.3em;
+      font-weight: 500;
+      font-size: 12px;
+      line-height: 130%;
+      text-align: center;
+      background-color: #F3F3F3;
+      @include size_adaptive (font-size, 12, 22, 1024, 2560);
+
+      @media (min-width:2560px) {
+         font-size: 22px;
+      }
+
+   }
+
+   &__cell-header-left {
+      padding-top: var(--padding-sm);
+      padding-bottom: var(--padding-sm);
+      padding-right: var(--padding-sm);
+      font-weight: 600;
+      font-size: var(--font-size-ml);
+      line-height: 140%;
+   }
+
+   &__cell-checked {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: linear-gradient(180deg, #d7ffa0 0%, #b7fe56 16.74%, #abeb53 51.17%);
+
+      &::before {
+         width: 15px;
+         content: url("data:image/svg+xml; utf8, %3Csvg viewBox='0 0 28 28' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M14.0007 25.6673C20.4439 25.6673 25.6673 20.4439 25.6673 14.0007C25.6673 7.55733 20.4439 2.33398 14.0007 2.33398C7.55733 2.33398 2.33398 7.55733 2.33398 14.0007C2.33398 20.4439 7.55733 25.6673 14.0007 25.6673ZM20.3673 11.0339L12.834 18.5672L7.92569 13.6589L9.57561 12.009L12.834 15.2674L15.7757 12.3257L18.7174 9.38402L20.3673 11.0339Z' fill='%23191919' /%3E%3Cpath d='M20.3673 11.0339L12.834 18.5672L7.92569 13.6589L9.57561 12.009L12.834 15.2674L15.7757 12.3257L18.7174 9.38402L20.3673 11.0339Z' fill='white' /%3E%3C/svg%3E");
+
+         @media (min-width:1366px) {
+            width: 20px;
+         }
+
+         @media (min-width:2560px) {
+            width: 28px;
+         }
+      }
+   }
+}

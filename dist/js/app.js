@@ -323,6 +323,98 @@ if (mapContainer) {
    }
    initMap();
 }
+
+
+
+// networks-map
+const networks_map = document.getElementById('networks-map');
+
+if (networks_map) {
+   let coordinates = []
+   const networks_map_marker = document.getElementById('networks-map-marker');
+
+   const networks_map_tab_button = document.querySelectorAll('.networks-map__tab-button');
+   networks_map_tab_button.forEach(e => {
+      const data = e.dataset.coord;
+      if (data) {
+         coordinates.push(data)
+      }
+   })
+
+   function loadYMapsAPI() {
+      return new Promise((resolve, reject) => {
+         if (window.ymaps3) {
+            resolve();
+            // console.log(" API Яндекс Карт загружен");
+            return;
+         }
+      });
+   }
+
+   async function initMap() {
+      await loadYMapsAPI();
+      await ymaps3.ready;
+      const { YMap, YMapMarker, YMapDefaultSchemeLayer, YMapDefaultFeaturesLayer } = ymaps3;
+
+      const mapNetworks = new YMap(
+         networks_map,
+         {
+            location: {
+               center: coordinates[0].split(','),
+               zoom: 11,
+            }
+         }, [
+         new YMapDefaultSchemeLayer(),
+         new YMapDefaultFeaturesLayer()
+      ]
+      );
+
+      function addMarker(coord, index) {
+         if (!networks_map_marker) return;
+         const markerClone = networks_map_marker.content.cloneNode(true);
+         if (index == 0) {
+            markerClone.querySelector('.networks-map__marker').classList.add('active');
+         }
+         const element = markerClone.querySelector('.networks-map__marker');
+         if (element) {
+            element.dataset.index = index;
+            const observer = new MutationObserver((mutationsList, observer) => {
+               if (element.classList.contains('active')) {
+                  mapNetworks.update({
+                     location: {
+                        center: coord.split(','),
+                        // zoom: 11,
+                        duration: 700,
+                     }
+                  })
+               }
+            });
+            observer.observe(element, {
+               attributes: true,
+               attributeFilter: ['class'],
+               childList: false,
+               subtree: false,
+               characterData: false,
+            });
+         }
+         const marker = new YMapMarker(
+            {
+               coordinates: coord.split(','),
+            },
+            markerClone
+         );
+         mapNetworks.addChild(marker);
+      }
+      coordinates.forEach((coord, index) => {
+         addMarker(coord, index)
+      })
+   }
+
+   initMap();
+
+}
+
+
 /* открывает, закрывает модальные окна. */
 /*
 добавить классы
@@ -501,6 +593,24 @@ if (document.querySelector('.services-swiper__body')) {
                slidesPerView: 4
             }
          },
+      });
+   })
+}
+
+if (document.querySelector('.feedback__swiper')) {
+   const list = document.querySelectorAll('.feedback__swiper');
+   list.forEach(e => {
+      const swiperItem = e.querySelector('.swiper');
+      const swiper = new Swiper(swiperItem, {
+         spaceBetween: 10,
+         speed: 300,
+         loop: true,
+         slidesPerView: 1,
+         navigation: {
+            nextEl: e.querySelector('.next'),
+            prevEl: e.querySelector('.prev'),
+         },
+
       });
    })
 }
@@ -692,8 +802,9 @@ class Tabs {
    };
    closeAll = (event) => {
       const body = event.target.closest('.js-tabs-body');
-      if (this.listClosingTabs.length == 0 && body) return;
-      this.listClosingTabs.forEach((e) => { if (e !== body) this.closeTab(e); })
+      const closingTabs = document.querySelectorAll('.js-tabs-closing');
+      if (!body) return;
+      closingTabs.forEach((e) => { if (e !== body) this.closeTab(e); })
    };
    closeAllHover = (target) => {
       const element = target.closest('.js-tabs-hover');
@@ -754,18 +865,30 @@ function actionTabsSwitching(event, target_button, list_buttons, list_tabs, exec
    if (!number) return;
    list_buttons.forEach((e) => { e.classList.toggle('active', e.dataset.button_ts == number) });
    if (list_tabs.length > 0) { list_tabs.forEach((e) => { e.classList.toggle('active', e.dataset.tab_ts == number) }) }
-   if (execute) { this.execute(event) };
+   if (execute) { execute(event) };
 }
 
-function addTabsSwitching(button_name, tab_name, fn_name) {
+function addTabsSwitching(button_name, tab_name, execute) {
    if (document.querySelector(button_name) && document.querySelector(tab_name)) {
-      let tab = new TabsSwitching(button_name, tab_name, fn_name);
+      let tab = new TabsSwitching(button_name, tab_name, execute);
       tab.init();
    }
 }
 
-// addTabsSwitching('.button_name', '.tab_name', '.fn_name')
+// addTabsSwitching('.button_name', '.tab_name', execute)
 addTabsSwitching('.js-server-configuration-tab-button', '.js-server-configuration-tab')
 addTabsSwitching('.js-server-placement-tab-button', '.js-server-placement-tab')
+
+
+function setActiveNetworkMarker() {
+   const activeButton = document.querySelector('.networks-map__tab-button.active');
+   if (!activeButton) return;
+   const activeIndex = activeButton.dataset.button_ts;
+   if (!activeIndex) return;
+   const markers = document.querySelectorAll('.networks-map__marker');
+   markers.forEach(e => e.classList.toggle('active', e.dataset.index == activeIndex))
+}
+
+addTabsSwitching('.networks-map__tab-button', '.networks-map__tab', setActiveNetworkMarker)
 
 
