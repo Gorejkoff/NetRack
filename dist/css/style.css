@@ -8139,6 +8139,31 @@ option span {
   height: var(--size);
 }
 
+.feedback__pagination {
+  margin-top: 10px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  gap: 4px;
+}
+
+.feedback__pagination .swiper-pagination-bullet {
+  width: 10px;
+  height: 10px;
+  background-color: #ffffff;
+  border-radius: 5px;
+  -webkit-transition: width 0.3s, background-color 0.3s;
+  transition: width 0.3s, background-color 0.3s;
+}
+
+.feedback__pagination .swiper-pagination-bullet-active {
+  background-color: #B7FE56;
+  width: 60px;
+}
+
 .modal {
   padding: 10px;
   position: fixed;
@@ -8433,6 +8458,10 @@ option span {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
+  }
+
+  .feedback__pagination {
+    display: none;
   }
 }
 

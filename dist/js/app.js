@@ -610,7 +610,11 @@ if (document.querySelector('.feedback__swiper')) {
             nextEl: e.querySelector('.next'),
             prevEl: e.querySelector('.prev'),
          },
-
+         pagination: {
+            el: e.querySelector('.feedback__pagination'),
+            type: 'bullets',
+            clickable: true,
+         },
       });
    })
 }
