@@ -354,7 +354,19 @@ if (networks_map) {
    async function initMap() {
       await loadYMapsAPI();
       await ymaps3.ready;
-      const { YMap, YMapMarker, YMapDefaultSchemeLayer, YMapDefaultFeaturesLayer } = ymaps3;
+      const {
+         YMap,
+         YMapMarker,
+         YMapDefaultSchemeLayer,
+         YMapDefaultFeaturesLayer,
+         YMapControls,
+      } = ymaps3;
+
+      const {
+         YMapZoomControl,
+         YMapControlButton,
+         Tooltip
+      } = await ymaps3.import('@yandex/ymaps3-controls@0.0.1');
 
       const mapNetworks = new YMap(
          networks_map,
@@ -362,12 +374,15 @@ if (networks_map) {
             location: {
                center: coordinates[0].split(','),
                zoom: 11,
-            }
-         }, [
-         new YMapDefaultSchemeLayer(),
-         new YMapDefaultFeaturesLayer()
-      ]
+            },
+            behaviors: ['drag'],
+         },
+         [new YMapDefaultSchemeLayer(), new YMapDefaultFeaturesLayer()]
       );
+      const controls = new YMapControls({ position: 'bottom' });
+      controls.addChild(new YMapZoomControl({}));
+      mapNetworks.addChild(controls);
+
 
       function addMarker(coord, index) {
          if (!networks_map_marker) return;
