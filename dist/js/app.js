@@ -81,8 +81,16 @@ window.addEventListener('resize', () => {
 document.documentElement.addEventListener("click", (event) => {
    if (event.target.closest('.open-menu')) { openHeaderMenu() };
    if (event.target.closest('.gallery-accordion__item')) { changeGalleryAccordion(event.target.closest('.gallery-accordion__item')) }
+   if (event.target.closest('.js-show-customers')) { showCustomers(event) }
 })
-
+function showCustomers(event) {
+   const body = event.target.closest('.customers');
+   const grid = body.querySelector('.customers__grid');
+   const size = grid.offsetHeight;
+   body.style.setProperty('--size', size + 'px');
+   body.classList.add('all-customers');
+   setTimeout(() => { body.style.setProperty('--size', 'auto'); }, 400)
+}
 function openHeaderMenu() {
    document.body.classList.toggle('menu-is-open')
 }
