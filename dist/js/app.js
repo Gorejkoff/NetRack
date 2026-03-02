@@ -304,21 +304,30 @@ if (mapContainer) {
    async function initMap() {
       await loadYMapsAPI();
       await ymaps3.ready;
-      const { YMap, YMapMarker, YMapDefaultSchemeLayer, YMapDefaultFeaturesLayer } = ymaps3;
-
+      const {
+         YMap,
+         YMapMarker,
+         YMapDefaultSchemeLayer,
+         YMapDefaultFeaturesLayer,
+         YMapControls,
+      } = ymaps3;
+      const { YMapZoomControl } = await ymaps3.import('@yandex/ymaps3-controls@0.0.1');
       const map = new YMap(
          mapContainer,
          {
             location: {
                center: data.coordinates.split(','),
                zoom: 17,
-            }
+            },
+            behaviors: ['drag'],
          }, [
          new YMapDefaultSchemeLayer(),
          new YMapDefaultFeaturesLayer()
       ]
       );
-
+      const controls = new YMapControls({ position: 'bottom' });
+      controls.addChild(new YMapZoomControl({}));
+      map.addChild(controls);
       const markerTemplate = document.getElementById('marker');
       const markerClone = markerTemplate.content.cloneNode(true);
       const marker = new YMapMarker(
@@ -370,11 +379,7 @@ if (networks_map) {
          YMapControls,
       } = ymaps3;
 
-      const {
-         YMapZoomControl,
-         YMapControlButton,
-         Tooltip
-      } = await ymaps3.import('@yandex/ymaps3-controls@0.0.1');
+      const { YMapZoomControl } = await ymaps3.import('@yandex/ymaps3-controls@0.0.1');
 
       const mapNetworks = new YMap(
          networks_map,

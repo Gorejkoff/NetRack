@@ -6935,17 +6935,18 @@ option span {
 .contacts__grid {
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: 0.8fr 2fr;
-  grid-template-columns: 0.8fr 2fr;
+  gap: 10px;
+  -ms-grid-columns: 1fr;
+  grid-template-columns: 1fr;
 }
 
 .contacts__grid:not(:last-child) {
-  margin-bottom: 54px;
+  margin-bottom: 20px;
 }
 
 .contacts__grid-header {
   font-weight: 500;
-  font-size: 30px;
+  font-size: var(--font-size-2xl);
   line-height: 140%;
 }
 
@@ -6959,7 +6960,7 @@ option span {
      -moz-column-gap: 20px;
           column-gap: 20px;
   font-weight: 500;
-  font-size: 24px;
+  font-size: var(--font-size-ml);
   line-height: 140%;
 }
 
@@ -6971,14 +6972,14 @@ option span {
   font-family: var(--font-family-second);
   font-weight: 800;
   margin-bottom: 5px;
-  font-size: 50px;
+  font-size: 20px;
   line-height: 100%;
   letter-spacing: -0.02em;
 }
 
 .contacts__grid-title {
   font-weight: 400;
-  font-size: 22px;
+  font-size: var(--font-size-md);
   line-height: 140%;
   color: #575757;
 }
@@ -6994,7 +6995,7 @@ option span {
   display: flex;
   gap: 10%;
   font-weight: 500;
-  font-size: 28px;
+  font-size: var(--font-size-xl);
   line-height: 140%;
 }
 
@@ -7005,18 +7006,24 @@ option span {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  gap: 26px;
+  gap: 1em;
+}
+
+.contacts__grid-social-network-link svg,
+.contacts__grid-social-network-link img {
+  width: 40px;
+  height: auto;
 }
 
 .contacts__grid-address {
   margin-bottom: 16px;
   font-weight: 500;
-  font-size: 30px;
+  font-size: var(--font-size-2xl);
   line-height: 140%;
 }
 
 .contacts__grid-list-titles {
-  font-size: 24px;
+  font-size: var(--font-size-lg);
   line-height: 140%;
   color: #575757;
 }
@@ -7027,7 +7034,7 @@ option span {
 
 .contacts__grid-list-text {
   font-weight: 500;
-  font-size: 24px;
+  font-size: var(--font-size-lg);
   line-height: 140%;
 }
 
@@ -7038,7 +7045,7 @@ option span {
 .contacts__map {
   margin: 70px 0;
   position: relative;
-  height: 650px;
+  height: min(650px, 60vh);
   border-radius: 20px;
   overflow: hidden;
 }
@@ -7057,7 +7064,7 @@ option span {
           align-items: center;
   gap: 10px;
   font-weight: 600;
-  font-size: 24px;
+  font-size: var(--font-size-ml);
   line-height: 140%;
   text-decoration: underline;
   text-underline-offset: 3px;
@@ -7065,11 +7072,11 @@ option span {
 }
 
 .contacts__message {
-  margin-top: 50px;
+  margin-top: 2em;
   padding: 24px 30px;
   background-color: #F3F3F3;
   border-radius: 5px;
-  font-size: 22px;
+  font-size: var(--font-size-md);
   line-height: 140%;
   color: #575757;
 }
@@ -8452,6 +8459,11 @@ option span {
     min-width: 105%;
   }
 
+  .contacts__grid {
+    -ms-grid-columns: 0.8fr 2fr;
+    grid-template-columns: 0.8fr 2fr;
+  }
+
   .services-swiper__card-title {
     font-size: 24px;
   }
@@ -8941,6 +8953,10 @@ option span {
 
   .ddos__body {
     gap: 40px;
+  }
+
+  .contacts__grid:not(:last-child) {
+    margin-bottom: 32px;
   }
 
   .ordering {
@@ -9803,6 +9819,19 @@ option span {
 
   .connection-scheme__cell {
     font-size: 50px;
+  }
+
+  .contacts__grid:not(:last-child) {
+    margin-bottom: 54px;
+  }
+
+  .contacts__grid-tel {
+    font-size: 50px;
+  }
+
+  .contacts__grid-social-network-link svg,
+  .contacts__grid-social-network-link img {
+    width: 95px;
   }
 
   .services-swiper__card-title {
@@ -12402,6 +12431,15 @@ option span {
     font-size: calc(18px + (100vw - 768px) / 598 * 6);
   }
 
+  .contacts__grid-tel {
+    font-size: calc(20px + (100vw - 768px) / 598 * 16);
+  }
+
+  .contacts__grid-social-network-link svg,
+  .contacts__grid-social-network-link img {
+    --font-size-3xl: calc(40px + (100vw - 768px) / 598 * 20);
+  }
+
   .ordering__item-inner {
     font-size: calc(10px + (100vw - 768px) / 598 * 4);
   }
@@ -12754,6 +12792,15 @@ option span {
 
   .connection-scheme__cell {
     font-size: calc(30px + (100vw - 1366px) / 1194 * 20);
+  }
+
+  .contacts__grid-tel {
+    font-size: calc(36px + (100vw - 1366px) / 1194 * 14);
+  }
+
+  .contacts__grid-social-network-link svg,
+  .contacts__grid-social-network-link img {
+    --font-size-3xl: calc(60px + (100vw - 1366px) / 1194 * 35);
   }
 
   .services-swiper__card-price {

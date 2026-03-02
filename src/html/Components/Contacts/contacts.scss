@@ -1,3 +1,5 @@
+@use '../../../scss/utils' as *;
+
 .contacts {
 
    &__container {}
@@ -6,16 +8,29 @@
 
    &__grid {
       display: grid;
-      grid-template-columns: 0.8fr 2fr;
+      gap: 10px;
+      grid-template-columns: 1fr;
+
+      @media (min-width:768px) {
+         grid-template-columns: 0.8fr 2fr;
+      }
 
       &:not(:last-child) {
-         margin-bottom: 54px;
+         margin-bottom: 20px;
+
+         @media (min-width:1024px) {
+            margin-bottom: 32px;
+         }
+
+         @media (min-width:2560px) {
+            margin-bottom: 54px;
+         }
       }
    }
 
    &__grid-header {
       font-weight: 500;
-      font-size: 30px;
+      font-size: var(--font-size-2xl);
       line-height: 140%;
    }
 
@@ -25,7 +40,7 @@
       row-gap: 32px;
       column-gap: 20px;
       font-weight: 500;
-      font-size: 24px;
+      font-size: var(--font-size-ml);
       line-height: 140%;
 
       a {
@@ -39,14 +54,20 @@
       font-family: var(--font-family-second);
       font-weight: 800;
       margin-bottom: 5px;
-      font-size: 50px;
+      font-size: 20px;
       line-height: 100%;
       letter-spacing: -0.02em;
+      @include size_adaptive (font-size, 20, 36, 768, 1366);
+      @include size_adaptive (font-size, 36, 50, 1366, 2560);
+
+      @media (min-width:2560px) {
+         font-size: 50px;
+      }
    }
 
    &__grid-title {
       font-weight: 400;
-      font-size: 22px;
+      font-size: var(--font-size-md);
       line-height: 140%;
       color: #575757;
 
@@ -60,26 +81,37 @@
       display: flex;
       gap: 10%;
       font-weight: 500;
-      font-size: 28px;
+      font-size: var(--font-size-xl);
       line-height: 140%;
-
    }
 
    &__grid-social-network-link {
       display: flex;
       align-items: center;
-      gap: 26px;
+      gap: 1em;
+
+      svg,
+      img {
+         width: 40px;
+         height: auto;
+         @include size_adaptive (--font-size-3xl, 40, 60, 768, 1366);
+         @include size_adaptive (--font-size-3xl, 60, 95, 1366, 2560);
+
+         @media (min-width:2560px) {
+            width: 95px;
+         }
+      }
    }
 
    &__grid-address {
       margin-bottom: 16px;
       font-weight: 500;
-      font-size: 30px;
+      font-size: var(--font-size-2xl);
       line-height: 140%;
    }
 
    &__grid-list-titles {
-      font-size: 24px;
+      font-size: var(--font-size-lg);
       line-height: 140%;
       color: #575757;
 
@@ -90,7 +122,7 @@
 
    &__grid-list-text {
       font-weight: 500;
-      font-size: 24px;
+      font-size: var(--font-size-lg);
       line-height: 140%;
 
       li {
@@ -101,7 +133,7 @@
    &__map {
       margin: 70px 0;
       position: relative;
-      height: 650px;
+      height: min(650px, 60vh);
       border-radius: 20px;
       overflow: hidden;
    }
@@ -116,7 +148,7 @@
       align-items: center;
       gap: 10px;
       font-weight: 600;
-      font-size: 24px;
+      font-size: var(--font-size-ml);
       line-height: 140%;
       text-decoration: underline;
       text-underline-offset: 3px;
@@ -124,11 +156,11 @@
    }
 
    &__message {
-      margin-top: 50px;
+      margin-top: 2em;
       padding: 24px 30px;
       background-color: #F3F3F3;
       border-radius: 5px;
-      font-size: 22px;
+      font-size: var(--font-size-md);
       line-height: 140%;
       color: #575757;
    }
