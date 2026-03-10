@@ -45,12 +45,14 @@
             </div>
 
             <div class="configuration__selection-group">
-               @@include('../../UI/Selection/selection-list.html',{
-               text:'Intel Xeon Platinum 8352V',
-               subtext:'(8 ядер/2100-3000 МГц)',
-               json:'selection-list-cpu.json',
-               class:'width-lg'
-               })
+               <div class="configuration__selection-group-inner">
+                  @@include('../../UI/Selection/selection-list.html',{
+                  text:'Intel Xeon Platinum 8352V',
+                  subtext:'(8 ядер/2100-3000 МГц)',
+                  json:'selection-list-cpu.json',
+                  class:'width-auto'
+                  })
+               </div>
 
                @@include('../../UI/Selection/selection-list.html',{
                text:'2',

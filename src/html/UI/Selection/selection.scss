@@ -26,10 +26,14 @@
       text-align: left;
    }
 
-   &.width-xs {
-      flex: 0 0 48px;
+   &.width-auto {
+      flex: 1 1 auto;
+   }
 
-      @include size_adaptive_flex (0, 0, 48, 100, 1366, 2560);
+   &.width-xs {
+      flex: 0 0 60px;
+
+      @include size_adaptive_flex (0, 0, 60, 100, 1366, 2560);
 
       @media (min-width:2560px) {
          flex: 0 0 100px;
@@ -46,21 +50,21 @@
       }
    }
 
-   &.width-md {
-      flex: 0 1 auto;
+   // &.width-md {
+   //    flex: 0 1 auto;
 
-      @media (min-width:1366px) {
-         flex: 0 1 433px;
-      }
-   }
+   //    @media (min-width:1366px) {
+   //       flex: 0 1 433px;
+   //    }
+   // }
 
-   &.width-lg {
-      flex: 0 1 auto;
+   // &.width-lg {
+   //    flex: 0 1 auto;
 
-      @media (min-width:1366px) {
-         flex: 0 1 690px;
-      }
-   }
+   //    @media (min-width:1366px) {
+   //       flex: 0 1 690px;
+   //    }
+   // }
 
 
    &__border {
@@ -102,12 +106,12 @@
          padding: 16px 20px;
       }
 
-      ._pc .configuration__border-inner &:hover {
+      ._pc .selection-list__border-inner &:hover {
          background-color: #6E48F5;
          color: #ffffff;
 
-         .configuration__subtext-color,
-         .configuration__subtext {
+         .selection-list__subtext-color,
+         .selection-list__subtext {
             color: #ffffff;
          }
       }
@@ -128,6 +132,37 @@
 
    &__subtext-color {
       color: #6E48F5;
+   }
+
+   &__section {
+      padding: 10px;
+      background-color: #ffffff;
+
+      @media (min-width:1366px) {
+         background-color: #F3F3F3;
+      }
+
+      @media (min-width:1920px) {
+         padding: 10px 15px;
+      }
+
+      @media (min-width:2560px) {
+         padding: 16px 20px;
+      }
+   }
+
+   &__section-inner {
+      padding: 5px 10px;
+      background-color: #F3F3F3;
+      color: #575757;
+      font-weight: 500;
+      font-size: var(--font-size-md);
+      line-height: 140%;
+      letter-spacing: -0.02em;
+
+      @media (min-width:1366px) {
+         background-color: #ffffff;
+      }
    }
 
    &__shell {
@@ -152,6 +187,11 @@
       max-height: calc(var(--height-wrapper) * 4.1);
       overflow-y: auto;
       transition: border-color $tr-time;
+      background-color: #ffffff;
+
+      @media (min-width:1366px) {
+         background-color: #F3F3F3;
+      }
 
       @media (min-width:2560px) {
          max-height: 262px;

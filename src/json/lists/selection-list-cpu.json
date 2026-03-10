@@ -10,6 +10,9 @@
       "inputname": "cpu2"
    },
    {
+      "section": "Поколение 5"
+   },
+   {
       "text": "Intel Xeon Platinum 8362V ",
       "subtext": "(12 ядер/2300-3200 МГц)",
       "inputname": "cpu2"
@@ -18,6 +21,9 @@
       "text": "Intel Xeon Platinum 8290V ",
       "subtext": "(16 ядер/3100-4000 МГц)",
       "inputname": "cpu2"
+   },
+   {
+      "section": "Поколение 6"
    },
    {
       "text": "Intel Xeon Platinum 8352V ",

@@ -160,6 +160,7 @@
       gap: 5px;
 
       &>* {
+         align-self: stretch;
          flex: 1 1 1%;
       }
    }
@@ -214,6 +215,7 @@
       gap: 5px;
       width: 100%;
       min-height: 60px;
+      height: 100%;
       border-radius: 5px;
       background-color: #F3F3F3;
       text-align: center;
@@ -273,13 +275,14 @@
    &__section-grid {
       display: grid;
       grid-template-columns: 1fr;
-      @include size_adaptive (column-gap, 32, 62, 1366, 2560);
 
       @media (min-width:1366px) {
          grid-template-columns: 1fr 1fr;
-         column-gap: 32px;
+         column-gap: 20px;
          row-gap: 0;
       }
+
+      @include size_adaptive (column-gap, 20, 62, 1366, 2560);
 
       @media (min-width:2560px) {
          column-gap: 62px;
@@ -292,15 +295,20 @@
       gap: 5px;
       width: 100%;
 
-      @media (min-width:1366px) {
-         gap: 10px;
-      }
-
       &:not(:last-child) {
          padding-bottom: 10px;
       }
    }
 
+   &__selection-group-inner {
+      flex: 1 1 auto;
+      display: flex;
+      gap: 5px;
+
+      @media (min-width:1366px) {
+         flex: 0 0 calc(50% - 2.5px);
+      }
+   }
 
    &__button-add {
       --width: 36px;

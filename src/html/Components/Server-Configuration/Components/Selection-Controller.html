@@ -1,8 +1,10 @@
 <div class="configuration__selection-group">
-   @@include('../../../UI/Selection/selection-list.html',{
-   text:'SATA+NVMe RAID-контроллер, BBU, кэш 1G',
-   class:'width-lg',
-   json:'selection-list-controller.json'
-   })
+   <div class="configuration__selection-group-inner">
+      @@include('../../../UI/Selection/selection-list.html',{
+      text:'SATA+NVMe RAID-контроллер, BBU, кэш 1G',
+      class:'width-auto',
+      json:'selection-list-controller.json'
+      })
+   </div>
 </div>
 @@include('../UI/message.html',{ text:'для RAID-5 требуется минимум 3 диска ' })
