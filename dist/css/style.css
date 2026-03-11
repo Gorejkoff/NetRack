@@ -3882,6 +3882,13 @@ input:checked + .checkbox__icon svg {
   gap: 5px;
 }
 
+.configuration__selection-group-inner > .selection-list__border {
+  width: auto;
+  min-width: -webkit-max-content;
+  min-width: -moz-max-content;
+  min-width: max-content;
+}
+
 .configuration__button-add {
   --width: 36px;
   display: -webkit-box;
@@ -4525,6 +4532,31 @@ input:checked + .configuration__filter-checkbox-icon img {
 
 input:checked + .configuration__stepper-value-item {
   display: block;
+}
+
+.configuration__compare-body {
+  position: relative;
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 100%;
+          flex: 0 0 100%;
+}
+
+.configuration__compare {
+  padding: 20px;
+  border-radius: 5px;
+  background-color: #F3F3F3;
+  font-size: 16px;
+  line-height: 140%;
+  max-width: 100%;
+}
+
+.configuration__compare-link {
+  font-size: 16px;
+  line-height: 88%;
+  text-decoration: underline;
+  text-decoration-style: dotted;
+  text-underline-offset: 3px;
+  color: #757575;
 }
 
 .tabs-switching-buttons {
@@ -9200,6 +9232,18 @@ option span {
     padding: 0;
   }
 
+  .configuration__compare-body {
+    -webkit-box-flex: 1;
+        -ms-flex: 1 1 auto;
+            flex: 1 1 auto;
+  }
+
+  .configuration__compare {
+    position: absolute;
+    top: 0;
+    right: 0;
+  }
+
   .tabs-switching-buttons a,
   .tabs-switching-buttons button {
     gap: 3px;
@@ -12571,7 +12615,7 @@ option span {
   }
 
   .configuration__cpu-icon {
-    width: calc(105px + (100vw - 1366px) / 1194 * 95);
+    width: calc(98.3px + (100vw - 1366px) / 1194 * 101.7);
   }
 
   .configuration__cpu-icon {

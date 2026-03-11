@@ -95,7 +95,7 @@ class Tabs {
    closeAll = (event) => {
       const body = event.target.closest('.js-tabs-body');
       const closingTabs = document.querySelectorAll('.js-tabs-closing');
-      if (!body) return;
+      // if (!body) return;
       closingTabs.forEach((e) => { if (e !== body) this.closeTab(e); })
    };
    closeAllHover = (target) => {

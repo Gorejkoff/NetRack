@@ -42,6 +42,12 @@
                      <img src="@img/svg/amd-epyc.svg" alt="amd epyc">
                   </span>
                </label>
+               <label>
+                  <input type="radio" name="cpu" value="amd-epyc" hidden>
+                  <span class="configuration__cpu-icon hover-button">
+                     <img src="@img/svg/amd-6.svg" alt="amd 6">
+                  </span>
+               </label>
             </div>
 
             <div class="configuration__selection-group">
@@ -59,6 +65,14 @@
                json:'selection-list-quantity.json',
                class:'width-xs'
                })
+
+               <div class="configuration__compare-body" data-da=".configuration__parameter,last,1366,max">
+                  <div class="configuration__compare">
+                     <div>CPU Passmark: <b>123 456</b></div>
+                     <a href="#0" class="configuration__compare-link">сравнить процессор</a>
+                  </div>
+               </div>
+
             </div>
 
          </div>
