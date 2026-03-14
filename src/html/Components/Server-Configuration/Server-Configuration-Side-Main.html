@@ -14,38 +14,50 @@
             <div class="configuration__cpu">
                <label>
                   <input type="radio" name="cpu" value="intel-xeon-silver" hidden checked="true">
-                  <span class="configuration__cpu-icon hover-button">
-                     <img src="@img/svg/intel-xeon-silver.svg" alt="intel xeon silver">
+                  <span class="configuration__cpu-shell hover-button">
+                     <span class="configuration__cpu-icon">
+                        <img src="@img/svg/intel-xeon-silver.svg" alt="intel xeon silver">
+                     </span>
                   </span>
                </label>
                <label>
                   <input type="radio" name="cpu" value="intel-xeon-gold" hidden>
-                  <span class="configuration__cpu-icon hover-button">
-                     <img src="@img/svg/intel-xeon-gold.svg" alt="intel xeon gold">
+                  <span class="configuration__cpu-shell hover-button">
+                     <span class="configuration__cpu-icon ">
+                        <img src="@img/svg/intel-xeon-gold.svg" alt="intel xeon gold">
+                     </span>
                   </span>
                </label>
                <label>
                   <input type="radio" name="cpu" value="intel-xeon-platinum" hidden>
-                  <span class="configuration__cpu-icon hover-button">
-                     <img src="@img/svg/intel-xeon-platinum.svg" alt="intel xeon platinum">
+                  <span class="configuration__cpu-shell hover-button">
+                     <span class="configuration__cpu-icon">
+                        <img src="@img/svg/intel-xeon-platinum.svg" alt="intel xeon platinum">
+                     </span>
                   </span>
                </label>
                <label>
                   <input type="radio" name="cpu" value="intel-xeon-e" hidden>
-                  <span class="configuration__cpu-icon hover-button">
-                     <img src="@img/svg/intel-xeon-e.svg" alt="intel xeon e">
+                  <span class="configuration__cpu-shell hover-button">
+                     <span class="configuration__cpu-icon">
+                        <img src="@img/svg/intel-xeon-e.svg" alt="intel xeon e">
+                     </span>
                   </span>
                </label>
                <label>
                   <input type="radio" name="cpu" value="amd-epyc" hidden>
-                  <span class="configuration__cpu-icon hover-button">
-                     <img src="@img/svg/amd-epyc.svg" alt="amd epyc">
+                  <span class="configuration__cpu-shell hover-button">
+                     <span class="configuration__cpu-icon">
+                        <img src="@img/svg/amd-epyc.svg" alt="amd epyc">
+                     </span>
                   </span>
                </label>
                <label>
                   <input type="radio" name="cpu" value="amd-epyc" hidden>
-                  <span class="configuration__cpu-icon hover-button">
-                     <img src="@img/svg/amd-6.svg" alt="amd 6">
+                  <span class="configuration__cpu-shell hover-button">
+                     <span class="configuration__cpu-icon">
+                        <img src="@img/svg/amd-6.svg" alt="amd 6">
+                     </span>
                   </span>
                </label>
             </div>
@@ -66,7 +78,7 @@
                class:'width-xs'
                })
 
-               <div class="configuration__compare-body" data-da=".configuration__parameter,last,1366,max">
+               <div class="configuration__compare-body" data-da=".configuration__parameter,last,1365.98,max">
                   <div class="configuration__compare">
                      <div>CPU Passmark: <b>123 456</b></div>
                      <a href="#0" class="configuration__compare-link">сравнить процессор</a>
@@ -130,11 +142,10 @@
       </div>
    </div>
 
-   <div class="configuration__section">
-      <div class="configuration__section-title">Дополнительные сервисы</div>
+   <div class="configuration__section configuration__hide-body">
+      <div class="configuration__section-title configuration__hide-button">Дополнительные сервисы</div>
       <div class="configuration__section-wrapper">
          <div class="configuration__section-grid">
-
             @@include('./UI/parameter-wrapper.html',{
             name:'Сетевые интерфейсы',
             path:'../Components/Selection-Interface.html'
@@ -167,7 +178,6 @@
             name:'Сетевой диск',
             path:'../Components/Selection-Interface.html'
             })
-
          </div>
 
       </div>

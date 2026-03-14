@@ -41,12 +41,12 @@
    }
 
    &.width-sm {
-      flex: 0 0 85px;
+      flex: 0 0 100px;
 
-      @include size_adaptive_flex (0, 0, 85, 141, 1366, 2560);
+      @include size_adaptive_flex (0, 0, 100, 160, 1366, 2560);
 
       @media (min-width:2560px) {
-         flex: 0 0 141px;
+         flex: 0 0 160px;
       }
    }
 

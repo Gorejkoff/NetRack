@@ -335,10 +335,6 @@ label {
    line-height: 100%;
    letter-spacing: -0.02em;
 
-   @media (min-width:1366px) {
-      max-width: 60%;
-   }
-
    .dark--scheme & {
       color: #ffffff;
    }

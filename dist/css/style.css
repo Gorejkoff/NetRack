@@ -3765,6 +3765,7 @@ input:checked + .checkbox__icon svg {
 }
 
 .configuration__cpu {
+  margin-bottom: 20px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -3776,21 +3777,39 @@ input:checked + .checkbox__icon svg {
   display: none;
 }
 
-.configuration__cpu:not(:last-child) {
-  margin-bottom: 20px;
+.configuration__cpu > * {
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 max(1%, 105px);
+          flex: 1 1 max(1%, 105px);
 }
 
-.configuration__cpu-icon {
+.configuration__cpu-shell {
   padding: 12px;
   display: block;
   background-color: #F3F3F3;
   border: 1px solid #B5B5B5;
   border-radius: 5px;
-  width: 105px;
+  min-width: 105px;
+}
+
+.configuration__cpu-icon {
+  position: relative;
+  overflow: hidden;
+  padding-bottom: 100%;
+  display: block;
 }
 
 .configuration__cpu-icon img {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+      -ms-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
   width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
   -webkit-box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.04);
           box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.04);
 }
@@ -4121,6 +4140,12 @@ input:checked + .checkbox__icon svg {
   -ms-user-select: none;
 }
 
+.configuration__range.equals {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 100%;
+          flex: 0 0 100%;
+}
+
 .configuration__range-border {
   --padding: 15px;
   padding-bottom: var(--padding);
@@ -4159,11 +4184,13 @@ input:checked + .checkbox__icon svg {
       -ms-flex: 1 1 auto;
           flex: 1 1 auto;
   gap: 20px;
+  --fs: 13px;
 }
 
 .configuration__range-name {
-  font-size: 13px;
+  font-size: var(--fs);
   line-height: 140%;
+  min-height: 1em;
 }
 
 .configuration__double-range {
@@ -4176,9 +4203,13 @@ input:checked + .checkbox__icon svg {
   padding-bottom: calc(var(--size-spin) / 2);
 }
 
+.configuration__double-range:first-child {
+  margin-top: var(--fs);
+}
+
 .configuration__double-range-track {
-  --color-out: #6E48F5;
-  --color-in: #ffffff;
+  --color-out: #ffffff;
+  --color-in: #6E48F5;
   position: relative;
   height: 6px;
   border-radius: 100px;
@@ -4186,7 +4217,7 @@ input:checked + .checkbox__icon svg {
   background: linear-gradient(90deg, var(--color-out) 0% var(--minGradient), var(--color-in) var(--minGradient) var(--maxGradient), var(--color-out) var(--maxGradient) 100%);
 }
 
-.configuration__double-range-spin {
+.configuration__double-range-shell {
   cursor: pointer;
   position: absolute;
   top: 50%;
@@ -4203,8 +4234,8 @@ input:checked + .checkbox__icon svg {
   transition: background-color 0.2s, border-color 0.2s;
 }
 
-.configuration__double-range-spin.hover,
-.configuration__double-range-spin:hover {
+.configuration__double-range-shell.active,
+.configuration__double-range-shell:hover {
   background-color: #ffffff;
   border: 3px solid #575757;
 }
@@ -4458,11 +4489,6 @@ input:checked + .configuration__filter-checkbox-icon img {
   font-size: 13px;
   line-height: 140%;
   letter-spacing: -0.02em;
-}
-
-.configuration__asterisked {
-  padding-top: 10px;
-  padding-bottom: 45px;
 }
 
 .configuration__asterisked::before {
@@ -5076,8 +5102,8 @@ input:checked + .configuration__stepper-value-item {
 
 .selection-list.width-sm {
   -webkit-box-flex: 0;
-      -ms-flex: 0 0 85px;
-          flex: 0 0 85px;
+      -ms-flex: 0 0 100px;
+          flex: 0 0 100px;
 }
 
 .selection-list__border {
@@ -8375,6 +8401,12 @@ option span {
 }
 
 @media (min-width: 768px) {
+  .configuration__range.equals {
+    -webkit-box-flex: 1;
+        -ms-flex: 1 1 20%;
+            flex: 1 1 20%;
+  }
+
   .configuration__range-group {
     gap: 40px;
     -webkit-box-orient: horizontal;
@@ -9134,10 +9166,6 @@ option span {
     --radius-m: 20px;
   }
 
-  .title-section {
-    max-width: 60%;
-  }
-
   .cards-grid {
     -ms-grid-columns: 1fr 1fr 1fr;
     grid-template-columns: 1fr 1fr 1fr;
@@ -9169,8 +9197,6 @@ option span {
 
   .configuration__cpu {
     overflow-x: visible;
-    -ms-flex-wrap: wrap;
-        flex-wrap: wrap;
   }
 
   .configuration__with-logo {
@@ -9216,6 +9242,8 @@ option span {
   }
 
   .configuration__filter-range {
+    -ms-flex-wrap: nowrap;
+        flex-wrap: nowrap;
     gap: 10px;
   }
 
@@ -9600,9 +9628,8 @@ option span {
     width: 20px;
   }
 
-  .configuration__cpu-icon {
+  .configuration__cpu-shell {
     padding: 24px;
-    width: 200px;
   }
 
   .configuration__with-logo {
@@ -9636,8 +9663,8 @@ option span {
     --padding: 30px;
   }
 
-  .configuration__range-name {
-    font-size: 20px;
+  .configuration__range-block {
+    --fs: 20px;
   }
 
   .configuration__double-range {
@@ -9742,8 +9769,8 @@ option span {
 
   .selection-list.width-sm {
     -webkit-box-flex: 0;
-        -ms-flex: 0 0 141px;
-            flex: 0 0 141px;
+        -ms-flex: 0 0 160px;
+            flex: 0 0 160px;
   }
 
   .selection-list__wrapper {
@@ -12407,6 +12434,14 @@ option span {
 }
 
 @media (max-width: 767.98px) {
+  .configuration__hide-body .configuration__section-wrapper {
+    display: none;
+  }
+
+  .configuration__hide-body.open .configuration__section-wrapper {
+    display: block;
+  }
+
   .questions .button {
     width: 100%;
   }
@@ -12614,11 +12649,7 @@ option span {
     width: calc(10px + (100vw - 1366px) / 1194 * 10);
   }
 
-  .configuration__cpu-icon {
-    width: calc(98.3px + (100vw - 1366px) / 1194 * 101.7);
-  }
-
-  .configuration__cpu-icon {
+  .configuration__cpu-shell {
     padding: calc(12px + (100vw - 1366px) / 1194 * 12);
   }
 
@@ -12652,8 +12683,8 @@ option span {
     --padding: calc(15px + (100vw - 1366px) / 1194 * 15);
   }
 
-  .configuration__range-name {
-    font-size: calc(13px + (100vw - 1366px) / 1194 * 7);
+  .configuration__range-block {
+    --fs: calc(13px + (100vw - 1366px) / 1194 * 7);
   }
 
   .configuration__double-range {
@@ -12752,8 +12783,8 @@ option span {
 
   .selection-list.width-sm {
     -webkit-box-flex: 0;
-        -ms-flex: 0 0 calc(85px + (100vw - 1366px) / 1194 * 56);
-            flex: 0 0 calc(85px + (100vw - 1366px) / 1194 * 56);
+        -ms-flex: 0 0 calc(100px + (100vw - 1366px) / 1194 * 60);
+            flex: 0 0 calc(100px + (100vw - 1366px) / 1194 * 60);
   }
 
   .selection-list__arrow {
