@@ -3694,7 +3694,7 @@ input:checked + .checkbox__icon svg {
 }
 
 .configuration__section .configuration__double-range-track {
-  --color-in: #F3F3F3;
+  --color-out: #f3f3f3;
 }
 
 .configuration__section-title {
