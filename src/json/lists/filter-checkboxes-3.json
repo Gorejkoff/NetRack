@@ -10,9 +10,5 @@
    {
       "name": "disks",
       "text": "NVMe"
-   },
-   {
-      "name": "disks",
-      "text": "SAS"
    }
 ]
