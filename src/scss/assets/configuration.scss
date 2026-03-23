@@ -679,6 +679,10 @@
 
       &:first-child {
          margin-top: var(--fs);
+
+         @media (min-width:1366px) {
+            margin-top: 0;
+         }
       }
 
       @media (min-width:1024px) {

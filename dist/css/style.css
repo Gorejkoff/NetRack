@@ -9412,6 +9412,10 @@ option span {
             align-items: flex-end;
   }
 
+  .configuration__double-range:first-child {
+    margin-top: 0;
+  }
+
   .configuration__actions {
     padding: 0;
   }
