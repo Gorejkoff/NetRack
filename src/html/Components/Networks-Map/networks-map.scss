@@ -123,10 +123,15 @@
       align-items: center;
       gap: 0.2em;
       font-weight: 600;
-      font-size: 20px;
+      font-size: var(--font-size-md);
       letter-spacing: -0.02em;
       text-decoration: underline dotted;
       text-underline-offset: 0.2em;
+
+      svg {
+         height: 1em;
+         width: auto;
+      }
    }
 
    &__tab-data {
@@ -137,7 +142,7 @@
       margin-bottom: max(calc(var(--padding-sm) / 2), 10px);
       display: flex;
       align-items: flex-start;
-      font-size: var(--font-size-sm);
+      font-size: var(--font-size-md);
       line-height: 140%;
    }
 
@@ -167,7 +172,7 @@
    &__tab-certificates-title {
       margin-bottom: var(--padding-xs);
       color: #575757;
-      font-size: 20px;
+      font-size: var(--font-size-md);
       line-height: 140%;
    }
 

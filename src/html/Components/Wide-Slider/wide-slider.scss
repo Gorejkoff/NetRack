@@ -54,9 +54,14 @@
       position: absolute;
       top: 50%;
       z-index: 3;
+      transition: background-color 0.3s;
 
       @media (max-width:767.98px) {
          display: none;
+      }
+
+      ._pc &:hover {
+         background-color: #6E48F5;
       }
    }
 

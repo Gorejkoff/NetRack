@@ -29,7 +29,7 @@
       }
 
       @media (min-width:1024px) {
-         --offset: calc((100vw - 100% - var(--padding-container) - var(--gap)) / 2);
+         --offset: calc((100vw - 100%) / 2 - 10px);
          --padding: min(200px, var(--offset));
          margin-left: calc((var(--offset)) * -1);
          padding-right: max(var(--padding), var(--padding-container));
@@ -93,7 +93,7 @@
 
       @media (min-width:1024px) {
          padding-bottom: 0;
-         --offset: calc((100vw - 100% - var(--gap)) / 2);
+         --offset: calc((100vw - 100%) / 2);
          margin-right: calc(var(--offset) * -1);
          flex: 0 0 calc(40% + var(--offset) - var(--gap));
          min-height: 100%;
