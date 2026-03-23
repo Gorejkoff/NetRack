@@ -4,12 +4,23 @@
    position: relative;
    border-radius: 20px;
    overflow: hidden;
+   width: calc(100vw - 20px);
+   margin-left: 10px;
 
-   &__container {}
+   @media (min-width:1024px) {
+      margin-left: 0;
+      width: 100%;
+   }
+
+   &__container {
+      position: relative;
+   }
 
    &__body {}
 
-   &__content {}
+   &__content {
+      padding: 0 10px;
+   }
 
    &__mask {
       position: relative;

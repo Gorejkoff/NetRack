@@ -6374,7 +6374,7 @@ option span {
 
 .intro__body {
   position: relative;
-  padding: 30px;
+  padding: 20px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -6472,7 +6472,8 @@ option span {
 }
 
 .intro__asterisked {
-  color: #ffffff;
+  color: #B5B5B5;
+  font-weight: 400;
 }
 
 .intro__tag {
@@ -6513,7 +6514,7 @@ option span {
 }
 
 .primary__header {
-  padding: var(--padding-lg);
+  padding: 20px;
   background-color: #F3F3F3;
   border-radius: 10px;
   overflow: hidden;
@@ -6572,7 +6573,7 @@ option span {
 }
 
 .primary__content {
-  padding: var(--padding-lg);
+  padding: 20px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -6710,6 +6711,16 @@ option span {
   position: relative;
   border-radius: 20px;
   overflow: hidden;
+  width: calc(100vw - 20px);
+  margin-left: 10px;
+}
+
+.initial__container {
+  position: relative;
+}
+
+.initial__content {
+  padding: 0 10px;
 }
 
 .initial__mask {
@@ -9161,6 +9172,11 @@ option span {
     min-height: 100%;
   }
 
+  .initial {
+    margin-left: 0;
+    width: 100%;
+  }
+
   .table td,
   .table th {
     padding: 16px 20px;
@@ -9533,6 +9549,14 @@ option span {
 
   .intro__text {
     margin-bottom: 50px;
+  }
+
+  .primary__header {
+    padding: var(--padding-lg);
+  }
+
+  .primary__content {
+    padding: var(--padding-lg);
   }
 
   .primary__text {

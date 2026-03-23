@@ -6,7 +6,7 @@
 
    &__body {
       position: relative;
-      padding: 30px;
+      padding: 20px;
       display: flex;
       flex-direction: column;
       justify-content: space-between;
@@ -120,7 +120,8 @@
    }
 
    &__asterisked {
-      color: #ffffff;
+      color: #B5B5B5;
+      font-weight: 400;
    }
 
    &__tag {

@@ -20,13 +20,17 @@
    }
 
    &__header {
-      padding: var(--padding-lg);
+      padding: 20px;
       background-color: #F3F3F3;
       border-radius: 10px;
       overflow: hidden;
 
       @media (min-width:768px) {
          grid-column: span 2;
+      }
+
+      @media (min-width:1366px) {
+         padding: var(--padding-lg);
       }
    }
 
@@ -93,7 +97,7 @@
 
 
    &__content {
-      padding: var(--padding-lg);
+      padding: 20px;
       display: flex;
       flex-direction: column;
       justify-content: space-between;
@@ -105,6 +109,10 @@
       }
 
       @include size_adaptive (min-height, 400, 770, 1366, 2560);
+
+      @media (min-width:1366px) {
+         padding: var(--padding-lg);
+      }
 
       @media (min-width:2560px) {
          min-height: 770px;
