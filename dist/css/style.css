@@ -6713,10 +6713,12 @@ option span {
   overflow: hidden;
   width: calc(100vw - 20px);
   margin-left: 10px;
+  background-color: #f3f3f3;
 }
 
 .initial__container {
   position: relative;
+  z-index: 2;
 }
 
 .initial__content {
@@ -6807,11 +6809,12 @@ option span {
   position: absolute;
   top: 0;
   right: 0;
-  z-index: -1;
+  z-index: 1;
   width: 100%;
   height: 100%;
   -o-object-fit: cover;
      object-fit: cover;
+  display: none;
 }
 
 .table {
@@ -9177,6 +9180,14 @@ option span {
     width: 100%;
   }
 
+  .initial__text {
+    max-width: 60%;
+  }
+
+  .initial__background {
+    display: block;
+  }
+
   .table td,
   .table th {
     padding: 16px 20px;
@@ -9282,10 +9293,6 @@ option span {
 @media (min-width: 1120px) {
   .initial__mask {
     width: 70%;
-  }
-
-  .initial__text {
-    max-width: 60%;
   }
 }
 

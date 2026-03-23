@@ -6,6 +6,7 @@
    overflow: hidden;
    width: calc(100vw - 20px);
    margin-left: 10px;
+   background-color: #f3f3f3;
 
    @media (min-width:1024px) {
       margin-left: 0;
@@ -14,6 +15,7 @@
 
    &__container {
       position: relative;
+      z-index: 2;
    }
 
    &__body {}
@@ -106,7 +108,7 @@
       font-size: var(--font-size-md);
       line-height: 140%;
 
-      @media (min-width:1120px) {
+      @media (min-width:1024px) {
          max-width: 60%;
       }
 
@@ -131,9 +133,14 @@
       position: absolute;
       top: 0;
       right: 0;
-      z-index: -1;
+      z-index: 1;
       width: 100%;
       height: 100%;
       object-fit: cover;
+      display: none;
+
+      @media (min-width:1024px) {
+         display: block;
+      }
    }
 }
