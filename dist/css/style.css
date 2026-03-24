@@ -6896,12 +6896,6 @@ option span {
   vertical-align: top;
 }
 
-.table td ul {
-  font-size: 0.9em;
-  line-height: 140%;
-  color: #575757;
-}
-
 .table td ul:not(:first-child) {
   margin-top: 10px;
 }
