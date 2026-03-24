@@ -5743,6 +5743,13 @@ option span {
   --padding-parts: 30px;
 }
 
+.contact-form .input,
+.contact-form .selection-list__wrapper {
+  min-height: 50px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
 .two--parts .contact-form__container {
   padding: 0;
   margin: 0px;
@@ -10098,6 +10105,11 @@ option span {
     --padding-parts: 70px;
   }
 
+  .contact-form .input,
+  .contact-form .selection-list__wrapper {
+    min-height: 65px;
+  }
+
   .two--parts .contact-form__content {
     padding: var(--padding-parts) 2.8vw;
   }
@@ -11984,6 +11996,10 @@ option span {
 
   .contact-form {
     margin: 0;
+  }
+
+  .contact-form__map {
+    pointer-events: none;
   }
 
   .gallery-accordion__item.active {

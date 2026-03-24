@@ -22,6 +22,18 @@
       margin: 0;
    }
 
+
+   .input,
+   .selection-list__wrapper {
+      min-height: 50px;
+      box-sizing: border-box;
+
+      @media (min-width:2560px) {
+         min-height: 65px;
+      }
+
+   }
+
    &__container {
       .two--parts & {
          padding: 0;
@@ -125,6 +137,10 @@
       position: relative;
       min-height: 400px;
       overflow: hidden;
+
+      @media (max-width:1023.98px) {
+         pointer-events: none;
+      }
 
       @media (min-width:1024px) {
          flex: 0 0 calc(50% - 5px);
