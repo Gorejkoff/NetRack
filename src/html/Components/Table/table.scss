@@ -3,7 +3,15 @@
    border-collapse: collapse;
    width: 100%;
    table-layout: auto;
+
    // table-layout: fixed;
+   &.vertical-align-top {
+
+      th,
+      td {
+         vertical-align: top;
+      }
+   }
 
    .table__shell & {
       @media (max-width:1023.98px) {
@@ -105,8 +113,6 @@
          font-size: 15px;
          font-weight: 500;
          line-height: 140%;
-         vertical-align: top;
-         // vertical-align: middle;
 
          @media (min-width:1024px) {
             font-size: 18px;
@@ -125,14 +131,12 @@
          // line-height: 140%;
          // color: #575757;
 
-         &:not(:first-child) {
-            margin-top: 10px;
-         }
 
          &:not(:last-child) {
             margin-bottom: 20px;
          }
       }
+
 
       li {
          list-style: disc;

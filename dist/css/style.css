@@ -6860,6 +6860,11 @@ option span {
   table-layout: auto;
 }
 
+.table.vertical-align-top th,
+.table.vertical-align-top td {
+  vertical-align: top;
+}
+
 .table__shell .table td:last-child,
 .table__shell .table th:last-child {
   padding-left: 0;
@@ -6893,11 +6898,6 @@ option span {
   font-size: 15px;
   font-weight: 500;
   line-height: 140%;
-  vertical-align: top;
-}
-
-.table td ul:not(:first-child) {
-  margin-top: 10px;
 }
 
 .table td ul:not(:last-child) {
