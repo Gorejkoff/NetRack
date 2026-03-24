@@ -53,6 +53,10 @@
       border-radius: 20px;
       overflow: hidden;
 
+      @media (max-width:767.98px) {
+         pointer-events: none;
+      }
+
       @media (min-width:992px) {
          position: absolute;
          top: 0;

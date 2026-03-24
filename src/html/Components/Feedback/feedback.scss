@@ -100,8 +100,8 @@
                url('../img/png/swiper-mask.png');
             mask-composite: exclude;
             mask-repeat: no-repeat, no-repeat;
-            mask-position: 0 0, 0% 100%;
-            mask-size: 100% 100%, calc((var(--button-size) - var(--decrease)) * 2 + 30px) calc(var(--button-size) - var(--decrease) + 20px);
+            mask-position: 1px 1px, 1px 100%;
+            mask-size: 100% 100%, calc((var(--button-size) - var(--decrease)) * 2 + 32px) calc(var(--button-size) - var(--decrease) + 22px);
 
          }
       }

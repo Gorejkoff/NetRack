@@ -28,19 +28,22 @@ body {
    @media (min-width:1024px) {
       padding-left: 10px;
       padding-right: 10px;
+
+
+
    }
 
-   &::-webkit-scrollbar {
+   ._pc &::-webkit-scrollbar {
       width: var(--scrollWidth);
       border-radius: 6px;
    }
 
-   &::-webkit-scrollbar-track {
+   ._pc &::-webkit-scrollbar-track {
       border-radius: 6px;
       background-color: white;
    }
 
-   &::-webkit-scrollbar-thumb {
+   ._pc &::-webkit-scrollbar-thumb {
       border: 2px solid white;
       background-color: #acacac;
       background-clip: content-box;

@@ -3100,17 +3100,17 @@ body {
   --scrollWidth: 12px;
 }
 
-body::-webkit-scrollbar {
+._pc body::-webkit-scrollbar {
   width: var(--scrollWidth);
   border-radius: 6px;
 }
 
-body::-webkit-scrollbar-track {
+._pc body::-webkit-scrollbar-track {
   border-radius: 6px;
   background-color: white;
 }
 
-body::-webkit-scrollbar-thumb {
+._pc body::-webkit-scrollbar-thumb {
   border: 2px solid white;
   background-color: #acacac;
   background-clip: content-box;
@@ -7219,8 +7219,8 @@ option span {
 
 .contacts__grid-list-text {
   font-weight: 500;
-  font-size: var(--font-size-lg);
   line-height: 140%;
+  font-size: 12px;
 }
 
 .contacts__grid-list-text li {
@@ -8758,6 +8758,10 @@ option span {
     grid-template-columns: 0.8fr 2fr;
   }
 
+  .contacts__grid-list-text {
+    font-size: var(--font-size-lg);
+  }
+
   .services-swiper__card-title {
     font-size: 24px;
   }
@@ -8839,10 +8843,10 @@ option span {
             mask-composite: exclude;
     -webkit-mask-repeat: no-repeat, no-repeat;
             mask-repeat: no-repeat, no-repeat;
-    -webkit-mask-position: 0 0, 0% 100%;
-            mask-position: 0 0, 0% 100%;
-    -webkit-mask-size: 100% 100%, calc((var(--button-size) - var(--decrease)) * 2 + 30px) calc(var(--button-size) - var(--decrease) + 20px);
-            mask-size: 100% 100%, calc((var(--button-size) - var(--decrease)) * 2 + 30px) calc(var(--button-size) - var(--decrease) + 20px);
+    -webkit-mask-position: 1px 1px, 1px 100%;
+            mask-position: 1px 1px, 1px 100%;
+    -webkit-mask-size: 100% 100%, calc((var(--button-size) - var(--decrease)) * 2 + 32px) calc(var(--button-size) - var(--decrease) + 22px);
+            mask-size: 100% 100%, calc((var(--button-size) - var(--decrease)) * 2 + 32px) calc(var(--button-size) - var(--decrease) + 22px);
   }
 
   .feedback__slide-stars {
@@ -12762,6 +12766,14 @@ option span {
     -webkit-box-flex: 0;
         -ms-flex: 0 0 50%;
             flex: 0 0 50%;
+  }
+
+  .contacts__map {
+    pointer-events: none;
+  }
+
+  .networks-map__item {
+    pointer-events: none;
   }
 
   .modal__container {

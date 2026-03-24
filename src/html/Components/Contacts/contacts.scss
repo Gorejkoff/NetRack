@@ -122,8 +122,12 @@
 
    &__grid-list-text {
       font-weight: 500;
-      font-size: var(--font-size-lg);
       line-height: 140%;
+      font-size: 12px;
+
+      @media (min-width:768px) {
+         font-size: var(--font-size-lg);
+      }
 
       li {
          margin-bottom: 0.44em;
@@ -136,6 +140,10 @@
       height: min(650px, 60vh);
       border-radius: 20px;
       overflow: hidden;
+
+      @media (max-width:767.98px) {
+         pointer-events: none;
+      }
    }
 
    &__grid-footer {
