@@ -3090,8 +3090,6 @@ body {
 }
 
 body {
-  padding-left: 0;
-  padding-right: 0;
   font-family: var(--font-family);
   font-weight: 400;
   color: var(--color-black);
@@ -3099,6 +3097,24 @@ body {
   --container-width: 1120px;
   --max-width-container: calc(var(--container-width) + var(--padding-container) * 2);
   --indent-section: 40px;
+  --scrollWidth: 12px;
+}
+
+body::-webkit-scrollbar {
+  width: var(--scrollWidth);
+  border-radius: 6px;
+}
+
+body::-webkit-scrollbar-track {
+  border-radius: 6px;
+  background-color: white;
+}
+
+body::-webkit-scrollbar-thumb {
+  border: 2px solid white;
+  background-color: #acacac;
+  background-clip: content-box;
+  border-radius: 6px;
 }
 
 .wrapper {
@@ -8009,9 +8025,8 @@ option span {
 }
 
 .winner__photo-item img {
-  height: 100%;
-  -o-object-fit: cover;
-     object-fit: cover;
+  width: 100%;
+  height: auto;
 }
 
 .winner__content {
@@ -8762,6 +8777,13 @@ option span {
     min-height: 320px;
   }
 
+  .winner__photo-item img {
+    height: 100%;
+    width: auto;
+    -o-object-fit: cover;
+       object-fit: cover;
+  }
+
   .winner__diploma {
     -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
@@ -9200,6 +9222,10 @@ option span {
             flex: 0 0 calc(60% - var(--gap) + var(--offset));
   }
 
+  ._pc .info-block__contant {
+    --offset: calc((100vw - 100%) / 2 - 10px - var(--scrollWidth) / 2);
+  }
+
   .info-block__image {
     padding-bottom: 0;
     --offset: calc((100vw - 100%) / 2);
@@ -9208,6 +9234,10 @@ option span {
         -ms-flex: 0 0 calc(40% + var(--offset) - var(--gap));
             flex: 0 0 calc(40% + var(--offset) - var(--gap));
     min-height: 100%;
+  }
+
+  ._pc .info-block__image {
+    --offset: calc((100vw - 100%) / 2 - var(--scrollWidth) / 2);
   }
 
   .initial {
@@ -11943,6 +11973,11 @@ option span {
 }
 
 @media (max-width: 1023.98px) {
+  body {
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+  }
+
   .contact-form {
     margin: 0;
   }

@@ -35,6 +35,10 @@
          padding-right: max(var(--padding), var(--padding-container));
          padding-left: max(var(--offset), var(--padding-container));
          flex: 0 0 calc(60% - var(--gap) + var(--offset));
+
+         ._pc & {
+            --offset: calc((100vw - 100%) / 2 - 10px - var(--scrollWidth) / 2);
+         }
       }
    }
 
@@ -98,7 +102,9 @@
          flex: 0 0 calc(40% + var(--offset) - var(--gap));
          min-height: 100%;
 
-
+         ._pc & {
+            --offset: calc((100vw - 100%) / 2 - var(--scrollWidth) / 2);
+         }
       }
 
       img {

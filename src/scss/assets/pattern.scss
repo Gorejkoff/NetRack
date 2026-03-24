@@ -1,8 +1,7 @@
 @use '../utils' as *;
 
 body {
-   padding-left: 0;
-   padding-right: 0;
+
    font-family: var(--font-family);
    font-weight: 400;
    color: var(--color-black);
@@ -10,6 +9,13 @@ body {
    --container-width: 1120px;
    --max-width-container: calc(var(--container-width) + var(--padding-container) * 2);
    --indent-section: 40px;
+   --scrollWidth: 12px;
+
+   @media (max-width:1023.98px) {
+      padding-left: 0 !important;
+      padding-right: 0 !important;
+   }
+
    @include size_adaptive (--container-width, 1120, 2116, 1366, 2560);
    @include size_adaptive (--indent-section, 40, 70, 768, 1366);
    @include size_adaptive (--indent-section, 70, 120, 1366, 2560);
@@ -24,6 +30,22 @@ body {
       padding-right: 10px;
    }
 
+   &::-webkit-scrollbar {
+      width: var(--scrollWidth);
+      border-radius: 6px;
+   }
+
+   &::-webkit-scrollbar-track {
+      border-radius: 6px;
+      background-color: white;
+   }
+
+   &::-webkit-scrollbar-thumb {
+      border: 2px solid white;
+      background-color: #acacac;
+      background-clip: content-box;
+      border-radius: 6px;
+   }
 }
 
 .wrapper {
